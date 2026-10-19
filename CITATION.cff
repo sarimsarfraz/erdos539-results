@@ -3,6 +3,9 @@ message: "If you use this formalization, please cite the software and accompanyi
 title: "Gcd quotients and positive differences: Lean formalization"
 type: software
 version: 0.1.0
+date-released: 2026-10-19
+doi: 10.5281/zenodo.23481106
+url: "https://zenodo.org/records/23481106"
 authors:
   - family-names: Sarfraz
     given-names: Sarim
@@ -20,11 +23,10 @@ keywords:
 abstract: >-
   Formal proofs of an improved unrestricted lower bound for the gcd quotient-set
   minimum and sharp orders for every fixed prime support. The full unrestricted
-  order remains open. This metadata describes the private release candidate;
-  publication identifiers and release date are added only at publication.
+  order remains open.
 repository-code: "https://github.com/sarimsarfraz/erdos539-results"
 preferred-citation:
-  type: unpublished
+  type: article
   title: "Gcd quotients: a quantitative lower bound and sharp fixed-dimensional orders"
   authors:
     - family-names: Sarfraz
@@ -34,3 +36,5 @@ preferred-citation:
       given-names: Wali
       affiliation: Columbia University
   year: 2026
+  doi: 10.5281/zenodo.23481037
+  url: "https://zenodo.org/records/23481037"

@@ -4,7 +4,7 @@ Lean 4 proofs accompanying **Gcd quotients: a quantitative lower bound and sharp
 
 This development establishes an improved quantitative lower bound for Erdős problem 539 and the sharp order of the corresponding minimum for every fixed prime support. **The unrestricted order remains open.**
 
-This is the private release candidate. Public publication, Zenodo records, and upstream pull requests await author approval.
+Version 0.1.0 contains the checked proof sources and accompanying paper described below. The paper and software are released separately so that each can be cited and versioned.
 
 ## Main results
 
@@ -32,6 +32,9 @@ The principal results are:
 The unrestricted proof uses elementary extraction. Its 38-module local import closure contains no PFR imports. The larger library retains a historical PFR route and supporting energy and entropy results.
 
 ## Read the paper and proofs
+
+- [Paper on Zenodo](https://doi.org/10.5281/zenodo.23481037)
+- [Software version 0.1.0 on Zenodo](https://doi.org/10.5281/zenodo.23481106)
 
 - [Paper PDF — 17 pages](paper/main.pdf)
 - [Manuscript source](paper/main.tex)
@@ -89,11 +92,11 @@ $$
 
 is not proved here. Universal compatible-cut and quadratic-core bounds remain explicit hypotheses in the conditional theorems. Verified small-cover cases and counterexamples to intermediate proof strategies do not resolve this gap.
 
-The manuscript's completion and exchange propositions have written proofs but are outside the completed Lean proof closure. Experimental five-mask work is excluded from the release candidate. Historical research notes are not a substitute for the theorem statements or verification receipt.
+The manuscript's completion and exchange propositions have written proofs but are outside the completed Lean proof closure. Experimental five-mask work is excluded from this release. Historical research notes are not a substitute for the theorem statements or verification receipt.
 
 ## Citation and attribution
 
-Use [CITATION.cff](CITATION.cff) for software attribution. The paper and software have distinct citation metadata; permanent publication identifiers will be added when the approved versions are released.
+Use [CITATION.cff](CITATION.cff) for software attribution. The paper and software have distinct citation metadata and permanent publication identifiers.
 
 The work builds on mathematical and formal contributions by Granville and Roesler, Holzman, Lev and Pinchasi, Schmitt and collaborators, Pham, Kitamura, Mathlib contributors, and the PFR project. Source adaptations and retained licenses are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 

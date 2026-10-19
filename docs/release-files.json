@@ -10,8 +10,8 @@
       "bytes": 1759
     },
     "CITATION.cff": {
-      "sha256": "e3149591682e6bdd088e0def8631e00f94503f80f62dc703ae1f09c11817842b",
-      "bytes": 1248
+      "sha256": "3936b1685bdb7ba40955dc58f3657b30c5444098919d7deb75f523097b042849",
+      "bytes": 1289
     },
     "CONTRIBUTING.md": {
       "sha256": "4a396f6c7e41162fa66ac3c34c0897fbefe24bcff3869d87e9fe8df4946e0d7c",
@@ -26,8 +26,8 @@
       "bytes": 11357
     },
     "README.md": {
-      "sha256": "f03f3dd26ee357123dcd98d415b5987507e4c35f9d042dfcabc99ad4a0816096",
-      "bytes": 7462
+      "sha256": "cc80673ec5e5914e34e2bfcac5a7fa2ee383f46a427c2cb3fba6956e97aa3315",
+      "bytes": 7594
     },
     "THIRD_PARTY_NOTICES.md": {
       "sha256": "94c9173e973765651459712d5733c7edef7544821be0bc3724e7aa56ca209b4c",
@@ -3446,8 +3446,8 @@
       "bytes": 3408
     },
     "docs/RELEASE_AUDIT.md": {
-      "sha256": "2a7e01a5d428b8cf727c313fb4d89e44fe582277977308ff3048721cf35d0b2f",
-      "bytes": 5833
+      "sha256": "cca0162d2674754ec6f9fecbf4c9b7b1a08cc85d836baf443e3edd825fa8038c",
+      "bytes": 6334
     },
     "docs/RELEASE_BUILD.json": {
       "sha256": "b81a4818a09420c16d5f31e43805969a2f536a6f400725af9f1cb29ab2ebabf2",

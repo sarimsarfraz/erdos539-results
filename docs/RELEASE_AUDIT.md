@@ -1,6 +1,6 @@
 # Release audit — 19 October 2026
 
-**The canonical release-source rebuild passed: 844 modules and 12,917 project declarations. This is an unpublished review candidate.** The clean rebuild completed on 14–15 October. On 19 October, source/artifact hash validation and a fresh transitive axiom audit passed again, reusing unchanged verified artifacts; this later check is not a second clean rebuild.
+**The canonical release-source rebuild passed: 844 modules and 12,917 project declarations. This records the verified source snapshot for version 0.1.0.** The clean rebuild completed on 14–15 October. On 19 October, source/artifact hash validation and a fresh transitive axiom audit passed again, reusing unchanged verified artifacts; this later check is not a second clean rebuild.
 
 ## What passed
 
@@ -24,11 +24,11 @@ The exact proposed DeepMind proposition passed against the freshly rebuilt relea
 
 ## Original pre-publication review and subsequent private repository setup
 
-The manuscript, theorem correspondence, proof sources, citation information and both upstream PR candidates have been checked. The source and matching 17-page PDF include Sarim Sarfraz (University of Toronto) and Wali Ahmed (Columbia University). The paper and software licenses have been approved. No public release or upstream submission has been authorized.
+The manuscript, theorem correspondence, proof sources, citation information and both upstream PR candidates have been checked. The source and matching 17-page PDF include Sarim Sarfraz (University of Toronto) and Wali Ahmed (Columbia University). The paper and software licenses have been approved. The authors authorized the coordinated public release and both upstream submissions on 19 October 2026. Their publication and review status is tracked separately from these proof-checking receipts.
 
-The reviewed source tree is prepared for the fresh private repository `sarimsarfraz/erdos539-results`. Its isolated history does not include the original research repository's history, private working notes or unfinished proofs. [Repository verification](REPOSITORY_VERIFICATION.md) records its separate setup checks. The author reports completing the Google CLA; the upstream CLA bot will validate account coverage when a PR is submitted.
+The reviewed source tree is prepared in the dedicated release repository `sarimsarfraz/erdos539-results`. Its isolated history does not include the original research repository's history, private working notes or unfinished proofs. [Repository verification](REPOSITORY_VERIFICATION.md) records its separate setup checks. The author reports completing the Google CLA; the upstream CLA bot will validate account coverage when a PR is submitted.
 
-Publication still requires author approval, real public paper/proof links, and a focused upstream recheck after inserting those links. The 32-word AI disclosure retains GPT-6/Codex and Claude attribution. The author must own the submission and reviewer responses.
+The final upstream patches, including their paper references and immutable proof links, passed focused checks on 19 October 2026, individually and together. The ten supporting API lemmas and both exact-statement bridges also passed. These checks ran serially under the 4096 MiB limit. The current AI disclosure credits OpenAI GPT-6 Astra through Codex as the primary AI tool, with additional assistance from Anthropic Claude. The submitting author remains responsible for understanding the formalization and writing reviewer responses. Hosted CI and maintainer review are separate from these local checks.
 
 ## Final editorial revision
 
