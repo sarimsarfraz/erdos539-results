@@ -6,12 +6,12 @@
       "bytes": 99
     },
     ".zenodo.json": {
-      "sha256": "c540259c6fd6ce227813d70c156a59a60a66cdd84ff102554f54d8ba2d8768b3",
-      "bytes": 1122
+      "sha256": "22770b45df0bb793025eae1a212b05e67cf694a0cbb3123a8cd9cabe2a1dda8e",
+      "bytes": 1207
     },
     "CITATION.cff": {
-      "sha256": "cea67e7da38c81413e907394728bf28b5388b301484cb057481701e4f8ea1a4b",
-      "bytes": 1160
+      "sha256": "653496bf0793886ea96c6981b1f7585003ed85da86887449fa7d00207783c310",
+      "bytes": 1243
     },
     "CONTRIBUTING.md": {
       "sha256": "4a396f6c7e41162fa66ac3c34c0897fbefe24bcff3869d87e9fe8df4946e0d7c",
@@ -3450,7 +3450,7 @@
       "bytes": 4910
     },
     "docs/RELEASE_BUILD.json": {
-      "sha256": "8539e86dadbb2bdf5e154abbc8fafa8e7d0e1ed934cdbab960698f26496ed536",
+      "sha256": "791ca861ad3b17b52a4fa30cda8706743d6e22b9150e186de311b3b201b3fe32",
       "bytes": 7618
     },
     "docs/REPOSITORY_SETUP.json": {
@@ -3470,7 +3470,7 @@
       "bytes": 6269
     },
     "docs/manuscript-provenance.json": {
-      "sha256": "b02693bf30ba325a33890444bd8f58065fb272e2178d784ba033b852610a0e5a",
+      "sha256": "6ecfc14151227cf4eb0c48920c9a9bc9941dd4903d896ffe33dc65e514846af2",
       "bytes": 1060
     },
     "docs/verification.json": {
@@ -3482,12 +3482,12 @@
       "bytes": 456
     },
     "paper/main.pdf": {
-      "sha256": "f932ff0bf904d2eccf432556381ee8d7e86aff5f3f6b5ed586c9ffc013610d5d",
-      "bytes": 439714
+      "sha256": "d919c25a2d59341363ba41854d04e8aad3eed4d5b0bbc376781cbad36b8bb399",
+      "bytes": 439730
     },
     "paper/main.tex": {
-      "sha256": "7284b5ba5581b416a2a04464704bc7eea05bbba1c258ec3fca6e2b6f870c8665",
-      "bytes": 59185
+      "sha256": "bc1f9b31edcaa569fa87a2b363709a1496e1a32ab5de4946fc09b9d341ea0d3d",
+      "bytes": 59198
     },
     "scripts/cache-imports.py": {
       "sha256": "237bea06feee2db8e2352d6ac3edfe163f801e1a9befab762ec61dc6bb0c1d59",

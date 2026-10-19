@@ -7,6 +7,9 @@ authors:
   - family-names: Sarfraz
     given-names: Sarim
     affiliation: University of Toronto
+  - family-names: Ahmed
+    given-names: Wali
+    affiliation: Columbia University
 license: Apache-2.0
 keywords:
   - Lean 4

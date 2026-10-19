@@ -5,6 +5,10 @@
     {
       "name": "Sarfraz, Sarim",
       "affiliation": "University of Toronto"
+    },
+    {
+      "name": "Ahmed, Wali",
+      "affiliation": "Columbia University"
     }
   ],
   "description": "For a finite set A of positive integers, let Q(A) be the set of a/gcd(a,b) for a,b in A, and let h(n) be the minimum of |Q(A)| over n-element sets. We prove h(n) >= sqrt(n) exp(c sqrt(log(n)/log(log(n)))) for all sufficiently large n, with an explicit formalized constant c = 1/16000. For integers supported on any d fixed distinct primes, we determine the sharp order h_d(n) = Theta_d(n^u_d), where u_1 = 1 and u_d is the minimum of (u_p+u_s)/(1+u_p+u_s) over positive splits p+s=d. Both headline results have Lean proofs. The unrestricted order remains open. This software record contains the formal proof sources, pinned dependencies, verification scripts and provenance.",

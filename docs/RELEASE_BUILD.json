@@ -144,10 +144,10 @@
   },
   "paper": {
     "path": "paper/main.tex",
-    "sha256": "7284b5ba5581b416a2a04464704bc7eea05bbba1c258ec3fca6e2b6f870c8665",
+    "sha256": "bc1f9b31edcaa569fa87a2b363709a1496e1a32ab5de4946fc09b9d341ea0d3d",
     "built_in_compilation": "passed",
     "pdf_export_and_visual_review": "passed: PDF generated from the same built-in-compiled source; all 16 pages reviewed",
-    "pdf_sha256": "f932ff0bf904d2eccf432556381ee8d7e86aff5f3f6b5ed586c9ffc013610d5d",
+    "pdf_sha256": "d919c25a2d59341363ba41854d04e8aad3eed4d5b0bbc376781cbad36b8bb399",
     "authors": [
       "Sarim Sarfraz",
       "Wali Ahmed"
