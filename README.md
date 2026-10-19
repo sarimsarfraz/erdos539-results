@@ -1,6 +1,6 @@
 # Gcd quotients and positive differences — Lean formalization
 
-Lean 4 proofs accompanying **Gcd quotients and positive differences: sharp bounds in fixed dimension**, by Sarim Sarfraz and Wali Ahmed.
+Lean 4 proofs accompanying **Gcd quotients: a quantitative lower bound and sharp fixed-dimensional orders**, by Sarim Sarfraz and Wali Ahmed.
 
 This development establishes an improved quantitative lower bound for Erdős problem 539 and the sharp order of the corresponding minimum for every fixed prime support. **The unrestricted order remains open.**
 

@@ -24,8 +24,12 @@ The exact proposed DeepMind proposition passed against the freshly rebuilt relea
 
 ## Original pre-publication review and subsequent private repository setup
 
-The manuscript, theorem correspondence, proof sources, citation information and both upstream PR candidates have been checked. The source and matching 16-page PDF include Sarim Sarfraz (University of Toronto) and Wali Ahmed (Columbia University). The paper and software licenses have been approved. No public release or upstream submission has been authorized.
+The manuscript, theorem correspondence, proof sources, citation information and both upstream PR candidates have been checked. The source and matching 17-page PDF include Sarim Sarfraz (University of Toronto) and Wali Ahmed (Columbia University). The paper and software licenses have been approved. No public release or upstream submission has been authorized.
 
 The reviewed source tree is prepared for the fresh private repository `sarimsarfraz/erdos539-results`. Its isolated history does not include the original research repository's history, private working notes or unfinished proofs. [Repository verification](REPOSITORY_VERIFICATION.md) records its separate setup checks. The author reports completing the Google CLA; the upstream CLA bot will validate account coverage when a PR is submitted.
 
 Publication still requires author approval, real public paper/proof links, and a focused upstream recheck after inserting those links. The 32-word AI disclosure retains GPT-6/Codex and Claude attribution. The author must own the submission and reviewer responses.
+
+## Final editorial revision
+
+The approved title is *Gcd quotients: a quantitative lower bound and sharp fixed-dimensional orders*. The introduction and construction section now distinguish the earlier planar exponent and layering construction from the matching all-dimension theorem. The comparison explicitly limits claims concerning unpublished Bollobás–Leader work. This revision changes no theorem, lemma, proposition, corollary, conjecture or proof environment, and no Lean source. The PDF compiles with no overfull boxes or undefined references.

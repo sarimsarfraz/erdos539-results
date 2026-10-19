@@ -2,8 +2,8 @@
   "current": {
     "revision": "2026-10-19",
     "source": "paper/main.tex",
-    "sha256": "bc1f9b31edcaa569fa87a2b363709a1496e1a32ab5de4946fc09b9d341ea0d3d",
-    "status": "local preprint review candidate; 32-word AI disclosure; paper/PDF and upstream changed-module checks passed; no publication",
+    "sha256": "3498b0dfb8f2dc14e2f53848d54042a72728a8fe1ea8c37e2721d365189da379",
+    "status": "unpublished final review candidate; approved title and prior-work comparison; mathematical statements and proofs unchanged",
     "theorem_map": "docs/PAPER_THEOREMS.md",
     "verification": "docs/verification.json",
     "build_provenance": "docs/RELEASE_BUILD.json",
@@ -11,11 +11,13 @@
       "Sarim Sarfraz",
       "Wali Ahmed"
     ],
-    "pdf_sha256": "d919c25a2d59341363ba41854d04e8aad3eed4d5b0bbc376781cbad36b8bb399",
+    "pdf_sha256": "2bd17018d087483fa91bdd362bc094678b39b82834c34375c3906c3b2848bf85",
     "author_affiliations": {
       "Sarim Sarfraz": "University of Toronto",
       "Wali Ahmed": "Columbia University"
-    }
+    },
+    "title": "Gcd quotients: a quantitative lower bound and sharp fixed-dimensional orders",
+    "pages": 17
   },
   "proof_source_baseline": "53b83d4e81b4f3a80b3c55b44f945c714f1c7cff",
   "source_derivation": {

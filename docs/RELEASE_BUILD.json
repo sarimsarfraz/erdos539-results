@@ -144,27 +144,42 @@
   },
   "paper": {
     "path": "paper/main.tex",
-    "sha256": "bc1f9b31edcaa569fa87a2b363709a1496e1a32ab5de4946fc09b9d341ea0d3d",
+    "sha256": "3498b0dfb8f2dc14e2f53848d54042a72728a8fe1ea8c37e2721d365189da379",
     "built_in_compilation": "passed",
-    "pdf_export_and_visual_review": "passed: PDF generated from the same built-in-compiled source; all 16 pages reviewed",
-    "pdf_sha256": "d919c25a2d59341363ba41854d04e8aad3eed4d5b0bbc376781cbad36b8bb399",
+    "pdf_export_and_visual_review": "passed: same built-in-compiled source; all 17 pages checked in contact sheets and revised pages inspected at reading size",
+    "pdf_sha256": "2bd17018d087483fa91bdd362bc094678b39b82834c34375c3906c3b2848bf85",
     "authors": [
       "Sarim Sarfraz",
       "Wali Ahmed"
-    ]
+    ],
+    "title": "Gcd quotients: a quantitative lower bound and sharp fixed-dimensional orders",
+    "pages": 17,
+    "editorial_revision": {
+      "date": "2026-10-19",
+      "changes": "approved title, prior-work comparison, citations and prime-support wording",
+      "math_environments_unchanged": true,
+      "overfull_boxes": 0,
+      "undefined_references": 0
+    }
   },
   "current_upstream_build_and_lint": {
-    "status": "passed changed-module build and configured custom linters with warnings treated as errors",
-    "baseline": "197f7f8dcc457f556754f826389d2ec7a0d85b92",
+    "status": "passed both individual PR builds, combined build and supporting API axiom checks",
+    "baseline": "23b33b971dec670ba859e5d3c7b000d7d77a0871",
     "toolchain": "leanprover/lean4:v4.33.1",
     "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
-    "command": "lake --wfail build FormalConjectures/ErdosProblems/539.lean",
     "exit_code": 0,
     "lean_memory_limit_mb": 4096,
     "lean_compiler_processes_at_once": 1,
-    "max_lean_rss_bytes": 3030007808,
-    "proposed_file_sha256": "dd83ba9cd6bb70b69f2e2c40f6f1fdf7b9d6958ee820ef1c3ded5fcd740da528",
-    "scope": "one changed problem file and dependencies; full repository build is not requested by upstream AGENTS.md for this scope",
+    "max_lean_rss_bytes": 3010396160,
+    "checked_at_utc": "2026-10-19T19:12:36.767690+00:00",
+    "pr1_problem_sha256": "cfab3b0602e3d853607265160eb6a6892b50394b703654c0599b2f6bcc2ba7d2",
+    "pr2_files": {
+      "FormalConjectures/ErdosProblems/539.lean": "f69c1fa0547dbf819e557ac2d3abdd6eb91c536a41dd3de70ba012feea5fc0d9",
+      "FormalConjecturesForMathlib.lean": "08990d9a8e98a7d97745ceecf98a8858cb362d0579a9c5c5909252d85738e31c",
+      "FormalConjecturesForMathlib/NumberTheory/GcdQuotient.lean": "2e3d1d7fd2e7633dfc269e57017ebc3ef7afc147e4f22c4f45f3eec04df4a91c"
+    },
+    "combined_problem_sha256": "dfcd0ec6ec9292f6cfa45e5b5be0949eb29cbad0b63cc55d34fbe5cee15de22f",
+    "scope": "fresh focused builds and configured lint; reused dependency caches; not a new clean proof rebuild",
     "final_public_urls": "insert and recheck after author-approved release"
   },
   "publication": "none",
@@ -190,5 +205,19 @@
     "mode": "revalidation using hash-matched compiled artifacts from the audited release; fresh axiom audit; not a new clean rebuild",
     "finished_at_utc": "2026-10-19T17:29:54.870912+00:00",
     "resource_violation": null
+  },
+  "earlier_upstream_build_and_lint": {
+    "status": "passed changed-module build and configured custom linters with warnings treated as errors",
+    "baseline": "197f7f8dcc457f556754f826389d2ec7a0d85b92",
+    "toolchain": "leanprover/lean4:v4.33.1",
+    "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "command": "lake --wfail build FormalConjectures/ErdosProblems/539.lean",
+    "exit_code": 0,
+    "lean_memory_limit_mb": 4096,
+    "lean_compiler_processes_at_once": 1,
+    "max_lean_rss_bytes": 3030007808,
+    "proposed_file_sha256": "dd83ba9cd6bb70b69f2e2c40f6f1fdf7b9d6958ee820ef1c3ded5fcd740da528",
+    "scope": "one changed problem file and dependencies; full repository build is not requested by upstream AGENTS.md for this scope",
+    "final_public_urls": "insert and recheck after author-approved release"
   }
 }

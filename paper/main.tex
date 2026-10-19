@@ -3,7 +3,7 @@
 \usepackage{booktabs}
 \usepackage[margin=1.1in]{geometry}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
-\hypersetup{pdftitle={Gcd quotients and positive differences: sharp bounds in fixed dimension},
+\hypersetup{pdftitle={Gcd quotients: a quantitative lower bound and sharp fixed-dimensional orders},
   pdfauthor={Sarim Sarfraz and Wali Ahmed},
   pdfsubject={Erdos problem 539: quantitative and fixed-dimensional bounds},
   pdfkeywords={gcd quotients, positive differences, additive combinatorics, Lean}}
@@ -28,7 +28,7 @@
 \newcommand{\Lg}{L}
 \DeclareMathOperator{\dimaff}{dim_{aff}}
 
-\title[Gcd quotients and positive differences]{Gcd quotients and positive differences:\\ sharp bounds in fixed dimension}
+\title[Gcd quotients]{Gcd quotients: a quantitative lower bound\\ and sharp fixed-dimensional orders}
 \author{Sarim Sarfraz}
 \address{University of Toronto, Toronto, Ontario, Canada}
 \email{sarim.sarfraz@mail.utoronto.ca}
@@ -45,7 +45,7 @@ For a finite set $A$ of positive integers, let $Q(A)=\{a/\gcd(a,b):a,b\in A\}$, 
 \[
 h(n)\ge\sqrt n\exp\!\left(c\sqrt{\frac{\log n}{\log\log n}}\right)
 \]
-for all sufficiently large $n$ and an absolute $c>0$. The proof uses an elementary extraction onto logarithmically many original coordinates and an estimate for positive differences with controlled fiber irregularity. For integers supported on any $d$ fixed primes, we determine the exact order $h_d(n)=\Theta_d(n^{u_d})$, where $u_1=1$ and $u_d=\min_{p+s=d}(u_p+u_s)/(1+u_p+u_s)$. Matching constructions and a two-corner pruning argument establish this for every fixed $d$. Both headline results, including an explicit unrestricted constant $c=1/16000$, have been formalized in Lean. We also give dimension-sensitive bounds for structured sets and a completion-and-exchange criterion for further progress. The sharper unrestricted scale $\sqrt n\exp(\Theta(\sqrt{\log n}))$ remains conjectural.
+for all sufficiently large $n$ and an absolute $c>0$. The proof uses an elementary extraction onto logarithmically many original coordinates and an estimate for positive differences with controlled fiber irregularity. For integers whose prime divisors lie in any prescribed set of $d\ge1$ distinct primes, we determine the exact order $h_d(n)=\Theta_d(n^{u_d})$, where $u_1=1$ and $u_d=\min_{p+s=d}(u_p+u_s)/(1+u_p+u_s)$ over positive splits. Matching constructions and a two-corner pruning argument establish this for every fixed $d$. Both headline results, including an explicit unrestricted constant $c=1/16000$, have been formalized in Lean. We also give dimension-sensitive bounds for structured sets and a completion-and-exchange criterion for further progress. The sharper unrestricted scale $\sqrt n\exp(\Theta(\sqrt{\log n}))$ remains conjectural.
 \end{abstract}
 
 \maketitle
@@ -62,7 +62,7 @@ Erd\H{o}s asked for the order of magnitude of $h(n)$ \cite{Er73,EP539}. Prime va
 M(F)=\max_{a\in F}|(F-a)^+|.
 \]
 We call $(F-a)^+$ a forward fan. The equality
-$v_p(a/\gcd(a,b))=(v_p(a)-v_p(b))^+$ identifies $h(n)$ with the minimum of $|\Dp(F)|$ over all $n$-point integer sets in arbitrary dimension. Restricting to $d$ fixed distinct primes gives
+$v_p(a/\gcd(a,b))=(v_p(a)-v_p(b))^+$ identifies $h(n)$ with the minimum of $|\Dp(F)|$ over all $n$-point integer sets in arbitrary dimension. Restricting to positive integers whose prime divisors belong to a prescribed set of $d$ distinct primes gives
 \[
 h_d(n)=\min_{\substack{F\subset\Z^d\\|F|=n}}|\Dp(F)|,
 \qquad h(n)=\min_{d\ge1}h_d(n).
@@ -79,7 +79,11 @@ The 2026 preprint of Schmitt et al.\ \cite[Appendix A]{PC26} establishes
 \begin{equation}\label{eq:known-upper}
 h(n)\le\sqrt n\exp(C\sqrt{\log n}),
 \end{equation}
-and hence $h(n)=n^{1/2+o(1)}$. Pham's unrefereed manuscript \cite{Ph26} gives the lower bound $\sqrt n\exp(c(\log n)^{1/3})$, using a dimension-dependent estimate and weak polynomial Freiman--Ruzsa theory \cite{GGMT}. Kitamura's separate Lean developments \cite{Ki26,KiExp26} verify the logarithmic exponent $1/2$ and the divergence $h(n)/\sqrt n\to\infty$, with the appropriate comparison to the zero-inclusive Formal Conjectures definition. These conclusions do not determine the order of $h(n)$.
+and hence $h(n)=n^{1/2+o(1)}$. Their construction gives upper exponents $2/3,4/7,8/15,\ldots$ in dimensions $2,5,11,\ldots$ \cite[Propositions A.7--A.8]{PC26}; these are upper bounds, without matching lower bounds in each dimension. Our construction refines this layering method: it combines sets in dimensions $p$ and $s$ in dimension $p+s$, permits unequal pieces, and optimizes over all positive splits. The fixed-dimensional contribution is the resulting recursive exponent together with a matching lower bound for every $d$, including $5/8$ in dimension three and $4/7$ in dimension four. The planar exponent and the underlying layering idea have these predecessors.
+
+Pham's unrefereed manuscript \cite{Ph26} claims the lower bound $\sqrt n\exp(c(\log n)^{1/3})$, using a dimension-dependent estimate and weak polynomial Freiman--Ruzsa theory \cite{GGMT}; its main theorem is not yet formalized in the accompanying Lean project. Our unrestricted lower bound has the stronger gain $\exp(c\sqrt{\log n/\log\log n})$. Kitamura's separate Lean developments \cite{Ki26,KiExp26} verify the logarithmic exponent $1/2$ and the divergence $h(n)/\sqrt n\to\infty$, with the appropriate comparison to the zero-inclusive Formal Conjectures definition. These conclusions do not determine the order of $h(n)$.
+
+Schmitt et al.\ \cite[Appendix A, ``Relation to prior announcements'']{PC26} document earlier unpublished joint work of Bollob\'as and Leader announcing an improvement to the $n^{2/3}$ upper bound; see also Leader's 2012 seminar abstract \cite{Le12}. We know of no written account specifying its bound and make no priority claim over the unknown contents of that work. Our claims concern the quantitative lower bound and the sharp fixed-dimensional orders stated below, relative to the public results cited here.
 
 \subsection*{Main results}
 Our first result improves the quantitative lower bound.
@@ -192,6 +196,8 @@ We use the standard Pl\"unnecke--Ruzsa consequence \cite{Ru89,Pe12}
 for finite subsets of an abelian group. All logarithms are natural unless a base is specified.
 
 \section{Constructions}\label{sec:constructions}
+
+The following proposition generalizes the separated-suspension construction of \cite[Lemma A.6]{PC26}. Taking sufficiently separated levels makes the additional level coordinate unnecessary and allows the two factors to have different dimensions.
 
 \begin{proposition}[Gluing]\label{prop:glue}
 Let $p,s\ge1$, and let $F\subset\Z^p$ and $G\subset\Z^s$ be finite and nonempty, let $L$ bound every coordinate diameter of $F$ and of $G$, let $M>2L$ and $K\ge1$ be integers, and put
@@ -709,7 +715,7 @@ N.~Alon, G.~Brightwell, H.~A.~Kierstead, A.~V.~Kostochka and P.~Winkler, \emph{D
 P.~Erd\H{o}s, \emph{Problems and results on combinatorial number theory}, in: A Survey of Combinatorial Theory (Proc. Internat. Sympos., Colorado State Univ., Fort Collins, 1971), North-Holland, 1973, 117--138.
 
 \bibitem[EP]{EP539}
-T.~F.~Bloom, \emph{Erd\H{o}s Problem \#539}, \url{https://www.erdosproblems.com/539}.
+T.~F.~Bloom, \emph{Erd\H{o}s Problem \#539}, \url{https://www.erdosproblems.com/539}, accessed 19 October 2026.
 
 \bibitem[GGMT25]{GGMT}
 W.~T.~Gowers, B.~Green, F.~Manners and T.~Tao, \emph{On a conjecture of Marton}, Ann. of Math. (2) \textbf{201} (2025), no.~2, 515--549.
@@ -721,25 +727,28 @@ A.~Granville and F.~Roesler, \emph{The set of differences of a given set}, Amer.
 R.~Holzman, V.~F.~Lev and R.~Pinchasi, \emph{Projecting difference sets on the positive orthant}, Combin. Probab. Comput. \textbf{17} (2008), 681--688.
 
 \bibitem[Ki26]{Ki26}
-K.~Kitamura, \emph{A Lean disproof of the square-root variants in Erd\H{o}s Problem 539}, 2026, \url{https://github.com/KitaKen1/erdos-539-sqrt-disproof}.
+K.~Kitamura, \emph{A Lean disproof of the square-root variants in Erd\H{o}s Problem 539}, 2026, \url{https://github.com/KitaKen1/erdos-539-sqrt-disproof}, commit \texttt{78e0a02a4623}, accessed 19 October 2026.
+
+\bibitem[Le12]{Le12}
+I.~Leader, \emph{Positive projections}, Combinatorial Theory Seminar abstract, University of Oxford, 7 February 2012; joint work with B.~Bollob\'as, \url{https://www.maths.ox.ac.uk/node/9547}.
 
 \bibitem[Ph26]{Ph26}
-S.~Pham, \emph{A stretched-exponential lower bound for Erd\H{o}s Problem 539}, unrefereed manuscript, 9 August 2026, \url{https://github.com/sonpham-org/erdos-539-lower-bound}.
+S.~Pham, \emph{A stretched-exponential lower bound for Erd\H{o}s Problem 539}, unrefereed manuscript, 9 August 2026, \url{https://github.com/sonpham-org/erdos-539-lower-bound}, commit \texttt{4e7dfc612e9f}, accessed 19 October 2026.
 
 \bibitem[Pe12]{Pe12}
 G.~Petridis, \emph{New proofs of Pl\"unnecke-type estimates for product sets in groups}, Combinatorica \textbf{32} (2012), 721--733.
 
 \bibitem[PC26]{PC26}
-J.~Schmitt, T.~Gehrunger, J.~Dekoninck, G.~B\'erczi, U.~Kreitner, L.~Price and D.~Holmes, \emph{ProofCouncil: an LLM agent for solving open mathematical problems}, arXiv:2607.09474, 2026, Appendix~A.
+J.~Schmitt, T.~Gehrunger, J.~Dekoninck, G.~B\'erczi, U.~Kreitner, L.~Price and D.~Holmes, \emph{ProofCouncil: an LLM agent for solving open mathematical problems}, arXiv:2607.09474v1, 10 July 2026, Appendix~A.
 
 \bibitem[Ru89]{Ru89}
 I.~Z.~Ruzsa, \emph{An application of graph theory to additive number theory}, Scientia Ser. A Math. Sci. \textbf{3} (1989), 97--109.
 
 \bibitem[FC26]{FC539}
-Google DeepMind and contributors, \emph{Formal Conjectures: Erd\H{o}s Problem 539}, repository snapshot checked on 19 October 2026, \url{https://github.com/google-deepmind/formal-conjectures/blob/197f7f8dcc457f556754f826389d2ec7a0d85b92/FormalConjectures/ErdosProblems/539.lean}.
+Google DeepMind and contributors, \emph{Formal Conjectures: Erd\H{o}s Problem 539}, repository snapshot checked on 19 October 2026, \url{https://github.com/google-deepmind/formal-conjectures/blob/23b33b971dec670ba859e5d3c7b000d7d77a0871/FormalConjectures/ErdosProblems/539.lean}.
 
 \bibitem[KiExp26]{KiExp26}
-K.~Kitamura, \emph{Lean proofs of the exponent variants of Erd\H{o}s Problem 539}, 2026, \url{https://github.com/KitaKen1/erdos-539-formal-conjectures}.
+K.~Kitamura, \emph{Lean proofs of the exponent variants of Erd\H{o}s Problem 539}, 2026, \url{https://github.com/KitaKen1/erdos-539-formal-conjectures}, commit \texttt{49af95ccd2ab}, accessed 19 October 2026.
 
 \bibitem[SA26]{Lean539}
 S.~Sarfraz and W.~Ahmed, \emph{Gcd quotients and positive differences: Lean formalization}, Lean 4 development, release candidate 0.1.0, 2026. The companion proof archive supplies source hashes, verification receipts, and a theorem map.

@@ -25,7 +25,7 @@ abstract: >-
 repository-code: "https://github.com/sarimsarfraz/erdos539-results"
 preferred-citation:
   type: unpublished
-  title: "Gcd quotients and positive differences: sharp bounds in fixed dimension"
+  title: "Gcd quotients: a quantitative lower bound and sharp fixed-dimensional orders"
   authors:
     - family-names: Sarfraz
       given-names: Sarim
