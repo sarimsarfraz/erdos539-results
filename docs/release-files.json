@@ -26,8 +26,8 @@
       "bytes": 11357
     },
     "README.md": {
-      "sha256": "2323577e21af20351e46efdaa29dc4a13315a14a04737a7ba9cf4c71b27d6b0d",
-      "bytes": 7396
+      "sha256": "f03f3dd26ee357123dcd98d415b5987507e4c35f9d042dfcabc99ad4a0816096",
+      "bytes": 7462
     },
     "THIRD_PARTY_NOTICES.md": {
       "sha256": "94c9173e973765651459712d5733c7edef7544821be0bc3724e7aa56ca209b4c",
@@ -3446,12 +3446,12 @@
       "bytes": 3408
     },
     "docs/RELEASE_AUDIT.md": {
-      "sha256": "ea42926c34d34e83087e254ef52e8cfa9686240fecac7243001f9347bd89687b",
-      "bytes": 5466
+      "sha256": "2a7e01a5d428b8cf727c313fb4d89e44fe582277977308ff3048721cf35d0b2f",
+      "bytes": 5833
     },
     "docs/RELEASE_BUILD.json": {
-      "sha256": "fb1714b9ef8d97d322ebb9de4220622a1822984043634da9b088b9017d0b5b5c",
-      "bytes": 9622
+      "sha256": "b81a4818a09420c16d5f31e43805969a2f536a6f400725af9f1cb29ab2ebabf2",
+      "bytes": 9864
     },
     "docs/REPOSITORY_SETUP.json": {
       "sha256": "4d8c0a7b1bf237bb99d5bd2e0238814f054641ef8c133bdb15b6298bdd28556a",
@@ -3470,8 +3470,8 @@
       "bytes": 6269
     },
     "docs/manuscript-provenance.json": {
-      "sha256": "dbfbb731ef05aaa5112e0c810b9d38680769114765c5f60cc350d3362f06c8c6",
-      "bytes": 1325
+      "sha256": "197f5b5b03266be7b749ecb79ec7f7d8a7691d7868232cd5d50b703273b2a290",
+      "bytes": 1327
     },
     "docs/verification.json": {
       "sha256": "1409a6b0603f504c6024d27273704ff2f4d031f5e3610e9b4601bbc7830c29e7",
@@ -3482,12 +3482,12 @@
       "bytes": 456
     },
     "paper/main.pdf": {
-      "sha256": "b89c329c21afc719a1dd5120c345a54cb6e2ac1fda54c2a6ecadd111bd31b77e",
-      "bytes": 445421
+      "sha256": "957d6adaf3de8a5320c0884ad9e153e737ab09f1ef2957cfcae21db85a962d60",
+      "bytes": 445449
     },
     "paper/main.tex": {
-      "sha256": "4e569004dfc4012093c3feb8f7a61fcda4a52d90134c7914a09b1c71546d2afb",
-      "bytes": 62458
+      "sha256": "002d28a862dd1041051e07baa2833df2437413556a8c3f4a37d5eac2a70117ed",
+      "bytes": 62498
     },
     "scripts/cache-imports.py": {
       "sha256": "237bea06feee2db8e2352d6ac3edfe163f801e1a9befab762ec61dc6bb0c1d59",

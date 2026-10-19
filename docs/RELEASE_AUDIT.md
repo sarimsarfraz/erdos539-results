@@ -33,3 +33,7 @@ Publication still requires author approval, real public paper/proof links, and a
 ## Final editorial revision
 
 The approved title is *Gcd quotients: a quantitative lower bound and sharp fixed-dimensional orders*. The introduction and construction section now distinguish the earlier planar exponent and layering construction from the matching all-dimension theorem. The comparison explicitly limits claims concerning unpublished Bollobás–Leader work. This revision changes no theorem, lemma, proposition, corollary, conjecture or proof environment, and no Lean source. The PDF compiles with no overfull boxes or undefined references.
+
+## Author attribution revision, 19 October 2026
+
+The author identifies GPT-6 Astra through Codex as the primary AI tool, with additional assistance from Anthropic Claude. The current disclosure reflects that attribution; earlier word-count descriptions above refer to the superseded disclosure. This editorial change alters no mathematical statement or Lean source.

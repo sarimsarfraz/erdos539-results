@@ -144,10 +144,10 @@
   },
   "paper": {
     "path": "paper/main.tex",
-    "sha256": "4e569004dfc4012093c3feb8f7a61fcda4a52d90134c7914a09b1c71546d2afb",
+    "sha256": "002d28a862dd1041051e07baa2833df2437413556a8c3f4a37d5eac2a70117ed",
     "built_in_compilation": "passed",
-    "pdf_export_and_visual_review": "passed: editor compilation and two export passes; revised bibliography and final contacts inspected at reading size; earlier full-document visual audit retained",
-    "pdf_sha256": "b89c329c21afc719a1dd5120c345a54cb6e2ac1fda54c2a6ecadd111bd31b77e",
+    "pdf_export_and_visual_review": "Pages 16 and 17 inspected at reading size; disclosure, references and final contacts fit; unchanged earlier pages retain prior review.",
+    "pdf_sha256": "957d6adaf3de8a5320c0884ad9e153e737ab09f1ef2957cfcae21db85a962d60",
     "authors": [
       "Sarim Sarfraz",
       "Wali Ahmed"
@@ -156,13 +156,17 @@
     "pages": 17,
     "editorial_revision": {
       "date": "2026-10-19",
-      "changes": "verified bibliography; Freiman-Lev planar attribution; direct 2009 announcement, Erdos-Szekeres, Lean and mathlib citations; Wali contact and location; fresh catalogue snapshot",
-      "math_environments_unchanged": true,
-      "proof_text_unchanged_except_ES35_citation": true,
+      "source_sha256": "002d28a862dd1041051e07baa2833df2437413556a8c3f4a37d5eac2a70117ed",
+      "pdf_sha256": "957d6adaf3de8a5320c0884ad9e153e737ab09f1ef2957cfcae21db85a962d60",
+      "pages": 17,
+      "built_in_compiler": "success",
+      "local_pdf_export": "two successful pdflatex passes",
       "overfull_boxes": 0,
       "undefined_references": 0,
-      "bibliography_entries": 19,
-      "every_entry_cited": true
+      "visual_review": "Pages 16 and 17 inspected at reading size; disclosure, references and final contacts fit; unchanged earlier pages retain prior review.",
+      "only_paper_change": "AI assistance paragraph: GPT-6 Astra primary, Claude additional",
+      "all_other_source_text_unchanged": true,
+      "bibliography_entries": 19
     }
   },
   "current_upstream_build_and_lint": {

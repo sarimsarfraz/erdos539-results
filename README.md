@@ -33,7 +33,7 @@ The unrestricted proof uses elementary extraction. Its 38-module local import cl
 
 ## Read the paper and proofs
 
-- [Paper PDF — 16 pages](paper/main.pdf)
+- [Paper PDF — 17 pages](paper/main.pdf)
 - [Manuscript source](paper/main.tex)
 - [Paper-to-theorem correspondence](docs/PAPER_THEOREMS.md)
 - [Release verification and scope](docs/RELEASE_AUDIT.md)
@@ -97,7 +97,7 @@ Use [CITATION.cff](CITATION.cff) for software attribution. The paper and softwar
 
 The work builds on mathematical and formal contributions by Granville and Roesler, Holzman, Lev and Pinchasi, Schmitt and collaborators, Pham, Kitamura, Mathlib contributors, and the PFR project. Source adaptations and retained licenses are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-OpenAI Codex (GPT-6) and Anthropic Claude assisted the research, Lean development, and exposition. The authors are responsible for the mathematical claims and presentation. Formal checking establishes the encoded propositions; it does not establish novelty or replace independent review of the exposition.
+OpenAI GPT-6 Astra, used through Codex, was the primary AI tool for the research, Lean development, and exposition; Anthropic Claude provided additional assistance. The authors are responsible for the mathematical claims and presentation. Formal checking establishes the encoded propositions; it does not establish novelty or replace independent review of the exposition.
 
 ## License
 
