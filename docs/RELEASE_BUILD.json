@@ -144,10 +144,10 @@
   },
   "paper": {
     "path": "paper/main.tex",
-    "sha256": "3498b0dfb8f2dc14e2f53848d54042a72728a8fe1ea8c37e2721d365189da379",
+    "sha256": "4e569004dfc4012093c3feb8f7a61fcda4a52d90134c7914a09b1c71546d2afb",
     "built_in_compilation": "passed",
-    "pdf_export_and_visual_review": "passed: same built-in-compiled source; all 17 pages checked in contact sheets and revised pages inspected at reading size",
-    "pdf_sha256": "2bd17018d087483fa91bdd362bc094678b39b82834c34375c3906c3b2848bf85",
+    "pdf_export_and_visual_review": "passed: editor compilation and two export passes; revised bibliography and final contacts inspected at reading size; earlier full-document visual audit retained",
+    "pdf_sha256": "b89c329c21afc719a1dd5120c345a54cb6e2ac1fda54c2a6ecadd111bd31b77e",
     "authors": [
       "Sarim Sarfraz",
       "Wali Ahmed"
@@ -156,22 +156,25 @@
     "pages": 17,
     "editorial_revision": {
       "date": "2026-10-19",
-      "changes": "approved title, prior-work comparison, citations and prime-support wording",
+      "changes": "verified bibliography; Freiman-Lev planar attribution; direct 2009 announcement, Erdos-Szekeres, Lean and mathlib citations; Wali contact and location; fresh catalogue snapshot",
       "math_environments_unchanged": true,
+      "proof_text_unchanged_except_ES35_citation": true,
       "overfull_boxes": 0,
-      "undefined_references": 0
+      "undefined_references": 0,
+      "bibliography_entries": 19,
+      "every_entry_cited": true
     }
   },
   "current_upstream_build_and_lint": {
-    "status": "passed both individual PR builds, combined build and supporting API axiom checks",
-    "baseline": "23b33b971dec670ba859e5d3c7b000d7d77a0871",
+    "status": "passed refreshed independent PR builds, combined build, ten API axiom checks, both exact external bridges, generated index and copyright check",
+    "baseline": "572bd287122d356ed18b67315541ba087b3086aa",
     "toolchain": "leanprover/lean4:v4.33.1",
     "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
     "exit_code": 0,
     "lean_memory_limit_mb": 4096,
     "lean_compiler_processes_at_once": 1,
-    "max_lean_rss_bytes": 3010396160,
-    "checked_at_utc": "2026-10-19T19:12:36.767690+00:00",
+    "max_lean_rss_bytes": 3032334336,
+    "checked_at_utc": "2026-10-19T19:38:19.727444+00:00",
     "pr1_problem_sha256": "cfab3b0602e3d853607265160eb6a6892b50394b703654c0599b2f6bcc2ba7d2",
     "pr2_files": {
       "FormalConjectures/ErdosProblems/539.lean": "f69c1fa0547dbf819e557ac2d3abdd6eb91c536a41dd3de70ba012feea5fc0d9",

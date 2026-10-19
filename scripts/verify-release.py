@@ -71,8 +71,8 @@ def verify():
     for field, path in [('sha256', 'paper/main.tex'), ('pdf_sha256', 'paper/main.pdf')]:
         require(build['paper'][field] == digest(ROOT / path), f'Paper provenance mismatch: {path}')
     require(r'\author{Sarim Sarfraz}' in paper and r'\author{Wali Ahmed}' in paper, 'Paper authors missing')
-    require(r'\author{Wali Ahmed}' + '\n' + r'\address{Columbia University}' in paper,
-            'Wali Ahmed affiliation mismatch')
+    require(r'\author{Wali Ahmed}' + '\n' + r'\address{Columbia University, New York, New York, USA}' + '\n' + r'\email{wa2294@columbia.edu}' in paper,
+            'Wali Ahmed affiliation or email mismatch')
     require((ROOT / 'paper/main.pdf').read_bytes().startswith(b'%PDF-'), 'Invalid paper PDF header')
     for path in (ROOT / 'scripts').glob('*.py'):
         ast.parse(path.read_text(), filename=str(path))

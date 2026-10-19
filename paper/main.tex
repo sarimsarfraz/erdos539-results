@@ -33,7 +33,8 @@
 \address{University of Toronto, Toronto, Ontario, Canada}
 \email{sarim.sarfraz@mail.utoronto.ca}
 \author{Wali Ahmed}
-\address{Columbia University}
+\address{Columbia University, New York, New York, USA}
+\email{wa2294@columbia.edu}
 \subjclass[2020]{11B30, 11B75, 05D99}
 \keywords{Erd\H{o}s problems, gcd quotients, positive orthant, additive combinatorics, difference sets, formal verification}
 \date{19 October 2026}
@@ -56,7 +57,7 @@ For a finite set $A\subset\N_{>0}$ write
 Q(A)=\left\{\frac{a}{\gcd(a,b)}:a,b\in A\right\},
 \qquad h(n)=\min_{|A|=n}|Q(A)|.
 \]
-Erd\H{o}s asked for the order of magnitude of $h(n)$ \cite{Er73,EP539}. Prime valuations turn this arithmetic question into a problem about coordinatewise positive differences. For $x\in\R^d$ put $x^+=(\max(x_1,0),\ldots,\max(x_d,0))$, and define
+Erd\H{o}s asked for the order of magnitude of $h(n)$ \cite[Section~5, p.~125]{Er73}; see also \cite{EP539}. Prime valuations turn this arithmetic question into a problem about coordinatewise positive differences. For $x\in\R^d$ put $x^+=(\max(x_1,0),\ldots,\max(x_d,0))$, and define
 \[
 \Dp(F)=(F-F)^+,\qquad
 M(F)=\max_{a\in F}|(F-a)^+|.
@@ -70,7 +71,7 @@ h_d(n)=\min_{\substack{F\subset\Z^d\\|F|=n}}|\Dp(F)|,
 The geometric lower bounds below hold for real point sets as well.
 
 \subsection*{Context}
-The classical bounds are $\sqrt n\ll h(n)\ll n^{2/3}$; Granville and Roesler give proofs and the geometric formulation \cite{GR99}. In fixed dimension, they obtained the sharp planar exponent $2/3$. Holzman, Lev and Pinchasi \cite{HLP08} proved
+The classical bounds are $\sqrt n\ll h(n)\ll n^{2/3}$; Granville and Roesler give proofs and the geometric formulation \cite{GR99}. The sharp planar lower bound is due to Granville and Roesler; the matching construction is due to Freiman and Lev, as reported in \cite{GR99}. Holzman, Lev and Pinchasi \cite{HLP08} proved
 \[
 h_3(n)\ge\tfrac16n^{3/5},\qquad
 h_4(n)\gg n^{6/11}(\log n)^{-2/11}.
@@ -83,7 +84,7 @@ and hence $h(n)=n^{1/2+o(1)}$. Their construction gives upper exponents $2/3,4/7
 
 Pham's unrefereed manuscript \cite{Ph26} claims the lower bound $\sqrt n\exp(c(\log n)^{1/3})$, using a dimension-dependent estimate and weak polynomial Freiman--Ruzsa theory \cite{GGMT}; its main theorem is not yet formalized in the accompanying Lean project. Our unrestricted lower bound has the stronger gain $\exp(c\sqrt{\log n/\log\log n})$. Kitamura's separate Lean developments \cite{Ki26,KiExp26} verify the logarithmic exponent $1/2$ and the divergence $h(n)/\sqrt n\to\infty$, with the appropriate comparison to the zero-inclusive Formal Conjectures definition. These conclusions do not determine the order of $h(n)$.
 
-Schmitt et al.\ \cite[Appendix A, ``Relation to prior announcements'']{PC26} document earlier unpublished joint work of Bollob\'as and Leader announcing an improvement to the $n^{2/3}$ upper bound; see also Leader's 2012 seminar abstract \cite{Le12}. We know of no written account specifying its bound and make no priority claim over the unknown contents of that work. Our claims concern the quantitative lower bound and the sharp fixed-dimensional orders stated below, relative to the public results cited here.
+Schmitt et al.\ \cite[Appendix A, ``Relation to prior announcements'']{PC26} document earlier unpublished joint work of Bollob\'as and Leader announcing an improvement to the $n^{2/3}$ upper bound; see also Leader's 2009 and 2012 seminar abstracts \cite{Le09,Le12}. We know of no written account specifying its bound and make no priority claim over the unknown contents of that work. Our claims concern the quantitative lower bound and the sharp fixed-dimensional orders stated below, relative to the public results cited here.
 
 \subsection*{Main results}
 Our first result improves the quantitative lower bound.
@@ -272,7 +273,7 @@ For $d\ge1$, every nonempty finite $S\subset\R^d$ has $a,b\in S$, possibly equal
 \]
 \end{lemma}
 \begin{proof}
-The selection principle is classical; see \cite[Section 7]{ABKKW}. For an explicit constant put $r=2^{2^{d-1}}$. Iterated Erd\H{o}s--Szekeres, sorting the first coordinate and taking successive monotone subsequences in the others, puts one of every $r+1$ points between two others. Coordinate ties may be ranked consistently; monotone ranks imply weak monotonicity of the original values.
+The selection principle is classical; see \cite[Section 7]{ABKKW}. For an explicit constant put $r=2^{2^{d-1}}$. Iterated Erd\H{o}s--Szekeres \cite{ES35}, sorting the first coordinate and taking successive monotone subsequences in the others, puts one of every $r+1$ points between two others. Coordinate ties may be ranked consistently; monotone ranks imply weak monotonicity of the original values.
 
 The hypergraph of such triples has independence number at most $r$. If $N=|S|\ge2r$, retain vertices independently with probability $p=2r/N$ and delete at most one vertex for each surviving edge. If there are $e$ edges, this gives $r\ge Np-ep^3$, hence $e\ge N^3/(8r^2)$. Assign each triple to a witnessing pair of corners. Some pair has at least $e/\binom N2\ge N/(4r^2)$ distinct middle points in its box. If $N<2r$, a singleton suffices. Finally $4r^2=2^{2^d+2}$.
 \end{proof}
@@ -614,7 +615,7 @@ The accompanying Lean development proves weighted pruning with one actual anchor
 The completed-core approach incorporates the additional freedom of replacing points without enlarging the palette. Later exact finite checks and constructions test this approach, but do not close its universal covering step. Neither those computations nor further formalization of the proved lemmas supplies the missing geometric theorem.
 
 \section{Formal verification and reproducibility}\label{sec:formal}
-The main results have an accompanying Lean 4 development \cite{Lean539}, using Lean \texttt{v4.29.0-rc8} and Mathlib revision \texttt{698d2b68b870}. The completed release audit covers 844 local and vendored modules and 12,917 project declarations. These counts include definitions and generated declarations; they are not counts of mathematical theorems. The transitive axiom audit permits only \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+The main results have an accompanying formalization \cite{Lean539} in Lean 4 \cite{Lean4} with mathlib \cite{Mathlib}, using Lean \texttt{v4.29.0-rc8} and Mathlib revision \texttt{698d2b68b870}. The completed release audit covers 844 local and vendored modules and 12,917 project declarations. These counts include definitions and generated declarations; they are not counts of mathematical theorems. The transitive axiom audit permits only \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
 
 The canonical import closure was rebuilt from source in an isolated extraction, reusing the pinned external dependency cache but no old project artifacts. Generated finite certificates were partitioned into smaller kernel-checked computations to bound memory, without changing their public theorem statements. Later five-mask drafts and preserved upstream reference copies are outside this verification claim.
 
@@ -706,7 +707,7 @@ For $\Dp$ argue identically with $q=|\Dp(F)|$: the block projections of $E$ have
 \section*{AI assistance}
 OpenAI Codex (GPT-6) and Anthropic Claude were used extensively for proof development, Lean formalization, computational checks, and drafting and revising the paper. The authors take responsibility for the mathematical claims and exposition.
 
-\begin{thebibliography}{GGMT25}
+\begin{thebibliography}{Mathlib20}
 
 \bibitem[ABKKW]{ABKKW}
 N.~Alon, G.~Brightwell, H.~A.~Kierstead, A.~V.~Kostochka and P.~Winkler, \emph{Dominating sets in $k$-majority tournaments}, J. Combin. Theory Ser. B \textbf{96} (2006), no.~3, 374--387; see Section~7.
@@ -716,6 +717,9 @@ P.~Erd\H{o}s, \emph{Problems and results on combinatorial number theory}, in: A 
 
 \bibitem[EP]{EP539}
 T.~F.~Bloom, \emph{Erd\H{o}s Problem \#539}, \url{https://www.erdosproblems.com/539}, accessed 19 October 2026.
+
+\bibitem[ES35]{ES35}
+P.~Erd\H{o}s and G.~Szekeres, \emph{\href{https://numdam.org/item/CM_1935__2__463_0/}{A combinatorial problem in geometry}}, Compositio Math. \textbf{2} (1935), 463--470.
 
 \bibitem[GGMT25]{GGMT}
 W.~T.~Gowers, B.~Green, F.~Manners and T.~Tao, \emph{On a conjecture of Marton}, Ann. of Math. (2) \textbf{201} (2025), no.~2, 515--549.
@@ -729,8 +733,17 @@ R.~Holzman, V.~F.~Lev and R.~Pinchasi, \emph{Projecting difference sets on the p
 \bibitem[Ki26]{Ki26}
 K.~Kitamura, \emph{A Lean disproof of the square-root variants in Erd\H{o}s Problem 539}, 2026, \url{https://github.com/KitaKen1/erdos-539-sqrt-disproof}, commit \texttt{78e0a02a4623}, accessed 19 October 2026.
 
+\bibitem[Le09]{Le09}
+I.~Leader, \emph{Positive projections}, DIMAP Seminar abstract, University of Warwick, 23 June 2009; joint work with B.~Bollob\'as, \url{https://warwick.ac.uk/fac/cross_fac/dimap/seminars/}.
+
 \bibitem[Le12]{Le12}
 I.~Leader, \emph{Positive projections}, Combinatorial Theory Seminar abstract, University of Oxford, 7 February 2012; joint work with B.~Bollob\'as, \url{https://www.maths.ox.ac.uk/node/9547}.
+
+\bibitem[MU21]{Lean4}
+L.~de Moura and S.~Ullrich, \emph{\href{https://doi.org/10.1007/978-3-030-79876-5_37}{The Lean 4 theorem prover and programming language}}, Automated Deduction---CADE 28, Lecture Notes in Comput. Sci. \textbf{12699}, Springer, 2021, 625--635.
+
+\bibitem[Mathlib20]{Mathlib}
+The mathlib Community, \emph{\href{https://doi.org/10.1145/3372885.3373824}{The Lean mathematical library}}, Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020), ACM, 2020.
 
 \bibitem[Ph26]{Ph26}
 S.~Pham, \emph{A stretched-exponential lower bound for Erd\H{o}s Problem 539}, unrefereed manuscript, 9 August 2026, \url{https://github.com/sonpham-org/erdos-539-lower-bound}, commit \texttt{4e7dfc612e9f}, accessed 19 October 2026.
@@ -745,7 +758,7 @@ J.~Schmitt, T.~Gehrunger, J.~Dekoninck, G.~B\'erczi, U.~Kreitner, L.~Price and D
 I.~Z.~Ruzsa, \emph{An application of graph theory to additive number theory}, Scientia Ser. A Math. Sci. \textbf{3} (1989), 97--109.
 
 \bibitem[FC26]{FC539}
-Google DeepMind and contributors, \emph{Formal Conjectures: Erd\H{o}s Problem 539}, repository snapshot checked on 19 October 2026, \url{https://github.com/google-deepmind/formal-conjectures/blob/23b33b971dec670ba859e5d3c7b000d7d77a0871/FormalConjectures/ErdosProblems/539.lean}.
+Google DeepMind and contributors, \emph{Formal Conjectures: Erd\H{o}s Problem 539}, repository snapshot checked on 19 October 2026, \url{https://github.com/google-deepmind/formal-conjectures/blob/572bd287122d356ed18b67315541ba087b3086aa/FormalConjectures/ErdosProblems/539.lean}.
 
 \bibitem[KiExp26]{KiExp26}
 K.~Kitamura, \emph{Lean proofs of the exponent variants of Erd\H{o}s Problem 539}, 2026, \url{https://github.com/KitaKen1/erdos-539-formal-conjectures}, commit \texttt{49af95ccd2ab}, accessed 19 October 2026.
