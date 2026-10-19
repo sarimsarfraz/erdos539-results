@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite the software and accompanying paper."
+title: "Gcd quotients and positive differences: Lean formalization"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Sarfraz
+    given-names: Sarim
+    affiliation: University of Toronto
+license: Apache-2.0
+keywords:
+  - Lean 4
+  - formal verification
+  - Erdos problem 539
+  - additive combinatorics
+  - gcd quotients
+abstract: >-
+  Formal proofs of an improved unrestricted lower bound for the gcd quotient-set
+  minimum and sharp orders for every fixed prime support. The full unrestricted
+  order remains open. This metadata describes the private release candidate;
+  publication identifiers and release date are added only at publication.
+repository-code: "https://github.com/sarimsarfraz/erdos539-results"
+preferred-citation:
+  type: unpublished
+  title: "Gcd quotients and positive differences: sharp bounds in fixed dimension"
+  authors:
+    - family-names: Sarfraz
+      given-names: Sarim
+      affiliation: University of Toronto
+    - family-names: Ahmed
+      given-names: Wali
+      affiliation: Columbia University
+  year: 2026

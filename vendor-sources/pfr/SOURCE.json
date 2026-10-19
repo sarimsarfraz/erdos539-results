@@ -1,0 +1,203 @@
+{
+  "repository": "teorth/pfr",
+  "commit": "346ef5b0609538f3fb49dc36c8adc52a0b2db4bb",
+  "scope": "Only the transitive PFR.WeakPFR source closure; no upstream Lake project",
+  "files": [
+    {
+      "path": "PFR/Endgame.lean",
+      "upstream_sha256": "50c7ae502af396795971c329f180424a138bed0eb7f52427de253e3841ae83d9"
+    },
+    {
+      "path": "PFR/EntropyPFR.lean",
+      "upstream_sha256": "300f8336c4f32f19113d49663315a8f59730248cf9b2aebead4a572a6120eef7"
+    },
+    {
+      "path": "PFR/Fibring.lean",
+      "upstream_sha256": "cb890f69773f78e4438274bee8943343eb5a5fd8ad245000bb5c1d67281c1f4f"
+    },
+    {
+      "path": "PFR/FirstEstimate.lean",
+      "upstream_sha256": "609cb5ad7dba010aeb1f04af85d5dc9d6044ddb7ab587cf7e60dad736ca281e6"
+    },
+    {
+      "path": "PFR/ForMathlib/AffineSpaceDim.lean",
+      "upstream_sha256": "e6e2bfe527f0126317bfa94e97d9b30db2bb0c69a97f05d57886647799cc902b"
+    },
+    {
+      "path": "PFR/ForMathlib/ConditionalIndependence.lean",
+      "upstream_sha256": "46bec712d5122750e376d8b8ab5b65e89fa8fcdc4e729a47829dd3666c6b5928"
+    },
+    {
+      "path": "PFR/ForMathlib/Entropy/Basic.lean",
+      "upstream_sha256": "2a64a1adf39c1e4235c3cef7fa744876d36ae94e2c120582afb9c771f8fc95db"
+    },
+    {
+      "path": "PFR/ForMathlib/Entropy/Group.lean",
+      "upstream_sha256": "6cd88995eda9d7735fc2e557de78c302f1e4e74baef897cc6ead595b558b5ac1"
+    },
+    {
+      "path": "PFR/ForMathlib/Entropy/Kernel/Basic.lean",
+      "upstream_sha256": "ee477093bd6f2069a83fe7dd4c34de656d57d38660acd43963456a6da78dbfe3"
+    },
+    {
+      "path": "PFR/ForMathlib/Entropy/Kernel/Group.lean",
+      "upstream_sha256": "9883ee460bc2aa2af569f79f984d83b6d9cfef44d7178c510bd9e9257c3fa6fd"
+    },
+    {
+      "path": "PFR/ForMathlib/Entropy/Kernel/MutualInfo.lean",
+      "upstream_sha256": "f0c68e3e0e6296ef805e2ff9b3b5a46ed13f722e16b4ba8aba797e2061aa5392"
+    },
+    {
+      "path": "PFR/ForMathlib/Entropy/Kernel/RuzsaDist.lean",
+      "upstream_sha256": "4f4d649415aaba6ae10e2f3e9abfcad102697b2299bca2f59cb7553059bc8e58"
+    },
+    {
+      "path": "PFR/ForMathlib/Entropy/Measure.lean",
+      "upstream_sha256": "9c9eafd792b24c4482bb692ebf67e5d04526b2233e1ffa430ad6f83fa45463cc"
+    },
+    {
+      "path": "PFR/ForMathlib/Entropy/RuzsaDist.lean",
+      "upstream_sha256": "c942fe45674904bffb178111493b0e15b28975ebc19761647fc01fd221be6f49"
+    },
+    {
+      "path": "PFR/ForMathlib/Entropy/RuzsaSetDist.lean",
+      "upstream_sha256": "936a3a1b91c883d97f868ac5881ea7617e7baa51e0635dfd240a0c17b999c30e"
+    },
+    {
+      "path": "PFR/ForMathlib/FiniteRange/ConditionalProbability.lean",
+      "upstream_sha256": "877b4196e7b0b686bf69304a9a82d61db75e2170b1154d81277afb5fca669fa3"
+    },
+    {
+      "path": "PFR/ForMathlib/FiniteRange/Defs.lean",
+      "upstream_sha256": "0da3b96e44df7373b87c1de814cf0fdee1dd614236271b5b62a00f5132a815f0"
+    },
+    {
+      "path": "PFR/ForMathlib/FiniteRange/IdentDistrib.lean",
+      "upstream_sha256": "b13fee11a923f2e3a3a4c52a7be0bb6e592dcb90b75c9f3be8e8eccca122bca5"
+    },
+    {
+      "path": "PFR/ForMathlib/FourVariables.lean",
+      "upstream_sha256": "2935014c348699e1d49505954c530e5c5112ee7841c92adaaadb22456ab197ba"
+    },
+    {
+      "path": "PFR/ForMathlib/Pair.lean",
+      "upstream_sha256": "33c2546b8980dba23557144554e519d5825dbaaa964259b0a5ff7f52fb2e31bc"
+    },
+    {
+      "path": "PFR/ForMathlib/Uniform.lean",
+      "upstream_sha256": "e7385c9b6cec8577964daa844c398e1a0f8498df0747e2f14fe9909c80337541"
+    },
+    {
+      "path": "PFR/HundredPercent.lean",
+      "upstream_sha256": "67b69f39149f349ea39a7510da38bdf69187616fa218e286eb4495fe87bea393"
+    },
+    {
+      "path": "PFR/ImprovedPFR.lean",
+      "upstream_sha256": "765a416ef0962747df7966017b6cd28b4ef33f3aef50026b4cae08408c01d300"
+    },
+    {
+      "path": "PFR/Main.lean",
+      "upstream_sha256": "7a9102fc871254c0f04f6402d8236f0fd37ccf389d401e44679f10c4954a4e99"
+    },
+    {
+      "path": "PFR/Mathlib/Algebra/Group/Action/Pointwise/Set/Basic.lean",
+      "upstream_sha256": "498e2a9d6ea597bfd367e93c88b28ab317b0a7dc00222eb50ae7b49aab4e0b71"
+    },
+    {
+      "path": "PFR/Mathlib/Data/Set/Basic.lean",
+      "upstream_sha256": "d097a19e5b6ab0372d2528ca13cd857890746595f0a3dae218a570d2c01a541d"
+    },
+    {
+      "path": "PFR/Mathlib/Data/Set/Card.lean",
+      "upstream_sha256": "6400d8bd23c49feb6fa70a20115f93d57ec2e44067d9bc1e0a0d6166d7bae234"
+    },
+    {
+      "path": "PFR/Mathlib/Data/Set/Insert.lean",
+      "upstream_sha256": "046509a4e650658ce57d58353b8d29d6dd9df6f2db336dfbf84bc03f29ec9a0c"
+    },
+    {
+      "path": "PFR/Mathlib/LinearAlgebra/Dimension/Finrank.lean",
+      "upstream_sha256": "a60ee786bd8988e59b5613964ff6f16d28b7987e3426359b18f9f8ece224006a"
+    },
+    {
+      "path": "PFR/Mathlib/LinearAlgebra/Dimension/FreeAndStrongRankCondition.lean",
+      "upstream_sha256": "fca1e8c71d297316b2285c65b36e24c896c7122a111cd9e1923b1162daafed72"
+    },
+    {
+      "path": "PFR/Mathlib/LinearAlgebra/Quotient/Basic.lean",
+      "upstream_sha256": "e4498447957ffb8a2e25b1abfb0e28d21449703bb961182c52070d298f76ab85"
+    },
+    {
+      "path": "PFR/Mathlib/MeasureTheory/Constructions/Pi.lean",
+      "upstream_sha256": "e3cc6a8198d8de2b0aad1e14583f7d265ed6e8e18d97c4b90ad2a6d69ee2668b"
+    },
+    {
+      "path": "PFR/Mathlib/MeasureTheory/Integral/Lebesgue/Basic.lean",
+      "upstream_sha256": "e38455b6a12e5698b406cdd88e19ac805855de48992529503e45833204d53ffc"
+    },
+    {
+      "path": "PFR/Mathlib/MeasureTheory/Integral/Lebesgue/Countable.lean",
+      "upstream_sha256": "3bc545e895a4493327aeccb1eb3d990b13cccd21b4d210af470a5fca41b1d817"
+    },
+    {
+      "path": "PFR/Mathlib/MeasureTheory/Measure/Dirac.lean",
+      "upstream_sha256": "9e687bede275f2a4006a98c9f90851faa286364a85bacc718adfc91def5714e8"
+    },
+    {
+      "path": "PFR/Mathlib/MeasureTheory/Measure/ProbabilityMeasure.lean",
+      "upstream_sha256": "e33083db48f22616d2bfb6e19db152f4019bccc6a7b5002dfd45e2cf67289e44"
+    },
+    {
+      "path": "PFR/Mathlib/MeasureTheory/Measure/Prod.lean",
+      "upstream_sha256": "0d1b6fa2ae60f0d470827b3e12eed114806469b274b2a0cc6d8bd9cd42239bce"
+    },
+    {
+      "path": "PFR/Mathlib/MeasureTheory/Measure/Real.lean",
+      "upstream_sha256": "f9dd720a476f7ac710061f1a4080a3ece9bee66cdfb7f88ccdda75074b6c2aac"
+    },
+    {
+      "path": "PFR/Mathlib/Probability/ConditionalProbability.lean",
+      "upstream_sha256": "8df1659678d67c036ec50a3b103cc5ec3f6062012c9f5b41018d7cf37039a64f"
+    },
+    {
+      "path": "PFR/Mathlib/Probability/IdentDistrib.lean",
+      "upstream_sha256": "19de45a933e0ba0759b6472d162c4cbd2a0a4d767967f5c8dfaf9e5f9e6cb2c0"
+    },
+    {
+      "path": "PFR/Mathlib/Probability/Independence/Basic.lean",
+      "upstream_sha256": "639a63d6852f277e12fe5c1e83821b323d6f66154c91f60ffa16701d6c634bf9"
+    },
+    {
+      "path": "PFR/Mathlib/Probability/Independence/Kernel/IndepFun.lean",
+      "upstream_sha256": "16fe6eb41defae2951c1056222e0a93f9d787ea928fb518bd1380c4a8f82c941"
+    },
+    {
+      "path": "PFR/Mathlib/Probability/Kernel/Composition/Comp.lean",
+      "upstream_sha256": "357dac5eb4b2797db8464e513b64cc2173acc6fa6834f9c3ee5bd97f03b647ae"
+    },
+    {
+      "path": "PFR/Mathlib/Probability/Kernel/Disintegration.lean",
+      "upstream_sha256": "0d16215b93b8ff428a5b41feb5296030f276ce7870c5ff9239f28184c7812399"
+    },
+    {
+      "path": "PFR/Mathlib/Probability/UniformOn.lean",
+      "upstream_sha256": "59030161177c08566b53a31fa0f057e40ba0dbe9d1dff37f794d26c0fd8ff8f2"
+    },
+    {
+      "path": "PFR/SecondEstimate.lean",
+      "upstream_sha256": "e4320ee1db9ef48112eee2b2f38540e1c482f93c37724990059718b179cdea42"
+    },
+    {
+      "path": "PFR/Tactic/RPowSimp.lean",
+      "upstream_sha256": "5c335a4cb8cfe514d9622bb253dedcd6852616ab0584551a2bcd7339908dc617"
+    },
+    {
+      "path": "PFR/TauFunctional.lean",
+      "upstream_sha256": "6a35d3089697f063a0ad44dfc4c164044e7268a1280be2c4f66136f1f36bd614"
+    },
+    {
+      "path": "PFR/WeakPFR.lean",
+      "upstream_sha256": "c2ed9c880ae6cce9c94523009528fc26b0d145460e8a64c3926101ce9302bfc5"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+.lake/
+.cache/
+*.olean
+*.ilean
+*.trace
+.DS_Store
+build-logs/
+
+__pycache__/
+*.pyc
+verification.lock

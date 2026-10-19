@@ -1,0 +1,34 @@
+{
+  "repository": "KitaKen1/erdos-539-sqrt-disproof",
+  "commit": "78e0a02a462321e110c182b58e48dbbb8280ad4b",
+  "files": [
+    {
+      "upstream_path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "upstream_path": "README.md",
+      "sha256": "bf7211bb95dcec1f4cb0168f92d770f6ae04bbc765880285461c2f7d251a672e"
+    },
+    {
+      "upstream_path": "lean/Erdos539PositiveDiff.lean",
+      "sha256": "6aad6a8ecd3431837d094607a9d09ed1a557eb78775db5329498544b81c8c641"
+    },
+    {
+      "upstream_path": "lean/Erdos539Factorization.lean",
+      "sha256": "62184449a7735d55239d07fcc373f1fdec7a7a8dc450b3222cac14b07ebc41d1"
+    },
+    {
+      "upstream_path": "lean/Erdos539Dimension.lean",
+      "sha256": "ecfb5a0b3c709972e56f0def9334b72d86f042af94de59b795619e684a3cc464"
+    },
+    {
+      "upstream_path": "lean/Erdos539Unconditional.lean",
+      "sha256": "11ddb7186565f8892f67f5b79b25f6d5a8a3973458a4f1223c5b15b6d15e50f5"
+    },
+    {
+      "upstream_path": "lean/Erdos539Asymptotic.lean",
+      "sha256": "6994fdb52f85e9971c4149fdf5319e54db21a5c1d0954a0943d2bdbc30cbcc82"
+    }
+  ]
+}

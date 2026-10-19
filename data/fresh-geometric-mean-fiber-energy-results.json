@@ -1,0 +1,193 @@
+{
+  "status": "passed",
+  "scope": "Exact finite checks of fiber energy retention and an unrestricted cut obstruction; no main asymptotic or normalized-class counterexample.",
+  "counts": {
+    "actual_fiber_energy_counts": 445,
+    "conditional_laws_certified_nonmaximizing": 10,
+    "exact_branch_palette_formulas": 4,
+    "exact_dimension_weighted_cut_masks": 8190,
+    "exact_logarithmic_equalities": 38,
+    "exact_maximizing_parent_projection_models": 78,
+    "exact_three_coordinate_branch_projections": 8,
+    "nonmaximizer_counterexample_parameters": 100,
+    "projected_quadruple_stationarity_checks": 312,
+    "signed_digit_differences_enumerated": 903856,
+    "strict_rational_logarithm_certificates": 196
+  },
+  "dimension_weighted_cut_certificate": {
+    "minimum_gap": "5400/4226183",
+    "mask": 126,
+    "p": 6,
+    "WU": 48,
+    "WV": 56,
+    "v_1_through_13": [
+      "2/3",
+      "4/7",
+      "26/47",
+      "8/15",
+      "370/699",
+      "116/221",
+      "766/1471",
+      "16/31",
+      "1238/2403",
+      "3508/6823",
+      "23258/45323",
+      "488/953",
+      "22654/44323"
+    ],
+    "projective_points": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        2
+      ]
+    ],
+    "ordered_lines": [
+      [
+        1,
+        4,
+        7,
+        10
+      ],
+      [
+        0,
+        4,
+        5,
+        6
+      ],
+      [
+        3,
+        4,
+        9,
+        11
+      ],
+      [
+        2,
+        4,
+        8,
+        12
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        6,
+        9,
+        12
+      ],
+      [
+        1,
+        5,
+        8,
+        11
+      ],
+      [
+        0,
+        10,
+        11,
+        12
+      ],
+      [
+        3,
+        6,
+        8,
+        10
+      ],
+      [
+        2,
+        5,
+        9,
+        10
+      ],
+      [
+        0,
+        7,
+        8,
+        9
+      ],
+      [
+        2,
+        6,
+        7,
+        11
+      ],
+      [
+        3,
+        5,
+        7,
+        12
+      ]
+    ]
+  },
+  "sha256": {
+    "fresh-geometric-mean-fiber-energy-20261011.md": "8a620dbe271d82188fd75968ef31ebefd95104876b10827ec64df2d8ba3e88c2",
+    "fresh-geometric-mean-fiber-energy-check.py": "d82c182e7f723c7b5b67410dd33043baad54e677d79323f464e624dbbce7e55a",
+    "fresh-stationary-energy-fibring-20261011.md": "0aa0a0a170babe2450f2719e73df43c6eab1fcbb876d3f6128b17cf62b192dd2",
+    "fresh-unretained-fan-entropy-cut-obstruction-20261010.md": "0da42fa24202c7bb5be52a8d9950e44a5fa84558b2427683a35f4f584c41f5d0",
+    "fresh-unretained-fan-entropy-cut-check.py": "098f378c4595a0424a287dd562caaa12b0cf1bcac0be479515a46dcc8b948adc"
+  }
+}

@@ -1,0 +1,5117 @@
+{
+  "checked_at_utc": "2026-10-19T17:29:54.821688+00:00",
+  "toolchain": "leanprover/lean4:v4.29.0-rc8",
+  "manifest_sha256": "984a38a502d090f953f1ebafab10a40791b25dd3f98e0a3ef202ef4f57585fa5",
+  "method": "Serial lake env lean -j1 -DElab.async=false; Mathlib loaded from compiled cache",
+  "lean_memory_limit_mb": 4096,
+  "elementary_lower_bound_boundary": {
+    "root": "Erdos539.SuperSqrt",
+    "status": "no PFR imports in transitive local dependency closure",
+    "modules": [
+      "Erdos539.AggregatePruning",
+      "Erdos539.CofactorGrowth",
+      "Erdos539.CoordinateCounting",
+      "Erdos539.CoordinatePartition",
+      "Erdos539.DownsetCells",
+      "Erdos539.DownsetExtraction",
+      "Erdos539.ElementaryDimension",
+      "Erdos539.ElementaryExtraction",
+      "Erdos539.ElementaryIntegerGrowth",
+      "Erdos539.ElementarySumsets",
+      "Erdos539.Factorization",
+      "Erdos539.Fans",
+      "Erdos539.FeasibleProfiles",
+      "Erdos539.Fibers",
+      "Erdos539.GrowthBasics",
+      "Erdos539.GrowthInversion",
+      "Erdos539.InductionEstimates",
+      "Erdos539.Lifting",
+      "Erdos539.LogPruning",
+      "Erdos539.PFRLogEstimate",
+      "Erdos539.PairCounting",
+      "Erdos539.PositiveDiff",
+      "Erdos539.PrefixTreeBasics",
+      "Erdos539.PrefixUniform",
+      "Erdos539.ProfileStack",
+      "Erdos539.ProfileSumsets",
+      "Erdos539.ProjectionBalance",
+      "Erdos539.RealReindex",
+      "Erdos539.Restricted",
+      "Erdos539.RestrictedBase",
+      "Erdos539.ScalarConvolution",
+      "Erdos539.SignMasks",
+      "Erdos539.SuperSqrt",
+      "Erdos539.SupportConvolution",
+      "Erdos539.TensorConvolution",
+      "Erdos539.Threshold",
+      "Erdos539.UniformExponents",
+      "Erdos539.UniformRegularity"
+    ]
+  },
+  "modules": [
+    {
+      "module": "Erdos539.Factorization",
+      "sha256": "b1a1edafd067406203085a753e54c31f492b8c962ad013e16b7cf7a74372ec94",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.Threshold",
+      "sha256": "28fa730513846465ee8fe65748fc32ca36dd0b0bc3fd513ff41fc0bb18d0ff41",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PositiveDiff",
+      "sha256": "b6e9746303aee23b93ad8f456e4396427d9ac0d4c1ae4d4eb88ddad5c11f2e1f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.Fans",
+      "sha256": "3bf974ec6ba92c4eaac6e5b36202b65605d9f6b5f9c25185c1c2b3c0ab279880",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.Fibers",
+      "sha256": "c609d15ec9f9bb8ff23cc6b80dbc53eae140b970007d63e424242947309605ce",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.LinearAlgebra.Dimension.Finrank",
+      "sha256": "a60ee786bd8988e59b5613964ff6f16d28b7987e3426359b18f9f8ece224006a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.AffineSpaceDim",
+      "sha256": "e6e2bfe527f0126317bfa94e97d9b30db2bb0c69a97f05d57886647799cc902b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.MeasureTheory.Constructions.Pi",
+      "sha256": "e3cc6a8198d8de2b0aad1e14583f7d265ed6e8e18d97c4b90ad2a6d69ee2668b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Probability.Independence.Kernel.IndepFun",
+      "sha256": "16fe6eb41defae2951c1056222e0a93f9d787ea928fb518bd1380c4a8f82c941",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Probability.Independence.Basic",
+      "sha256": "639a63d6852f277e12fe5c1e83821b323d6f66154c91f60ffa16701d6c634bf9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Probability.IdentDistrib",
+      "sha256": "19de45a933e0ba0759b6472d162c4cbd2a0a4d767967f5c8dfaf9e5f9e6cb2c0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.FiniteRange.Defs",
+      "sha256": "0da3b96e44df7373b87c1de814cf0fdee1dd614236271b5b62a00f5132a815f0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.FiniteRange.ConditionalProbability",
+      "sha256": "877b4196e7b0b686bf69304a9a82d61db75e2170b1154d81277afb5fca669fa3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Pair",
+      "sha256": "33c2546b8980dba23557144554e519d5825dbaaa964259b0a5ff7f52fb2e31bc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.ConditionalIndependence",
+      "sha256": "46bec712d5122750e376d8b8ab5b65e89fa8fcdc4e729a47829dd3666c6b5928",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.MeasureTheory.Integral.Lebesgue.Basic",
+      "sha256": "e38455b6a12e5698b406cdd88e19ac805855de48992529503e45833204d53ffc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.MeasureTheory.Integral.Lebesgue.Countable",
+      "sha256": "3bc545e895a4493327aeccb1eb3d990b13cccd21b4d210af470a5fca41b1d817",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Probability.Kernel.Disintegration",
+      "sha256": "0d16215b93b8ff428a5b41feb5296030f276ce7870c5ff9239f28184c7812399",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Probability.Kernel.Composition.Comp",
+      "sha256": "357dac5eb4b2797db8464e513b64cc2173acc6fa6834f9c3ee5bd97f03b647ae",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.MeasureTheory.Measure.Dirac",
+      "sha256": "9e687bede275f2a4006a98c9f90851faa286364a85bacc718adfc91def5714e8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.MeasureTheory.Measure.Prod",
+      "sha256": "0d1b6fa2ae60f0d470827b3e12eed114806469b274b2a0cc6d8bd9cd42239bce",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.MeasureTheory.Measure.Real",
+      "sha256": "f9dd720a476f7ac710061f1a4080a3ece9bee66cdfb7f88ccdda75074b6c2aac",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Data.Set.Basic",
+      "sha256": "d097a19e5b6ab0372d2528ca13cd857890746595f0a3dae218a570d2c01a541d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Data.Set.Insert",
+      "sha256": "046509a4e650658ce57d58353b8d29d6dd9df6f2db336dfbf84bc03f29ec9a0c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Data.Set.Card",
+      "sha256": "6400d8bd23c49feb6fa70a20115f93d57ec2e44067d9bc1e0a0d6166d7bae234",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Probability.UniformOn",
+      "sha256": "59030161177c08566b53a31fa0f057e40ba0dbe9d1dff37f794d26c0fd8ff8f2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Entropy.Measure",
+      "sha256": "9c9eafd792b24c4482bb692ebf67e5d04526b2233e1ffa430ad6f83fa45463cc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Entropy.Kernel.Basic",
+      "sha256": "ee477093bd6f2069a83fe7dd4c34de656d57d38660acd43963456a6da78dbfe3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Entropy.Kernel.MutualInfo",
+      "sha256": "f0c68e3e0e6296ef805e2ff9b3b5a46ed13f722e16b4ba8aba797e2061aa5392",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Uniform",
+      "sha256": "e7385c9b6cec8577964daa844c398e1a0f8498df0747e2f14fe9909c80337541",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Probability.ConditionalProbability",
+      "sha256": "8df1659678d67c036ec50a3b103cc5ec3f6062012c9f5b41018d7cf37039a64f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Entropy.Basic",
+      "sha256": "2a64a1adf39c1e4235c3cef7fa744876d36ae94e2c120582afb9c771f8fc95db",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Entropy.Kernel.Group",
+      "sha256": "9883ee460bc2aa2af569f79f984d83b6d9cfef44d7178c510bd9e9257c3fa6fd",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Entropy.Group",
+      "sha256": "6cd88995eda9d7735fc2e557de78c302f1e4e74baef897cc6ead595b558b5ac1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Entropy.Kernel.RuzsaDist",
+      "sha256": "4f4d649415aaba6ae10e2f3e9abfcad102697b2299bca2f59cb7553059bc8e58",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.FiniteRange.IdentDistrib",
+      "sha256": "b13fee11a923f2e3a3a4c52a7be0bb6e592dcb90b75c9f3be8e8eccca122bca5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.MeasureTheory.Measure.ProbabilityMeasure",
+      "sha256": "e33083db48f22616d2bfb6e19db152f4019bccc6a7b5002dfd45e2cf67289e44",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Entropy.RuzsaDist",
+      "sha256": "c942fe45674904bffb178111493b0e15b28975ebc19761647fc01fd221be6f49",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.Entropy.RuzsaSetDist",
+      "sha256": "936a3a1b91c883d97f868ac5881ea7617e7baa51e0635dfd240a0c17b999c30e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.TauFunctional",
+      "sha256": "6a35d3089697f063a0ad44dfc4c164044e7268a1280be2c4f66136f1f36bd614",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.HundredPercent",
+      "sha256": "67b69f39149f349ea39a7510da38bdf69187616fa218e286eb4495fe87bea393",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Fibring",
+      "sha256": "cb890f69773f78e4438274bee8943343eb5a5fd8ad245000bb5c1d67281c1f4f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.FirstEstimate",
+      "sha256": "609cb5ad7dba010aeb1f04af85d5dc9d6044ddb7ab587cf7e60dad736ca281e6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ForMathlib.FourVariables",
+      "sha256": "2935014c348699e1d49505954c530e5c5112ee7841c92adaaadb22456ab197ba",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.SecondEstimate",
+      "sha256": "e4320ee1db9ef48112eee2b2f38540e1c482f93c37724990059718b179cdea42",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Endgame",
+      "sha256": "50c7ae502af396795971c329f180424a138bed0eb7f52427de253e3841ae83d9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.EntropyPFR",
+      "sha256": "300f8336c4f32f19113d49663315a8f59730248cf9b2aebead4a572a6120eef7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Tactic.RPowSimp",
+      "sha256": "5c335a4cb8cfe514d9622bb253dedcd6852616ab0584551a2bcd7339908dc617",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Main",
+      "sha256": "7a9102fc871254c0f04f6402d8236f0fd37ccf389d401e44679f10c4954a4e99",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.ImprovedPFR",
+      "sha256": "765a416ef0962747df7966017b6cd28b4ef33f3aef50026b4cae08408c01d300",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.Algebra.Group.Action.Pointwise.Set.Basic",
+      "sha256": "498e2a9d6ea597bfd367e93c88b28ab317b0a7dc00222eb50ae7b49aab4e0b71",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankCondition",
+      "sha256": "fca1e8c71d297316b2285c65b36e24c896c7122a111cd9e1923b1162daafed72",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.Mathlib.LinearAlgebra.Quotient.Basic",
+      "sha256": "e4498447957ffb8a2e25b1abfb0e28d21449703bb961182c52070d298f76ab85",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "PFR.WeakPFR",
+      "sha256": "f2dce89ebf4668c43cf47e06e131db30338ccc5ecfd57901714c1e272b9a4c79",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PFR",
+      "sha256": "0a0dc0aca82c424c7e4902dd85d3d1f7ba840cffa382d8c5ae1dec3838073793",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.Restricted",
+      "sha256": "9c4e026548339d9ff660ae587ae9ee6831dd67cdc453f9502c5a1c5a2c57bfd9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.Lifting",
+      "sha256": "ea0828e7019bbf8e27f031f6268f611b9d2a7ed0739b57bc634c4506aef1ef36",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PairCounting",
+      "sha256": "0a42e665a544cabd39ebd129fa977fab1d77acfecb725ee5aaf1de8f52e5fda9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignMasks",
+      "sha256": "6a0e80b0d4b1ad28950dcf85ca708c585ecd08aa589b3af1f5ab23ce5f42d7e7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProjectionBalance",
+      "sha256": "f8b67266cc1b461b7db7a67b6987469f1cbd80f7fb2a77bcf28002f9e695824b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RestrictedBase",
+      "sha256": "4e74986d8e8b5a0cf75834bf8b0b48d548991e966c429e1cd6580abd960e80f4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinatePartition",
+      "sha256": "75851d9fc728cca3cf4ad1aaadbffcd1103b249726bf12337677f4d2a2e5d6a5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.AggregatePruning",
+      "sha256": "ab65c9d5e96b6ea524e333b1bfdcbdbb41898e08d6dc2a6af58ba65a1aea8aa6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformExponents",
+      "sha256": "f30b42e42fe9be24aef4b30238c0d717d7a4983a315bb96c6e0a61bd49b7c150",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.InductionEstimates",
+      "sha256": "edcecc6759e6cf58a1252fda50227ec3b75dedbc84e7a11cbdbe00a649a04e5e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LogPruning",
+      "sha256": "a87b88afc13c4914c1e77bdb9e6f7fbba9a4e27377c1b4bfaf95bb4314212ff7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformRegularity",
+      "sha256": "e853184884b9e3a7ce20c9b257919ddc07f68032d60820c7eaf3801261e18ff9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.Dimension",
+      "sha256": "54259f3a7a666561152eb9a5c23de1088b4d6c4eb7329b930478d022de19f69f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GrowthBasics",
+      "sha256": "00ff8bca982c93604d0cb7a6037e45eb572f01e5dd86b27cad9d68efd5f2a314",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PrefixTreeBasics",
+      "sha256": "bcdbd7fb4f6ab282d2ae40eb550879e3c2cab31aaf91fa0c4456fc3e3b9cc085",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ElementarySumsets",
+      "sha256": "fd1d4fed7b717bfef3bf39e8161dd1c8059e1befe08ac3fa86122ca4225ca579",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarConvolution",
+      "sha256": "e17d449861002dc8ca78ae01dd34b19ebc738669d8b35934e6b693e2ed715006",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProfileStack",
+      "sha256": "3134d8df41717b2eb53c874ceff3f01b308d341f916c88218e9dbf9d909ee4d0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FeasibleProfiles",
+      "sha256": "cba7fea7b33552a5dd265eab82c24c88def14d1bf4d683bb6dea1b9eea0c9936",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProfileSumsets",
+      "sha256": "c5e0265cf945e5c07de04d52d93faf3bbd2c890816090ae84f867c5c3477b621",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.DownsetCells",
+      "sha256": "3a735b06b67d45a5b1268beaf9233811517d027879f55e0bcc97ff959b839eb4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.TensorConvolution",
+      "sha256": "57c152ca3bf231a1285ebe2ee0ec56805900cfa7fe585bb4cec6639730ec3235",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SupportConvolution",
+      "sha256": "055668a0931c6d784781d1dc5c7e3bcdf9c044bbecd647b22cdefb63af038aeb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.DownsetExtraction",
+      "sha256": "dae9f7d4c0da531d36f6f1e2d6484ee01240ebeb4822372ad379e64cad55fa12",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PrefixUniform",
+      "sha256": "79dc3679515ad7886f1a37338b0ec546b7abf791afb939f95ec1067681ffa89c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ElementaryExtraction",
+      "sha256": "63a0d678abacab00b1855fac432605c2066874fd2ca1325c60f42a66d2cea63e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RealReindex",
+      "sha256": "eb656f7f6a403fdee0fddd42b83eec6ddd673f4386e03b66483745756bedcc8f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateCounting",
+      "sha256": "3d0aa23bec01be93ab716d7fa5d3c2fccfdde53cfd416397a19d39d2dd98d7cf",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ElementaryDimension",
+      "sha256": "bb5ce9b4d27e62b9c01c5760a533b3e3eb516fe7cc8170b159765b4e661711d7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PFRLogEstimate",
+      "sha256": "1d914a197c81f4e63189cb4c50b103a75d448f6f2b9d372b5484cbfd1e1dff7e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ElementaryIntegerGrowth",
+      "sha256": "5b0900c9348d18ec042cd2915032ff8f1c43ee6db96fc338a54b2908e4c95e23",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CofactorGrowth",
+      "sha256": "d321d724c3d2280eb58b1de9437e22010367d554917261091606c615ce43a86c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GrowthInversion",
+      "sha256": "226288aee76fcdbd5daf9360438d26852e5b45c77bc7e8e30b9a626e1412e15d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SuperSqrt",
+      "sha256": "76a26af4774140c70c45eaa1ca761c33d6623ae77854568a552b2ca64453ea9c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PlanarFans",
+      "sha256": "03805f48c4b65a16d0de3cc19ffc130c734be66710ee40e9334d2556a0c12c88",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SliceBounds",
+      "sha256": "17157681d6b9d2a3ae1bbfaca84fd4590840426189a8ca2e118fe213846a065b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignClasses",
+      "sha256": "2f4d4bf3b05262db976aae995ece8bfc006a500a7e10ca4a02ac020a9dc84bf1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ThreeDimensionalFans",
+      "sha256": "6e44423242b0ba129bb1bc4faf8d881b23727c81d4365ee8f49e5308c847afd2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntegerGeometry",
+      "sha256": "99b692240b62ee246a67a8fdb5249d7258debe44e920324ee480e83d04d69c8f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.Gluing",
+      "sha256": "df14642126338696f93cf7c82b569e5f6c054b17a998f5f55b12b33fe660d4ae",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntervalConstruction",
+      "sha256": "5b2eade34d0c8dfefd545fcafad6133648357f6d77281ef5fa78c85d4f9a184d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntegerReindex",
+      "sha256": "cd95757d20e5ec7bd75b374c7d7981b8c7ab9cca0a5135f9eb9c4ad1f887f8b2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PowerConstruction",
+      "sha256": "30916986d8ffb6bb3b807edcb38b8f8da949e2e0b5fe14f2a61d09eaae4f700d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PowerInterpolation",
+      "sha256": "0ef7fb3c496b2b4a716b606cc5d7438deea4c8f51803a953118bdbdda0fd4982",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FixedDimension",
+      "sha256": "13eec627f613103e9358fad7c81a9d72cf08ffb8aa131c518dc206a153f27fe6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PrimeEncoding",
+      "sha256": "fe663bf6345e8129af67376ce3fae35f40db913efd520e9fe7a1948f44588e18",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntegerToNatural",
+      "sha256": "b63ef751483c5aad756360290955a749304c243c50cb16cc7962c96076fdabf9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PrimeDecoding",
+      "sha256": "4246a687fc2c8582702ca7bc926da21f6ae821612c7ef9163d13eb19fc79325f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PrimeSupportedMinimum",
+      "sha256": "c2bf659cb8e263bd47cfcd3e31eb472ceadf50f9552858cae671d26d10ee7b65",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpExponents",
+      "sha256": "e919af716b9954f18454b7973ec08210cc243960aa2085a47842c4c8144bedb0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpExponentBounds",
+      "sha256": "bfacd3d24874b6f3c8ac0bebc673fc487d8ae43d972bdbcdfc96a893fad6f54a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpExponentValues",
+      "sha256": "85ef02d2ddc58702e41ddbcac82db7f889815d828d9ded5cc4ae2b67ccfc3c85",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GeneralPowerInterpolation",
+      "sha256": "03f462deb049d93088567edf08d71723c277d891f103569f055e63342eac1ba4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PowerFamilies",
+      "sha256": "df6a89d5bc58badf4ff77073447f96f0844a2dfae194c15bf15351d5b85e7eb5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpUpperConstruction",
+      "sha256": "6bff68e013f0b7edcf0bfa111fecb442e3d124339d05b25c5220ffac9a694c02",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpUpper",
+      "sha256": "80a552252e7ffe2822c08b6e7d71365f5ac3ad6ddc181a50dc8993a0ad2a9cc2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignedFans",
+      "sha256": "830d3491e445c5338ed2e75cacffe4be20577a4607edb2eb3fa6ef7c9eaef5e0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignedMonotonicity",
+      "sha256": "fec108a2b61cd591e48074abed1abb88f4dcefb323105995cfb5fd40ef82d0bc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignPartition",
+      "sha256": "c333569f54003e1785fbdc195d5048161a6af9e73570f02cad94f99149efe620",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.BalancedSignPartition",
+      "sha256": "febc013a30c9faea216154d0775ee162debdbfa8d713c90e922b5f3768fa7fd1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SmallDimensionEstimates",
+      "sha256": "0fe50827f2b0540acd841ec8c8e14dbf01888583c59812299cf767f95ae16b54",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignedLifting",
+      "sha256": "0c6249e7edc39511ce8c82c77508f4c7419c2fdb73a65d72b94dba8ceb3f98f8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.TwoSidedPruning",
+      "sha256": "3409260609704b17dd7ebc7433ce5ec1a91d4a1d5d64f4f341abc93a84513f43",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignedReflection",
+      "sha256": "c668337948faaad316de65c6dc8dd7cab30a017baeddaf7b79b9f50ef23d451b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignedSliceBounds",
+      "sha256": "a6435c41ce2750d17b6d8017ba0550106bb040a943971bf4654160d0753f753f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.TwoSidedLogPruning",
+      "sha256": "6e8fdfbdbb0a9fd63db2cae33fa45ef23cea746a88460d54088fa0caf7bc6308",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SmallTwoSided",
+      "sha256": "143197a3f9406d5901f8c15f95b21140923f2d13404aadb727e24358eed59668",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SmallSevenBounds",
+      "sha256": "50ec2a28790d10b189e0381d4255323799504240f2f53a9a286cf5771cdcba78",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RestrictedPosDiff",
+      "sha256": "d6ab0f157251804d50efb4815b98ee125a3ef8f417b0b208943b77706c38ed73",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FullDifferenceLifting",
+      "sha256": "a686c83fdf6cd8d9de40c5d6122bd6e4f46acfdc67322c5ef465caa5463b5777",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FullDifferencePruning",
+      "sha256": "1745eb6f10ab542367e1d602f1e38d3eed2fad97f02f15a99d3e00afd58581ab",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FullDifferenceLogPruning",
+      "sha256": "8c0f5180cdc93e84c5d9f0a83d9c0ac1e18d14cfd937fc7118fddfa23d6ebbc0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SmallFifteen",
+      "sha256": "73308a7e6f3ac7ace7b5d4d73026f4dc8ebb8cba337519b86e3e53f4ea2078f6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SmallFifteenBounds",
+      "sha256": "7467f413287f0b28bd4993f8de202e983cc153f79d3470dc3205425bb4eb763d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.DyadicFibers",
+      "sha256": "5b6c52ac9e92c8176209da3e091ec672b31a2890b098f1b774cc545ab5b25164",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.DyadicRegularization",
+      "sha256": "cee726ed3b407405f4a3bcd243f770d18228d4cb85677eb6d17f2fc931feaa97",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RegularizedPartition",
+      "sha256": "2155ebf311d3465431ba9895ca9efbc5781264402347fc6b5de6d462ad19d65c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.BoundedSliceBounds",
+      "sha256": "49b23b2ef98a2c89fd268daab6433da03b43f9da7b4d919690944f94590daf06",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpLowerEstimates",
+      "sha256": "c5dea491f4024d430a771f099c5bdde93c668d03ea155d997b63af0f66f689ab",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpLower",
+      "sha256": "9dccfa0535a78415cc84836a7665adc642c012909e98a9db2fe6a0bbf515fd9c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpLowerBounds",
+      "sha256": "95a114cc2e933e80451defa813461f546bcd5470ffecfd49c5330f57d922a859",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.DyadicAsymptotics",
+      "sha256": "cf9d1380f77b30559ee6e07729a59afa8f2dd34e6fdb45e9caf51fbd261322dc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpExponentLimit",
+      "sha256": "a4ce356072327a7b23484cde6ab0ff499f35c879f5756ed9451a67a400b68a19",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpRegularityCost",
+      "sha256": "9f55153f8c8d91f8456230061c522504754364bd8b4e4a5a2b00aae59f1dc84b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpLogPruning",
+      "sha256": "0f1b589e1c3fd17ea306fd6028b46c950a5e821740d30bc049857686e29ec86a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpRegularity",
+      "sha256": "d664dfc2f9d107d2f8d418c4dbcbb190f05647bad2095a9aa2efbacb1e13969c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpRegularityBounds",
+      "sha256": "01fbdbd573d9dd243c0a12b505ea942522a7ef8067baaace7168405c7f0a2bf3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpUniformCorollary",
+      "sha256": "ab4a11e85c54197f4f37801546294d8dd6866153f84d0495e6ba09ecaa93efa3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpPowerTwo",
+      "sha256": "5deaf7ebb22adbce630ac4778cc405f3ef3b0b946056b1f140065bca3f1c2ae6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProductFans",
+      "sha256": "dafa237479de1c97dcab657bbc982845bf9919db55f7a2b27413f4371d372929",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.OrderedLayers",
+      "sha256": "e4408b55991a22207e473c2dee0dcd3b3f533c57dd203a4eda209df5f751fd54",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.OrderedLayerFans",
+      "sha256": "d79f887bb69e5c4fe4a09ce8cc2d1930f5e82614e1fbe8059d85248b9d5b00c0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LayerEstimates",
+      "sha256": "acca4c9d4bdec9904a9f3fd7cc0b267810006d1d03a520a8aea8b54f5d48e2ff",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LayerCounting",
+      "sha256": "01674f1c9a4a7520e068d16a2d46cbb1e78c2a0dc71d3cd45ed621dbbbb1ce05",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.OrderedLayerBound",
+      "sha256": "6715fdc28155a8832f8a3229a5a840f6f7f874b83b65470c178eff845db55de0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LayerConstants",
+      "sha256": "9e0f3afa8f0f05eb3c7607265bd7c4976d0086ba6151c78eb851f18b5f4e17b2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpExponentMonotonicity",
+      "sha256": "ccd2a7bb4df1c50b2fcfe34d32ab84bf75d93b6606362885dd7843c8f1491d43",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LayerConstructible",
+      "sha256": "e70cb09f5aab3f2bc2e1f0f5a296ab98507ab3c18b8bc7c84fbd5cde20a808f6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LatticeCongruence",
+      "sha256": "eb9e12ffdd191ef682ea60453dac53a5304ecf52bdaea821e3e59398fa89bb0a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MidpointClosure",
+      "sha256": "9a5f2962701cdc6099896f179017b025aa71cb50fbb8e613bed489a698531e0d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CenteredSignClasses",
+      "sha256": "8993a50e8f23d7d7c77dcb059bd10e2ab88dac330b03da7d7b20cf8c05a9a5dc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LatticeSupports",
+      "sha256": "902378edb97f1876ff8891f421e46ae80e67c13705216dfb5e373f3dd457f8f9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MidpointDescendants",
+      "sha256": "398a8fe4e5c990eb42ab973d49e9d3eae8ed50e4f7341e011fc1f64c250b01be",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MidpointCoset",
+      "sha256": "5e60e417aee50fff3624398797d1f85d6fa21e2bcff7d76f3eaa484a9a9adfb8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MidpointProduct",
+      "sha256": "12917e1a70f68514ba5a26f9ee0999f0784fdea2cdeec9ee6b55c6ed91c1d72f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CenteredChildren",
+      "sha256": "2e4672cab82dccb51f33423717c967a51f77f7623a09025517275dcadf8992c3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CenteredEstimates",
+      "sha256": "304d3e67d63a35179aaf07bdde8da0547b00950515c55e609ef6e94775c68edb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CenteredMidpoint",
+      "sha256": "67ba8f2a748b251d89ab4bfabaa5797289cd7363d8f11d3f5d9ef03fb2400255",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MidpointSymmetrization",
+      "sha256": "b4d29c880c4a0a3365df40421c22e8baab0a1294b3e6c2c43477fdd32d7f2a10",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MidpointBound",
+      "sha256": "b55d6e1335ab4fd15595b9a5488ddef940ab529d00f196a76c39ba390d60914b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ConvexLattice",
+      "sha256": "2e0b6b9b26fddc7d8587a9455173655c29dbf47388491dce86a6cb750700bbb5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GluingExactDifferences",
+      "sha256": "b55b1bb46075642f283364d1662c904b074355ef36898f3bac0a3eaf62886cef",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GluingSeparation",
+      "sha256": "719a008b6ffdf672ead2f99895dc5b45178d89048b4a5f0bfbb180a3526ff4d4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GluingPositiveEncoding",
+      "sha256": "ad59e753ffbd257c6d44de6fecec36e5622655d6268a9afddbe58818071dea0c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GluingExactPositive",
+      "sha256": "b10667bae0760831d281dc8f54f88dac55446a2587ade01ff452ada2a9d9121c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LayerTranslations",
+      "sha256": "3347eb8eb4f380bbcca3f46a2aed76ca4b06cd56698eca172f9db3e454a7c7c0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GluingLayers",
+      "sha256": "3bd8f8a8c1ad2c8d6694218c79fcbe373fe96f5d5213aeaa633bcec3dbe75a02",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LayerPowerFamilies",
+      "sha256": "26f350e2146f42d6a5248db342f2ced16bc4d84c5b8ea65d1294d3720c70adcf",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LayerSharpness",
+      "sha256": "df343e584cee8419365b0629cb4083c7dff1120767092665dd2cfd9f35c616d8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RecursionBarrier",
+      "sha256": "bcc557ba7ab98b54e7de9bc0cad4780e50c5ae28f1982c72ce80f6befd4216ed",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.LocalRegularityBudget",
+      "sha256": "9a7551580505018ebda226e4b80d632015c88a5114cddc8cfa9ff61efb028638",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntegerProducts",
+      "sha256": "5dc0874d2008e68d727dc940c124fa59cfa71e3cec35f6017764371d17905bb4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntervalExact",
+      "sha256": "15b8c7cb4297872f6f6e53a2f6697a77a129bc4b3864a64dea07bd65338f3c43",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.AdditiveModel",
+      "sha256": "6a6273944815df7c62c28c6199d0bf34f90ccf46fe434a25a74c31f3f0f15de9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.OrthantTrimming",
+      "sha256": "bf1aa395fece2e6427fe731a6e1579368bac4628af7fb54fa49f1d10771f0094",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.OrthantExpansion",
+      "sha256": "2eaa9c6d553ba3cd2af08e6ce2b73c05758cd8370ea9a0e3cb05d714e1ac2ba4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.OrthantAnchor",
+      "sha256": "2f5a4c73e73901f4e8d4675c6e34776b17000de3870635024f258d4304865753",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProjectionCriterion",
+      "sha256": "d28b23cf13b3d9a45d2ef1a971ce1711568d3e7405181a6f3f02486d03c0053f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntegerGrowth",
+      "sha256": "951a8230187022d578ebdc8d919f4471b214d4343d32594a89dd55bb64bb391e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformGainEstimates",
+      "sha256": "f244aa4ddc5fd1a006cd70efe195ec0fe4cbe80115aa3a77ae87f2cf572a6130",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformGainIntegerGrowth",
+      "sha256": "180676715aa54cd5dd90aedda2f332930871d9d910fe881688dd10523c103893",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformGainCofactorGrowth",
+      "sha256": "3550ef4e68427338f9ec5842578e0654f90c1550f4be678ad73315f9f88142bb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.QuadraticThresholdInversion",
+      "sha256": "ef4c592b33b7db8f18c5bf11e73a9de2e701cd01ae926002e6125de85803c1e8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformGainInversion",
+      "sha256": "979599f4bed21b297e401da92116a5ec3a525dca4f249dd45d577aadbb4af5ac",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ConditionalSuperSqrt",
+      "sha256": "d32d69975ae61935815308f16a0806cc5672b3ff1bd2d2d330411f52d7e3f213",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PositiveMinimum",
+      "sha256": "76c0f94e454763d571e4e1aa662569bb6b6e322a0d43dd684c7208726bb73043",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CornerGeometry",
+      "sha256": "b4c6129935b4919a074aa75496bcc59d99d45b2c9a57dc258a97a222699a2c8b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteTripleCover",
+      "sha256": "8fe81e398d048358e9bec803ab0d1e1b0e754f3e36c9f2e45c9eb61547765e2c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CornerSelection",
+      "sha256": "f5d68c2156b2842f145a1b12404a17d04e7a1fee795c3a9f3368857d3ac9cd14",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CornerProjections",
+      "sha256": "8a270141f16b50e696240233e7a9fb1819dfc61538ee7c163a349b0564684d83",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CornerEstimates",
+      "sha256": "b1a9ce82808b1f3fe12cc56fac860f63c32bee10d7884f78d92ed010748849db",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CornerFanBound",
+      "sha256": "4d034d3b965a949d65b4fe7a25f76ded5531a6457aa1a6c5b3fc253252649568",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.AllDimensionBounds",
+      "sha256": "66d4854066e0bacfb58d08cfd09cb34d81e1fe0f3d7ecf56fbc982775aec4f6d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RootPotential",
+      "sha256": "4173cf598ff6f627e25f4b6ba4f9ad74aa5145d14c704fe7672e429e799b9d20",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCoreEstimates",
+      "sha256": "2dd1fd309c307f18b8316bc1ac6b984f006a55e2a15c55cd3d293a7dee0db877",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedEnergyBasics",
+      "sha256": "a30f40e0940a5b86f39c0f95f9a1df9ae31f76164c52507082e8f911e5ddb52e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedCollisions",
+      "sha256": "12fe95dcb03390fc4b454a3b28d0efe1def34bfca57878294cd00c76fc3ace65",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedHolder",
+      "sha256": "b61a79637b3936b7dd5ee98211e08e68545479bc198803777e4f734043234b3c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedEnergyRoot",
+      "sha256": "ceb6e1c606c0c6e99f34076e3702963a630754be6538bcaa17788e908c2d2a69",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyMaximizer",
+      "sha256": "b0b9a5c0ef7e809e7cd96dca921bbe3cf0bfa7a509baf22c81cbda641404bac6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyNormBasics",
+      "sha256": "dbf08becfe1b56cdf448fb24ea568f50703906432c62b08c7fdebf178359cb4f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyNormLower",
+      "sha256": "4809eb969e5abc13673dd6567a2c52767b0e5f2d79c2bf48ebbbfe124a4bc66f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyNormalization",
+      "sha256": "c62d4bfb6cc52c40a24ef360f2ee02d1d587f31f25e4b3d6f56dbb7dd44bcffb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ConvolutionAlgebra",
+      "sha256": "29ddb030b483be5b2bebcbcdf4f0325e224aa2440822540822aee9e60a6138d5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyVariation",
+      "sha256": "00ac1b37a9dd6c7d380219c84417ebe579120b1d8a68e9246b53be0c86a52543",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergySupport",
+      "sha256": "82444928cfdcd71500d42cbaf5c7ac7d56388895ef6be94cabcc32a39ddc4fd2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyRestriction",
+      "sha256": "cd4841fb175d1dbeabdd738ec6290993ae1d4d5086f4d7005e2f31044efe5c48",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyHereditary",
+      "sha256": "ab58b14b06930c1bdfe0f662a8873e0020471cb1bb012a0a7598cbfa6268b74a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyAtoms",
+      "sha256": "4e0467735c2b76e655aa9403335b761444c1d6d80a6e491a5ccccf609ccf38af",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.QuadrupleLaw",
+      "sha256": "2aa2ab1326640fbd6e037f3269989dee1eb84b525dc9af4949d72fbc7eb9c901",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteEntropy",
+      "sha256": "3b9e3e37ad37771cc88ad1b77719563606f66d5fc9c42963047958a91860b6a6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.QuadrupleEntropy",
+      "sha256": "5a0dabb9438c28027373bc973eac3d40087a78ea32dd0e903d313e868c873024",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MaskedProjection",
+      "sha256": "c6a5419e75882ff8c9e4c53e0a37d3f0a1ff0d623ba0ba53905cd30b09c92a98",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProjectionCandidates",
+      "sha256": "3eb9b801dda6e4c230a2ca2b95b92a9200fa01c92bbbf961204017af9be1b8bc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.TripleMinimum",
+      "sha256": "d01f251e3708b304f6629776cf1a1a313cf03c79b638331cae368ab44306f5eb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCoreSelection",
+      "sha256": "a32dee3e92b93a8d788a9cd72aabc5a6e43d4670b6945a5e2cf72fce71b520d2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyPalette",
+      "sha256": "dc1a3316daa445c6b3cd09dd6e8ec38d2338b110bc17854923550eb08364fe71",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCoreBounds",
+      "sha256": "8c4978dcd27e4b450e3f6cf696959a42fd1e7649c078267c8e752dc1feec6ad0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyPositiveSupport",
+      "sha256": "22dcd0ae6a66e26e5ba7c7a7fafba3313dfe1d8cc71922c719aa2ce4995fdcfa",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyTransport",
+      "sha256": "08535fe1c63041afbd49fc3a70390968f6a3b3bf4c7d795be1fcd30a8ca4c1e2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MaskedEnergy",
+      "sha256": "9ab4272f3e5f05b381c257a95487d9db94a71b4437c5fe4715a132047c7c6f3c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCoreStructure",
+      "sha256": "803cdde7c6a68e5fb9c064fb9f24568eced305715983e33f8d9c64b2338b726e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCoreMass",
+      "sha256": "b4b64b380334177f046892fdcfc6d6f5610ad22a0249b74e4091be33e54b28f7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCoreDimension",
+      "sha256": "758d34eb6219351dab9358a7eb0260e8ebfded7044c348ca5dca33c29fcf8d6b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProjectionCandidateLift",
+      "sha256": "f0361c4b5c6381bcd29a8a8c3bc295ba6fe8313ed1c86c70e8d3963dd9876a73",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateEnergy",
+      "sha256": "eb9bcfffc47941a628ce221d7727cea510a6685bae8e536eb39df0e6e25a157c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCoreTheorem",
+      "sha256": "537213ed1d4a57c695933cae39d8858bfef2e1c09e6fd3b91560d3fb78bfc1db",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCorePotential",
+      "sha256": "c0d33027c62210c6ff0b132e4320934c99b1c1bd9bd3e543b8dc405e07bc9b09",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.QuadraticCoreGrowth",
+      "sha256": "6b665343e37a5b3b63df9e53deab9f84845d4c293154b27235ece9be7151bdd0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.QuadraticGrowthTransfer",
+      "sha256": "0f6423f7c2858b9f9cc4bd13fc49899334e648b05ede0307ffd3fa0d36584bb0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.QuadraticCoreThreshold",
+      "sha256": "cadd7e20021e2afb2ece257cc106426cc4da8c65a8c35a6294f18970a4621637",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyMonotonicity",
+      "sha256": "d5c78f4ba1742ef9db7f65df7ff060d7603672de95934cf8707af2e525214688",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProductEnergy",
+      "sha256": "f38ef2d2e87ab5db9962b2d9e56657bf9bed42165d5cdac557ac374cdab36e02",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PushWeight",
+      "sha256": "7984a1d489f48d7400d210aed9ec37da4da8cb9ea1829433ad794700b1339c73",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiberEnergy",
+      "sha256": "ffa0a6d73bdf02dd74598623a7c9b49909f8ccc21cf8313ea45a1f807987cbfa",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateFiberEnergy",
+      "sha256": "0fdfdf8c41f87a93f24b36ebcc5ad9ccfe15a139d2c2502f5b7e9f1f69cbb74a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightRestriction",
+      "sha256": "f27ae602a66cdfd003d70ed94e201a14731c6f48e3ccde0ff74c636438501f9c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedSliceBound",
+      "sha256": "bc98ea6e42b782587e87d5a481cce2f003d99057e3817d01d8184961d34b6306",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyPruning",
+      "sha256": "f24276d12641dfbd9a6ef7b710c21001fa27566c8ac366f36cbfac4d39281900",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedPruning",
+      "sha256": "34255649d929d7cb27255c2ec395906b70cb4e93da30c528a2e863b45d0d5f6e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateMarginal",
+      "sha256": "2dec3b9caaeaa613ec05849daedf3ffee16ac372b6c24dea2d4206e2123a77a0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ActualWeightedPruning",
+      "sha256": "22e0f8ea40b51335a59d55a4108bd4a916f4e40d8e652af8a56c692b56242933",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MarginalEndpoints",
+      "sha256": "fc2c3fc89637d7baea18bb9b69db08cb800af945e9c6a056fdc4115e7a5341f3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedCutHypothesis",
+      "sha256": "5360a38b470da6858c5aed3600fbf582ab4f2bf401ceb47584487d940f61633e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedCutEstimates",
+      "sha256": "2f443edc30d3dc6ed17fea2006917b85703c172324347145ae7fbce56242fd33",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedPruningLog",
+      "sha256": "40c14b52ec9ecced1eb097e36908e002aef6d03b3f6409b87705da2c2e7406bb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyDecidableInvariance",
+      "sha256": "781dbd0b0d6aab99e74680cac6de9e3c55aeb9067bb175334cd9988807e6f6b8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedCutInduction",
+      "sha256": "cce200cd0f5138f16cfece7546c60c2fb917fcfb62239a4c80e23621958e7602",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedCutFanBounds",
+      "sha256": "e8574812c7181ad17cf32aa0fa83f6616d27c6401da02b7c6e108c0a756b1eba",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedCutCore",
+      "sha256": "92e9a9121db4e9bfcca9e2adfc175950db46e12f559b1046b1240d06215a4263",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedCutThreshold",
+      "sha256": "744b4a65d28180a32b46241eadcb62c8fbdc5b0455bf0521650913b884ee8cb3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RationalSidonCertificate",
+      "sha256": "a884102ecf3e18e5f4b4f9c273c2b82d0b3258caf265c1a4a94cffb9a58de6a5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RationalSidonScalar",
+      "sha256": "3925f154ae2c1c6eb523b968d314db4372e9dfa29e63bbe9f54f2835e01a4959",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RationalSidonSums",
+      "sha256": "2f67366f4d065cd5179b322852f771f0d9833a63c52e7edd8a48fc4904cb77dc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SidonEnergy",
+      "sha256": "b1065b40f8ac647d890cdeba35de0100bd22ca89c7be6aeaa0a364b34efda7c5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteGibbs",
+      "sha256": "a43a67a4758beaebeac521f30cacb9ae745bceb8e894c9911e7a0c05d900033a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryAdditiveLaw",
+      "sha256": "48815362d55a8ec7c7de132eac4bd3c1fb2546f7d3ec3b012f0ee7cee15ed5d1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryEntropyEnergy",
+      "sha256": "5ac5739653859a246e18d5c5e153ae62cbde6370668b984cf70429ea90c86417",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteProbabilityPush",
+      "sha256": "9383fc2ada8c447d403977d08cfe1d515cc7afaa1b5a4b28bf7b924165c93655",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FinitePushProducts",
+      "sha256": "7e6fcbca5cb57c614a9693318ed871d8c455eabde8bec442e3ccb6118abf7487",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryLawPush",
+      "sha256": "1772eba60c40982bcde221e40c3aed61432348be360e323ff0783eccc1c467f9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryCoordinateEnergy",
+      "sha256": "1c03d308feedfb109e7c40f4dafb05a4053c126534da60041b6b80fee4aa0ed1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCoreMarginalEnergy",
+      "sha256": "8e86a2f02f8d0ce400d6d2c4f6b44f556e031e1bfe8c17124dd1fbf1ae707488",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FinitePushTriples",
+      "sha256": "c80d9b7b4de7782b0517c318c50cf40eeb76940a137676db5f24d54ac05e13e2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteRelativeEntropy",
+      "sha256": "10461fda4fb12db9dfc6f848f02b1ac9e8a9205ff823dbca4c8cdca028a42ad5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteDataProcessing",
+      "sha256": "63fece93f974a4d9a60db75c224d01422f6b00f998b4325022b6f1d158d57c30",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryTripleLaw",
+      "sha256": "da9f5339c2731f7d88e1e385e376bb70424283aed4ec65719cd6f26866d05f32",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryLawCorrelation",
+      "sha256": "ceb689b1a607c78abdd771a33b93c8f9997a25f49c0c19966ffae03214a1472c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryProjectionProfile",
+      "sha256": "13cf081ef819eb730d02447b949d6e63864f3cee9fa1bb081d861c7762d476e9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryLawComposition",
+      "sha256": "288adb7f783fe0758c105850313c1a09115d510d486a36a36416d66d6ae9e30c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateProfileMonotonicity",
+      "sha256": "a27c73351f10a4f13a61bbb988352711e1b709da530d7c902f274f055afdec57",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteCouplings",
+      "sha256": "0909bdb962bbdf5020c8f6ba8c95d20ca1b847f7c1d6efa9017741750fbc82d9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteCouplingEntropy",
+      "sha256": "658605f2212e86608359866367ba8567e35dd112c8d2cca5744da2650e9c3024",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ExceptionalSumEnergy",
+      "sha256": "3569689229457976ab19891dc6a20da53ece28733d8ea0397a3fab30fdcbac0e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectedSupportCertificate",
+      "sha256": "760d4141312767c7575177b4edf9d8af17f08aeee3570881ddbd8880016b52a4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteConditionalEntropy",
+      "sha256": "c99afc7de1287b92a8bf2440dfa419b1edacfbe43b911bd657499832d2efb5ac",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryFanCapacity",
+      "sha256": "472fb01873928a6f1c1ff019595a201d9a8379ea1dab9a96ea5a787f30f2c828",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteEntropyMixtures",
+      "sha256": "850bbc79c7b10156948a2e1056a0863425b4568e218241aa925ff6d31f70e047",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ChannelPotentials",
+      "sha256": "b6bc0968d11d309cc57eba073507a96a7693286eb584d2a1beb24fda2d25ad9a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteEntropyConcavity",
+      "sha256": "569c28e347c019af5efc2cb5e34dbcd6c65a7a4c259dbc2d88669a087db68175",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteConcaveDuality",
+      "sha256": "28e91ff11494508773302ba2dfde4ba3844ff362958af298218a605b4b9c07e8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryApproximateDual",
+      "sha256": "dbe80b5a0a3be9353dbc72b132605262f8f5cd3f678982f18cbc1186ae40434c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ChannelDuality",
+      "sha256": "85269f5c55c11a5925de23bb63212b0ddab2bfb12ad4529c798f68c181defe74",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ChannelWeakDuality",
+      "sha256": "fb56945505f32c4f42df12405c1565d9c5ba31958874c15e818c68c08c0c499e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ChannelPotentialShift",
+      "sha256": "73da07184bb9162276cfec30ab5c75d67f502f17842695b4f72364ecf39f40d9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarBinRanks",
+      "sha256": "b9adf71220ffed8e31fec26b6c5395ebe4c882899d900025806178c202105974",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarPotentialRanks",
+      "sha256": "b0f570b907fa830cd77639de301129a7965716661b56ece1fad0841eae8371d3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteGeometricEntropy",
+      "sha256": "d4acd5a52c05c47265090d6021967c8d07dd8cf60566c66dfd302394eae8d642",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PotentialBinning",
+      "sha256": "0ae43403dcf5edfa4ec0db8ef6111dde1891001cbe1852753e074e969c051804",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteRankReference",
+      "sha256": "241789d02fe2a6e497c8014873b16cd45d4d522a87822891be0126b693e2b293",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteBinRankEntropy",
+      "sha256": "8fe02008028e1f20667fdde94bb6898c8266203c606cf90c40fe38e3d22c27eb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarStationaryTradeoff",
+      "sha256": "a66b7a71664d51796d5e547752bd852df4296ae36ad797a3db766aaf703ee02b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarStationaryBounds",
+      "sha256": "c9d5652470b46dd3464abd2810dd48bc85321a8ebad9d1d68c17cf090030171a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarPositiveDifferenceCapacity",
+      "sha256": "7271f140bc3166d61f27bcabc897e7d9c6a6333dd5b357bcf262c8402016155a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteConditioning",
+      "sha256": "0613261f89d456ba8bc133a272f2b5cd3dee638506dfefb0990c2a3b60a273db",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteKernelEntropy",
+      "sha256": "1bcf6c803c3805ae7d97c16756595a82a265ddceef68ec3685215984f9ae7398",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteMarkovStep",
+      "sha256": "55cade8b6742eddbd2057f384fa41999682bf1c63d618b76f717fe12892ea72b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteConditionalLaws",
+      "sha256": "3a5b6aebef5917675e829abec564123069bffa357ef7b752734a68d32b367924",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiberKernelLift",
+      "sha256": "05156105e62d06a154955eb527ef3953750073ac79c119c9163844ba339cc311",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CouplingKernel",
+      "sha256": "e44d5b100d19765b7b0b5cdef3ff082808364c4abc781a0bf8d6b7c46b8b5b4e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.OptimalFiberKernels",
+      "sha256": "6db39506bde168c3c87626a3307b41f2096323a580addb32110d92938c2ecbf4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MaskedOutputs",
+      "sha256": "04f497f5299b790719f4e52b30a5c2f818534a6596fa16ab292426ecdf5cc446",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateSweepStep",
+      "sha256": "1d72de644117952a96aad0a892764672e332667f3b11feb75cc40b989e28a822",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateSweep",
+      "sha256": "81365c25d37bf4dcd3841942a839aa47b195f0846c530f6e01755b0b2a22086a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryFiberSweep",
+      "sha256": "363df62033940b89be2cd67eb3414c271fdd7b1d472fa65259c8c16d583d0006",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryOutputTransport",
+      "sha256": "1359a3eedc6a78574b0ebb45ee90fd9900124068c99c6398dc8e6b7c8c2b909f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryCoordinateSweep",
+      "sha256": "12a4505c79799d3ea0102e4548af7b79245fa80a63bc4c43c87774b919691d5b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationarySweepLinear",
+      "sha256": "5a8b7eb29176fa76281bbe48ccef540803042da5c8b3f480d5899d5ac3111fdc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteConditionalComparison",
+      "sha256": "b7c20737837bb7b0d47d2ddee44a6d21bef41d1b8cd24ab3ad5f85b294258b67",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateHan",
+      "sha256": "2eee8511801c2aa6305d1c71b410df366e93fdd959f0862ddd76317db19fa1ff",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteLogJensen",
+      "sha256": "b2ed6a81a9f17688f8b897b12b4cd0fd6042a1f8b87d80fd8edfde2a98a5b863",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationarySweepLog",
+      "sha256": "50e01d16cd51b4ca4cad892254995a1b166e9d354f9627739d2893c926c219ee",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateProfileExact",
+      "sha256": "e53a05aa902a72e077d22ad1b4d12693cd56ac9324d78be79408be3438f64a9f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ParallelProjectionBudget",
+      "sha256": "c5674a47584771eedb4f1a2da75d4882683f93a4d856ee358b5aa5268db8088f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalCoreProfileCover",
+      "sha256": "b37ca4ab17288661991ed758f10c30c1ff1af283f619b72d53c2ae0f260a637c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteEntropyFactors",
+      "sha256": "6c1542d1c2ea0067ec071d1a024b1180a74d7fb2d4bd371c954b60fa4b9e87d5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.NestedProjectionEntropy",
+      "sha256": "76729189a9912101061314a1cc78e2c191184e46c56414dc21ef845acc4a58eb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProjectionDeletion",
+      "sha256": "5bedeb1b41beec833f545b0c36beeeccc857f67f0479420c50331985db35b853",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteDeletionChain",
+      "sha256": "5e438574183f6f9de73392352043f18728f53accfbad30a06ca885fd19d215e4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SameLawProjectionChain",
+      "sha256": "500b1313dd4410dff28866ee88f4e1319cb6bb75b7bc42eaf6c331f47a0dd51b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EvenCoreProjection",
+      "sha256": "cc320a5685e4eb3bc06ed79798b0355d2adf884b19900c7d45fd26fef141de93",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CornerMultiplicity",
+      "sha256": "e74b74853f55897e4852dc033e3bc0c9935a049bf6eedd6a9b9f635c0241e20e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteUniformMulticover",
+      "sha256": "1afdd60d2057f9f0dd5bd934144d0456f8abcff2590c1d398577621cd7bd7c15",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpCornerSelection",
+      "sha256": "63e447a2d591944f5875fe45ef9a07a33e6b40e725a4ec7f053053085f7e2e02",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyFiniteSums",
+      "sha256": "fcb06c6eec0401de9a4e47221177c088a947a656260e710299ca4cb0e6311d27",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SidonLabelAlgebra",
+      "sha256": "f89eb0d81abcc9335bfe201073daa284a4949822106ba0be77c6e404a8ca9e31",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SeparatedComponentEnergy",
+      "sha256": "c14e9ba7600a640d394930c06c48eb936b12916c3ad890c7c6871b325cf2354d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ComponentNormWeights",
+      "sha256": "15ab4e6f4ef926d708e027652d2b1401677459cc50549ec64086d12111fba0e4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RationalComponentHolder",
+      "sha256": "b32a7efe987f214cc9de7db75107809d6b32e64796ed4fcd356e897bb146f600",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SeparatedNormAggregation",
+      "sha256": "9877072f260cecc3665b1d5bd5ad8a660bfc18eba4654298e5a9caca1eb0b06d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SeparatedHierarchy",
+      "sha256": "e47e30a4a4e7d54d8b0d58c2a4ccf8ab637fe80038e537b08a7edcd4d8634cfc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SeparatedLeafRetention",
+      "sha256": "b7e5c15998876d739c441ccc63009540aca25e5fa97e64e1b93a9acb09214d8c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalPaletteInversion",
+      "sha256": "10409ad144b5e9828df4634727f985d3267cc9c4f8b1236aba587cda9ec5d3d8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalColorDeletion",
+      "sha256": "3f60d6641fa02faa28884f5064083a61d1b395d8ba66bdd496db4c2a17c4bdce",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.InheritedDeletionMass",
+      "sha256": "3d2a9b06c1a06dbda1828b567beb37b505123ebc2cba27f901d079112e40c89f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalColorMass",
+      "sha256": "a0bfad0fd752a004c395b580234ce8347e85347f4a8145e223472a1c921f8c06",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ForbiddenCoverScalar",
+      "sha256": "9e8301ce8b164257d59e05d631662c1d53e99715cdcf198793140911bbd772b6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RootColorMass",
+      "sha256": "cb70b4bb3d86c60ebef8aacd42a10f3182745c43acc62e4e5b73af71eb64d1a9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ExposedOutput",
+      "sha256": "498f71f85c63d807127a97c421d91b1bab8b324a382fdf6642794803ca3f5cb3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateEntropySubmodular",
+      "sha256": "794b48f4ce91c570c0c3af9b50f961ee00b0b898416de5e5ece1036a01b36a24",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteFractionalCover",
+      "sha256": "198e1cde0b2baede0c5c7e509117a00cf480abe4b87bbc55b9998e41ecfba7e3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateShearer",
+      "sha256": "9e1b4bb91a38fd64d01a374fd1aae00b382dcc76400271666796a8fd38c5c88b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ExposedProjectionBounds",
+      "sha256": "a9d4ece69726c1af6e253597b8e455f9ca03544f438af702482bf621e69bb035",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.AxisPalette",
+      "sha256": "30db4ddc54118b8b8f55a760b1f8b459a6917822313450dd0a4cd66255b95c63",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ForbiddenExposedMasks",
+      "sha256": "b7f905c6f58c277988beb5b163a843a6fcf27b11cd2e0c7c134a03a8afabf1a2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ExposedWitnessGraph",
+      "sha256": "e80f83f78983da042381f8cc0e6f9eef0cad43b9f20accec2510a2fad4180183",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MaskedCoordinateShearer",
+      "sha256": "3fd47d4a47cd07aa1913bbb0752c04b46c33e20d0ec5978dd4ce5d3e9f7457fd",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalMaskedCover",
+      "sha256": "8860974a1f1b71997385ece50186f7eb99876ef36ff5ee1edd5ecb59a44f59a1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteEntropySubadditive",
+      "sha256": "a784e9b1721a0f06fcb0be4d83dd27934ee99b5c8b3d5501cffe2711388b3d27",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.QuadrupleFanEncoding",
+      "sha256": "22fe8a29879747dcbb563470aed502d2d85cacff8130831d1aef6ca2c1789c8d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyFanNorm",
+      "sha256": "b3f263bde68741518b58c79833432f6438073ea8c37dd1e626295ae95dfb660f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ExposedCompatibleCut",
+      "sha256": "1cffd33edba1ff6f78ea43e562333133f8aba7988156770006c2d4812a9e36dc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ConcaveDerivativeEndpoint",
+      "sha256": "4fc0370744389f1504842c116abf87abeb2eaeaac741b737ba138779fa84579c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SidonCriticalConcavity",
+      "sha256": "31a00e1bad1101df2b36215501b0222f769d1c809d190526d8dd5ac09d82bfe0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SidonRatio",
+      "sha256": "71d51830d0ff968be5d183fed08cebde640373c5d1bb2299965cfd89d167b53f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpSidonScalar",
+      "sha256": "136f96f9bebed439bd4762948316236951dfcbfee935d59f4ad31afe613d22dc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpSidonSums",
+      "sha256": "4221f688d2e923d7421cf808242b3d1e32844a60983f81a7c2237daa65a36a7e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpSeparatedExponents",
+      "sha256": "ba27cd8535e0e18a8b1cb1204fb71087960558b58cf94eca4cad488ea7d187eb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpComponentHolder",
+      "sha256": "da4691756ed50022b774605dc1ddad7a5509be48f14d3bf5b745021aed7a8035",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpSeparatedNorm",
+      "sha256": "7ea92c9659a72f415150aaa363e963c0d642ecf166303487b64b8e597a60b335",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpSeparatedHierarchy",
+      "sha256": "5a4a419d1306b0b742d77347361a4df90f4ededd3a5dd0eb8ec65ad43dc26ce6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SharpLeafRetention",
+      "sha256": "dd553cb0c72ce03be072e6e6060666aec48c4d157a474333a3bfae3f7b39a8c9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProductNorm",
+      "sha256": "20bf07eaf59f497a1b36d81e52687f81d742f1b870bdaad29d0928aeb1252af9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.BinaryCubeNorm",
+      "sha256": "5acae944b9edb48d877b7a90bb6ac96097a0b81cb09e7615f96307c927ece183",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.BinaryCubeHierarchy",
+      "sha256": "6d381237e668784eaf6b20f7cb70660617f29379f331bd8dd964ffd5a18393f3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SeparatedSharpness",
+      "sha256": "f27df7c0ab962fd0fdee75b3ec709975fe19e22c887bd6c241a25cbe793c9747",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SeparatedCriticalExclusion",
+      "sha256": "80f6bee26640e6ab693cb4041419a928f44ed22df1e645249fce919a68ac9e65",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SeparatedCriticalScale",
+      "sha256": "96b643484b4f7526660671bae7f5a45dbdd06bee85259fee0621d24cbfc85c74",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedGibbsLaw",
+      "sha256": "aa7bccb19684c82f4aeb433dc842c25aebced41e9843e6936a0b79e814c1c91f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedGibbsEntropy",
+      "sha256": "ae54d2274aebff2342b87439d4cd887bdce40e6c151eeb0fe73cfce13602e5ea",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReferenceGibbs",
+      "sha256": "643c12aca5e38ac6cc5ac089410fcfaefb19019495259815f826e779990fb050",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReferenceUniformRoot",
+      "sha256": "55432d68515ba653513076945e6d7635ef213bdc7869e07494df4094d2a9b093",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReferenceWeightRoot",
+      "sha256": "0d4b0b84dbcf660bc3093a129b1cc12c07dff1c5d0cbbf43a9aba47af490a367",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedGibbsScale",
+      "sha256": "4564145b739c9c0da2393b53c6b0aadb06567beabcc1eede8aef9a877bf0b656",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReferenceOptimizerRoot",
+      "sha256": "d24bf5555d13fde3e8a94cc95c363337deae30f843a067c686003637a7bde494",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PositiveOptimizerSupport",
+      "sha256": "5d6fd9873d055f45f5ed0f92e8562d38c5895f36cb2fa797366ad58c5f060f18",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReferencePositiveOptimizer",
+      "sha256": "8ff1aa7e53eb43aeb216af8b4ad986f54d2af4e494ece016a3ae8d7dbe2560bc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteRelativeEntropyChain",
+      "sha256": "b5083c4c39a977b285dd1ff257e100e00c0f1068f9c2d39466f3daf1a4e6f938",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsImageFibers",
+      "sha256": "a307ddbc16cda6912ed9e53862e46bd9f20d651d61fd7c1cece4485fdcef33d1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsConditionalWeights",
+      "sha256": "a9c2644daf4550519c2705fa022471d94806f2e73e5458bcfc2fa2ad0a19f349",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsMixedPartition",
+      "sha256": "d80b686aef89131d361b34bbaa154f87641208467ab08ff80221f0355ac1a6b6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsProjectedDensity",
+      "sha256": "01983e81404bdb71fb35bcfade7f9f42305fb4dee8b2762cfbac2c6e2f39463b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsLiftSlack",
+      "sha256": "ad2da3d9d9d83d05df8bac75322bc4d39c3553a3b636f4f6a0c86e487ace592f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsLogProducts",
+      "sha256": "c7c55e80228818a02ce10eaff203e97cd686f0c2009108f6abb6b75a9cca9e68",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsCutDecomposition",
+      "sha256": "202d7ee81138528543a839ab004db3f6c805d3ef1c6678ef4d807d0e3e0bf281",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsProjectionDrift",
+      "sha256": "11c7c1aba374eb2b35f90120b60fd8a7c7d699c6a819a45cb3cae4acafd1c1c7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedGibbsTilt",
+      "sha256": "d27af2c2e6fef58efe99901a389fbc383cb4dde6471027ddbd829b1281bde92f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ImageFiberWeights",
+      "sha256": "30054f3f51315e3d92bfc13d3d12d5f4f1923fc664af9d277d477b1ea4bb8b25",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ImageFiberAssembly",
+      "sha256": "28d94de62f4c770e2c12a080738a4c46d34d58d9f7ea8991a263f4a8718c87af",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsFiberTilt",
+      "sha256": "c1a43242e1afbbb60a7a389c837b90675a6741a665bdafc140b1247107c8ad84",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteSubprobabilityEntropy",
+      "sha256": "0015263c0cb63e7af2a2676abb6d7792b30a084e5d568242996ad540f4f3f79c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryEntropyFibringBound",
+      "sha256": "9c5b965dca506464f1e334f31c208b51abb047a8d37d539985b84c28548aa541",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsFiberDrift",
+      "sha256": "ab5f3763424b9d7efe0960d997a5d1566ba1f9e1705be887b0a4a33fb156489c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsReferenceState",
+      "sha256": "6a591fa53845d02014c862e75a8df0ffcb6ff447585c1448aa406dca4deecb39",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsRecursion",
+      "sha256": "081be0872eec0afe6d224a03be3929c32ef3d4f3a0f5195fd8603efff9626680",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteBranchExpectation",
+      "sha256": "fd4b5e21816b00a37fe247005527ee22dfec8d2bccc6b5a10f3c11d8658a7bf0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsRecursionBudget",
+      "sha256": "88b4fc69f4c11ed8d400a16f75d0ad577ba65a135c835da14a40c201c7db6d0a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsCoordinateRecursion",
+      "sha256": "bc3df19571d5b56780ed6b5bbb98a6020e510b107c05345eb4e95b6f8979d521",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsCoordinateExistence",
+      "sha256": "de3b8aa1cf44dfe861281219099b3c8f7f82e949d45e4b4390a930391c87e4c9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsRecursionRoots",
+      "sha256": "194c7a091e8ce20c7cbca9c7aaf394ca2345db802e46fef10904ad177d01bf6f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsRecursiveCharge",
+      "sha256": "248979f8185847211ec3a7388c094d3a86d03c91fdfe85c0f5251ca8713896d1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CorrelationPairings",
+      "sha256": "3a3b6545fd1765713e535905183ff52cd73fc6c238c161dbe070e5467efd9cce",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.AutocorrelationGeometry",
+      "sha256": "3dc8e297fa0e3499fdeea76dcf4e9bfc292d3b6914fb18f72cac81287d793cb9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.MixedEnergyStability",
+      "sha256": "b7c239e9c9c512392466f971e7e36e44fa0b8e9ec6a147ffaa27f6d4d0baf467",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsAutocorrelationStability",
+      "sha256": "769794644fd4bd19e0b829dfd1f4ec24416f1134cf4dda54bdd8305001eaf9c5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsRecursiveStability",
+      "sha256": "d79af8f8109d554c076d2b8ab483d963ab3f928f596bda1ca15cc58db03ed8fc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ImageQuadrupleLaw",
+      "sha256": "c5bda3806a9d07da96cd33218eb6b73b1ce7c62fe7368bb305eba5189af98001",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryEntropyImageBound",
+      "sha256": "9b7716506adae0b53db63fe65fe8c911ac557969aedeca3cf888965b78e06000",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SidonQuadrupleEntropy",
+      "sha256": "8c965ff875c100371d600e0efb1e0adb1704067f23829d0110fd5f360c267bb8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SeparatedLabelEntropy",
+      "sha256": "90795352658701fde399a5f393d3d476839b14af84ff8bb628070105ef963044",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsPartitionBudget",
+      "sha256": "4f4b44498e51248e7e0e29799963e871357571336f155ea72f44c11d74d9ed57",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsComponentState",
+      "sha256": "0b3ced47a5909aa5676969025e3bab8bf3f68b0036d46477c7569309732f9e59",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsInterleavedRecursion",
+      "sha256": "675f7505e655d3baaacc578cf40ea84e9ee740e8a84eb49af7cccc1521faadaf",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsInterleavedBudget",
+      "sha256": "e5b1e4042a3a67eb8f84b847fbb70a2f6f54820af7f72400c912d61884b9351d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryIndependentLaw",
+      "sha256": "1a5afac78ffed3dc1c1d29e1c69dccfdb789e996e151c2335f0e60f620acbe50",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryEntropyMaximum",
+      "sha256": "46e89f84a8fdb3225d45d30d9b00c9bc9d5591f89920e9c81ed635a018dde37c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryEntropyReference",
+      "sha256": "1f70de7ced96da8bd2a5f852b7846e6f8d78ad8ace92accf40c7dcf298eb2da0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.AdditiveProbabilityPolytope",
+      "sha256": "646224d3152c3a60b81e5f81b1a5c32bdb13b0ce89139953a424632908c70236",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryEntropyDuality",
+      "sha256": "c9eddae141b283e061ca7c5006627783652fda8e60806d6d310d5a6b43bdb90d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ImageFiberConditionalEntropy",
+      "sha256": "f3c7788c51cef3822d0f5036e0d1e2270303a936df01d2555ebdca071ae0c85f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryEntropyFibring",
+      "sha256": "c721a3963e46148e1b90213cf2b44ddc41b773cefeb9a0b0d8c466bd929c1a6e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryReferenceFibring",
+      "sha256": "b6f841163fb287acbe385a31d3e15d8fb0f9c455c7895a54963962b1218732cc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryOptimizedProfile",
+      "sha256": "eb6bc7e618146c4fb5a1b26926487f51fe86ee8833c3fad8d4d3ac2161976354",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GeometricMeanFiberEnergy",
+      "sha256": "73d8d97549664fff32d66427b9ae6f8f96a08ba7549071f5dd874ba96c89d4d3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.OptimizerProjectedEntropy",
+      "sha256": "db8e46f0f6db3d8584db59b85bf07a80f399e8ded86c992d9f664d67473bb291",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CriticalFiberPaletteBudget",
+      "sha256": "9b4bf8897c8d8c64eaf7efb4ac6a93dab04166a778b52081bed76a12a32c8c0e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteSameFiberCoupling",
+      "sha256": "758943ad31a8f0376892d7efd254e0d2133ec18dec04a5f74f4f7d12e8aac6ad",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteIndependentPairs",
+      "sha256": "4f719ce13eb50c84323d6a1d173495c1e65185f54f25cb9f4e37a909d247837c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationarySumDifference",
+      "sha256": "f39efb1f959f70f946723cbb4f2d9d2f273ffdb0aaa1614d743e046a6923ca52",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryUniformDefect",
+      "sha256": "6c454364b58c494917896e4975eeab183103724afac7a1c18045e04fef498927",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteProductLaws",
+      "sha256": "2a16c4ca56aa3fa8ee4a88a6b03f2d74ad0507e0fcb4ef04e12b2675b543674a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProductSupportLaws",
+      "sha256": "4f093ecd89ecc86d2dad732a9a765119eef7005868804469cd4f298415633fc8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryProductLaw",
+      "sha256": "9df0dede84bc4cc0e71c30aa2f415ef179350d6cff1536c362f72bcac1a4f5ad",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryProductEntropy",
+      "sha256": "25703e24cebc0d816d56252567723f52ab961a5d6a33470b92c76e29789d0c7c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryReferenceState",
+      "sha256": "d0de2dab1285a2a1e0010935428b2d7bb11e8284bc52a091e78ab74224a15df6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryParallelRecursion",
+      "sha256": "dc67292565cdd247ea6c9eba4d8b3590f4c454a90946a8c59508c35da98b22bc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryParallelBudget",
+      "sha256": "83d709b3c0e207c2e5d8da4092dce311d9d613e5327828f17000060b4fd5f5fd",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryParallelProvenance",
+      "sha256": "5ff66fddec7cba4f4e6adf4e6e4a12d87a1a53139ef3d16905b1a05bcac3cb82",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryCoordinateFibers",
+      "sha256": "1abd934597dabd05ea3fae5ce9bf08778595dcf2971d9e3952cbce6357c1c0e9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinatePartitionTree",
+      "sha256": "e32e0ea81db70375426f4adac3fcbf0bc733ab4ce5dbbc6d21e2b339a30800e6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateParallelFamilies",
+      "sha256": "b2341566c4170481c746482aefd39c5939bc40af07e545f7a4d77fa5e27b0773",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryCountingRoot",
+      "sha256": "89fc222cedd238f881d69f78214832df830c6f6e27a2f9a13789b729bcb13604",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryParallelRoots",
+      "sha256": "1dc7a8b4a266e33da8b5ee04abbd311aaf22f9b3f0ad08724039167448330a4e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateParallelRoots",
+      "sha256": "b4120ce2637724aa6608396b8168eeb67da360233b637eb9f3830c90c4f3cc00",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CountingMixedDifferences",
+      "sha256": "a5db8a39252318c6b905e9f971114955e495ec4a5da70e2282dcfc135afa1ea9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiberDifferencePacking",
+      "sha256": "3840337093f6e56256c4a9fb7792bc51c1d3642fa67773b881b16c8e8b36597d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CollectiveCountingEnergy",
+      "sha256": "46521fbbae97bc88cac2d694b0baa924e2f764b15c66a149f98aee1dcee3b428",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteCollectiveEnergyBudgets",
+      "sha256": "2b90af58128bca6720b9aff374d6aa19d743455ad528e341e36d10fb2585d96c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CollectiveFiberBudgets",
+      "sha256": "2a56a2a1626935434bcc0ebb0ee3734c65a620ab2df2d562339c60a1f0deee1f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PopularReflectedSupport",
+      "sha256": "47be844ca214807a8c7057b068b18c772ce041db88b52f18027daabe7c2fb6a8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CollectiveReflectedSupport",
+      "sha256": "dc68651a40e06e08a1e8ec8f0465e9fc13e0af1f62d6d6e2d20679c9e46f98ac",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectedSignProjection",
+      "sha256": "bf158449486dfa4a15fef04bd443975cc5d33e897eb72a5f7b8753a5a8964f95",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CollectiveReflectedSignCell",
+      "sha256": "57cd4f6b5c4f5f2b222ed4cb1a556e391f33082762a283f35b0872bd33ee052d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CollectiveReflectedCut",
+      "sha256": "159554d4d8b66b76a5fcd7ef2d5d708ba45e297e6dff743853d6fc49dc609c7c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CountingReflectedMixture",
+      "sha256": "03c16fc46ef485e980765cabab8a6670e8750020c7fc843b6e8908b938b57af4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntegerCountingCertificate",
+      "sha256": "998f649cf2b715b423b2c0711ed9f876275d415e65172f83fafcd5290dae590e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCounterexampleSet",
+      "sha256": "48ce8b6e16553f1e93246f94c774b785dfe189b3adc2c15a7b239d10c6e5d3dd",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntegerListCounting",
+      "sha256": "dd9e1c78ef349cd6414b7ab8542ae66cb39a456324d83b2776cf6660adf42643",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RationalLogCertificate",
+      "sha256": "c01734bc574e880dd0676caeef51bfd1db23b3a493ef593b62eb3e8deedd59be",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RationalScaledLogCertificate",
+      "sha256": "52a4a152a60a120c1ddfa8b3b7d8628da248740d6c34db4b74139777b2ede007",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectedDefectComparison",
+      "sha256": "71a7afd8b4fcaea93ce8affc087f6bb25b55271dbc978165ca7a7bef919872ed",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectedIntegerDefect",
+      "sha256": "7d9dc8505a65480255089ce3fc76ca88cc23d12ffc3a54d9722e715cd0e73371",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate00.Part00",
+      "sha256": "820fcf0a66a3540b5be1ae32de8055e8f0d02ea8d89a85f9db3accff60c1b85c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate00.Part01",
+      "sha256": "409514b2cbc587b83c78325661afc9c1225d1db8c982f66d00316d5f031abcaf",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate00.Part02",
+      "sha256": "32420cfac5918b0e0a0b8afd951087a9d77f82f908bfadb2e677481a78b76c4e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate00.Part03",
+      "sha256": "e50435ba5d7322a8636f403012fe4bf8d802e8bf81525f9f5894bba7a31fadec",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate00",
+      "sha256": "fd50b18157b9c7815eefbe7d672fd8ac5de7d23269253c1611d2b6a767da4c0a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate01.Part00",
+      "sha256": "801650de1e5134a4950de970128c74c21fbf2ae6b43273f0490b409785ee8113",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate01.Part01",
+      "sha256": "6271edbbbeee38b057d80c5ea61892e6c84b91a4d40164fa8baec7521decb289",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate01.Part02",
+      "sha256": "ba6f1f8791261e82b36bd2aa319e7d5059eda138e259524a1729c217b5962c4f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate01.Part03",
+      "sha256": "966dd482f2d272c3e25aa24aa40cd41d6ba1126f858ec610611250321438458e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate01",
+      "sha256": "da60bf861178abd48adedb0b2c7de639ef21131980a1ab280d57c055ad688d9e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate02.Part00",
+      "sha256": "4633a3987ef4436cf14747f14ebcbc1ae3d0fee02bfc6e8c30f6934b51dd2513",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate02.Part01",
+      "sha256": "09fd93353607e78fc911a175280d09c5e0db18dddd5cd3c46268d15d8342eb0d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate02.Part02",
+      "sha256": "65baa30e8eed5a7b42172ef4ca0c6806e694780c5c9135e6b8fe4536b9f8c712",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate02.Part03",
+      "sha256": "d23c7a2a67474a8503bb8ada0750f02190519a4904be8b19b2169e0bfedb4728",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate02",
+      "sha256": "c7411c7d3fc3ccccf2b08e256ac6d16de907312ec61b1b7121e16f1cbe0162ad",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate03.Part00",
+      "sha256": "3cc149a0a04f42a374e1955c1dcea348a20aa3277c910208a43c599bf6b980c1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate03.Part01",
+      "sha256": "919de8be1f809bc08938994c8e296f7f4b0a85efca3ec63a438de6dd32fcd32e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate03.Part02",
+      "sha256": "c583f269cfee2e6192608f2842a4aa9dc2e86fd9648161bde8c6d4f41174a732",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate03.Part03",
+      "sha256": "f6b020982ea28a7d5262ed544e22a75cd432c22b93bb32f39b1a0879c60ea0cc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate03",
+      "sha256": "27832fd12a043dd4af64201d10743270280f6e5b28e8960162ff544362ae88ed",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate04.Part00",
+      "sha256": "2c7400c597b71602ab3c4c56ae1279fa6149c11484e7e1c4f5861dce39c89dcd",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate04.Part01",
+      "sha256": "bb868a8973dfd4249a48a78412ada4a71569206008217cb88466b976fedc8e15",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate04.Part02",
+      "sha256": "cb79c5fb1143ddf4c51dc37571c48bfdebc5d978c282a458ed28b24ba08d9c47",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate04.Part03",
+      "sha256": "efb269d0f3b09ddd9013d99e6e8269ebaac3abad7676fc5621bd7dd512d873d8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate04",
+      "sha256": "e22ffc29c46449a8ab092f21b2b42b9af8f6a3b7b87a11d2146ac4ac0fc25517",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate05.Part00",
+      "sha256": "4f55dd9c5899d91b5488a897e33502bdcfa9a79fc65c85823c78a47165c8b907",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate05.Part01",
+      "sha256": "016ba64392b92115b2c2f26967cbf3cefafbcae1486e360201a1de8ae88294a6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate05.Part02",
+      "sha256": "225d87fcb2ef670421b353f045d44ec5cf80bb480c623623153d9f6ea2273e04",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate05.Part03",
+      "sha256": "10d4f1bdbe48839ffbdae7214afb4a1dc84ffb863bab8abb24c45cc6bdc91a33",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate05",
+      "sha256": "311a84c46581af54f78c9071d949acedf9edff40eb700f1167fd07ad729620b4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate06.Part00",
+      "sha256": "00b597b0b45ee66392490f5d3147d4e8a4605a35dba34d067d8e2541248eb161",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate06.Part01",
+      "sha256": "2418a9aac07fe66d664c9db321a76a11add320c8fe4d81f4f3864022ae610a1a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate06.Part02",
+      "sha256": "af8c0d8f2a4a53aea61ef6f1b3656b121f0c917c5db33147b1e85d37c0bbd150",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate06.Part03",
+      "sha256": "645aa7bcb2dbd21e029635884178f10171e60f37ecfae59cec9b660a3adf8ab0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate06",
+      "sha256": "5ecc77453eef3ae8d16cfa415dbb128fffd8b3bb4bb618030ffaefb1ed1893c7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate07.Part00",
+      "sha256": "b8ee0ea66658d7fcb405093ae72d6204115a1081ba606f40e5418bca990683c1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate07.Part01",
+      "sha256": "c1336c79a50cebe7a2557a63c75cdc649339dc68cf6b05d31a32b67c6c0df993",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate07.Part02",
+      "sha256": "27bfb24a09455decf114faa644bce4cdd8f6ce62b81b953674cc3a136c1d27e6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate07.Part03",
+      "sha256": "d58537da9c11db880759e475f35b3f520f8918b901de182bb1c6a736363ade3c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate07",
+      "sha256": "befe9b52a870061ab4471db3226c776c581183d08d97d34a45b1ff43ee68eedf",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate08.Part00",
+      "sha256": "19f75b4d78631400187355acad824b7cfb3bfc30bc1936c5d3ac72a90e15d214",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate08.Part01",
+      "sha256": "2c38cb4ea49d1d250fe1f6a1cd10754638fe994ea1dbadbc749537699d81c0ea",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate08.Part02",
+      "sha256": "53fa56eca90f9e8f172112e848b1b4aa92550faa9195d9503423cc15fbff3503",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate08.Part03",
+      "sha256": "e99753b7ba4c643321546196552d727a7b17f6d35daa12426609214145e361f1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate08",
+      "sha256": "4f3361dc79c27554543206ed0c5d6e27db8636d3bebfda7f2d6ed6771d73f1de",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate09.Part00",
+      "sha256": "7fb3ed60278abfeabf770a856d62630bf1d29c2e8ba3f0b8d7c6249ea05abf91",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate09.Part01",
+      "sha256": "46805a9368cea556121d65b7fafe7d219cb76d386ce71b1a3f3629eb357bc91a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate09.Part02",
+      "sha256": "f714652bf6772d40136520052325f4fcedd2d97eb311e4a8eef8dcc6865ed83f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate09.Part03",
+      "sha256": "85c06a9b16238186fe28e8d3b23e366a22668725374b8f5aa378492711a676dd",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate09",
+      "sha256": "1fdd0c9927f483f4ad31be0c4cfa83642ac5e583f9742e335b761bae5682b7f4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate10.Part00",
+      "sha256": "7a1299e71ade3da51ce7e613663ca6a3ad89cc299b63a7c1de3108e0079f6e8f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate10.Part01",
+      "sha256": "90c5ad09cc68485244a4be8ad92fa96f4b048c906bf529c3b203ca6eacafff30",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate10.Part02",
+      "sha256": "fe3d322ab2ccf8605dc3dbc0e0a1e7b25f8286749f23ad13e9c5b6c6e93e6334",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate10.Part03",
+      "sha256": "650c56afaf8c946ee3d99ee1baae4e4621541da8eaa68ed855c90d9d2b5f7724",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate10",
+      "sha256": "ae1cd23dddb025d8c0f3c012698f31860c63d7cf55774ec6db391d3f67aaffc9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate11.Part00",
+      "sha256": "9d8c4051c8c79d6eb88fa86626fc468d9c6f2acf64d48115da0c2f79a68f6914",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate11.Part01",
+      "sha256": "f17111fcf263cceee5ae042f10fa8b3dffac6419ead6efebe28f41f1eb5c3db0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate11.Part02",
+      "sha256": "d631ed0c063ea59ce4f61f74eca8b35706cdda56ce53151a6aa58976b0829f09",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate11.Part03",
+      "sha256": "8b9397048d5c4291aef01d01e574d92b2cd23b6c298f414655218d59d00a3f03",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate11",
+      "sha256": "2f56b1031b7ff3fddd4bd3f6a2eb5f5ca2a15f761e74498ec1884a76a2498161",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate12.Part00",
+      "sha256": "d37ecffa4f2551b7dfd2a2e8f6f23c6c781c41377d7daf08296f577f35a1a501",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate12.Part01",
+      "sha256": "2e8c16e28334ed2fb65cbeaf3d35618a9eb673f8b5240d31f8095d0a26f03ebf",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate12.Part02",
+      "sha256": "d384f7fb92cbe2211074842e8a6a5fafa0c83ffd9022ac3b0e25dd0507c9a8bf",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate12.Part03",
+      "sha256": "155d202bb4be1486045a177bb02807b5f588e75508c80e641406bd6f30668813",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate12",
+      "sha256": "6da3ed87f3ebec4fa6a059f93e94ace8815c4d35dfa318bc4e1804fbd97ae1d8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate13.Part00",
+      "sha256": "cc3aae4e56670385d9ea77c9b9987126a3f6bfdf720ff41759e1a36db504d799",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate13.Part01",
+      "sha256": "6c19ca316a9d7a869bd84312edcead999f3be1f750e870b0622261b0b8d89bce",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate13.Part02",
+      "sha256": "33a882b369fcd7265a7ac32629bcd704a57849d1514e149613d543d85b21cf2a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate13.Part03",
+      "sha256": "3759fbdfdf55f8cc645abd9bf782580bd50dbd2b63a3e7f65e788e40a7b24421",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate13",
+      "sha256": "c7a973107f68cad5fe44a26dbdfddfe498023aec134834bff7a4a18c279cc9c8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate14.Part00",
+      "sha256": "b89c8eb50f457b265019fc626e945b73098fba834bb2d6b48196c896c0d85d6c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate14.Part01",
+      "sha256": "ffb2afa013b0d2b92e5d1ee292167c19b7ed0ed89a3b65ef8d7879d3a93dd62f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate14.Part02",
+      "sha256": "028cc994153f9dc10a3d2f460ecda6b70310876eb7acda8fc927e2ce3abc5c33",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate14.Part03",
+      "sha256": "318171421d56df0be4d69ac28b83925989c7abbe7f83caeb6a18d8f01e45787f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate14",
+      "sha256": "45bd173ac3ff83a7c4fd1f86205f08105becb86a220e8928266ce8505b3d1bf0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate15.Part00",
+      "sha256": "7fb98a69107180b8b7bae10545a5e80a016495c05e8dc5b4ad45f27e9c02b847",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate15.Part01",
+      "sha256": "ab0c4f3a941903f47c995eb49a7a9f2f3ad73173448b03720b521a686f4aa5b8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate15.Part02",
+      "sha256": "72332b2cdfab9f3306c22e1d391752af91bb1e3816787c524cbe9fb7abec3fa2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate15.Part03",
+      "sha256": "20fd398b062e7b8f0ed539c51011edf4d82aee8088eeab20ec4e8f9fc3486cf9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate15",
+      "sha256": "99c2531d4f5af8d3215b695c7ca3a906aa21a11d02a4ab9c0f05b6767700d964",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate16.Part00",
+      "sha256": "ee3d465e8a6e0596dc97e22731e30d78129af9fb76233ed38d6fe4ac91369e6a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate16.Part01",
+      "sha256": "17d54513fccd61ed1ff375c1beabc12995f1a1b3ac61f91792739938b220e5d5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate16.Part02",
+      "sha256": "2e89c980af979ae00f84b518c80cab68d29f0a4724bbea110a792f389e9873db",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate16.Part03",
+      "sha256": "783bf1b4ee446926e01b179f274a785b5d95f2e11184ce48d1a00c10b7c5fce1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate16",
+      "sha256": "b912e0553bea1602731e9ef68436a453915189a0699fdeb804555c88206660d7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate17.Part00",
+      "sha256": "c0bf48df08c252575be3ff43e7a9eeacbbe604a872e45d10682cc7598421eb69",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate17.Part01",
+      "sha256": "52b4f1cc2b9a9dd925a3b6aae3a58218e2ad660393bef341936ee1981c756377",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate17.Part02",
+      "sha256": "1fec1145aba6deeaa5d41cafc45bca6218bdbc4cf42f62bb147911713d6cd0b1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate17.Part03",
+      "sha256": "8d330dc987fdbee2134c5d541075b5b55be2cd1289d4dd4f6fc4454113f5317e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate17",
+      "sha256": "e0271b4481fb9487c3773d616ad894561c2179d12710ffb07058cc4cc2b5c648",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate18.Part00",
+      "sha256": "b6dd43e5c63e46f87139d11a4e1596e8a845c4b22443682332dc7e15e3eeba73",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate18.Part01",
+      "sha256": "b3f8c7716cd67f17187483a59d20865cacd9f366ad889011aa4543ec6824f398",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate18.Part02",
+      "sha256": "981d6a8cd44ea2965262a2d09831e24654348a680cc354c98250368cab4aa3e3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate18.Part03",
+      "sha256": "e8007d748013c8ca0e37e3744b207a7f82249f8040816b2ac0dbb69f2f0115b2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate18",
+      "sha256": "0cc008d14e17035d3940ab2935ab0a0c94c1630a31cee73a25fd6032afa94ebc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate19.Part00",
+      "sha256": "6a31ba3d0a0ab332e1eb861b1f8f88162b0311c9957f1a75c5a82a13e1f361f7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate19.Part01",
+      "sha256": "f9f4520f161ea50921b3aa3b463a86d0ae96033db07a64c95eaed3e030fff768",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate19.Part02",
+      "sha256": "ca379ff1d36e5a5963868da86552ff1dc36dba1cadfd36b57996bbf776d0f21c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate19.Part03",
+      "sha256": "8245f29dddc417e78bea8b2a4b7ab5730bcfbf519816d086bebeb3469c4a6a09",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate19",
+      "sha256": "1a2e1c40cc524a90f58b694c2529d1a3eedf230b495e537122bf29bdcb3320f2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate20.Part00",
+      "sha256": "99f704dd44710b10940cc828a9cd64f442f50f082bd7fda0d1d245ae700eb264",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate20.Part01",
+      "sha256": "dd510e4c258cc34acf775272e0ff51c36ba9f7472a9efc00b4b18f35e8bd7997",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate20.Part02",
+      "sha256": "f5bb5fa09ea21a9767dc275dc2c806c525070aebc927f0669170dbd675417a08",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate20.Part03",
+      "sha256": "cf6268b6997d361a4a905d8b73c0817edfa402a231057e5eb008dc5b95dadbb2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate20",
+      "sha256": "59353601555bce89cabd7e9047bc0fab3884cc0b20b68da7ba2cb39bf30e3e0c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate21.Part00",
+      "sha256": "65016aac81d3da80c2b4f74b40314033207ef8e8ae28c6a5737159cc121e6566",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate21.Part01",
+      "sha256": "0a4dcba291d9cfe1acb36c79cce211a2bcd7acc1cb12aa97283deabc2ced81b6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate21.Part02",
+      "sha256": "fdeff53ca723f85f0ed579cfa122ff50a3f4b53bac8faa99e3cd9698d2bfbcc0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate21.Part03",
+      "sha256": "80fe3cf45ef93bba2292db3d1456784801042dbdcc7bf8eb02ab8bc077725109",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate21",
+      "sha256": "2784a57eeed8b8d359affc97dc6b6ff24a2f06c64f0ba0d989f1d9214f4c4919",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate22.Part00",
+      "sha256": "9a1504416f1b9c393c4ed240b42ff43c14c0797d05972753453d5037d8a1f9f5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate22.Part01",
+      "sha256": "bf20b0dd31835933777b83689af63fe9cb6e5c5cf5e2f7bff26020410db21ff4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate22.Part02",
+      "sha256": "8d4f3c94c627f2544f568504461a19996a98868378f8a2edc7fbb1ec9b593643",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate22.Part03",
+      "sha256": "fb4b2433cae0d1227ca716487083e426476bac230fdeda0ec645a3ff46c8aaad",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate22",
+      "sha256": "294e58313490c2f259b063e5829e6ba2fca7331f04dda3fed60b83e264286712",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate23.Part00",
+      "sha256": "45ac5a079a51c0ce075609cd90d46acaa005c077cc20c62ea93905d1d104a146",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate23.Part01",
+      "sha256": "7a805f21d2d29fd8291a0325234a4115cbf56ee703fb8033d3dfc9216033e77c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate23.Part02",
+      "sha256": "dc6b1e15702b17b2684343c973606472cb2932f382d909c610dea10dd160652e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate23.Part03",
+      "sha256": "0472f450b3bfa9c6afaa2e7221c3b7779e5932f33224ab772c3e6c243e4718ab",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate23",
+      "sha256": "f8e46156f8dbd1264c766fddbe71eac96b80a7ad468cebddecdd71156a0ef7bb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate24.Part00",
+      "sha256": "8cd531f1aa423bba1e84f115d50067d2ad9298b413a2c92c3c32ea243b869c8c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCertificate24",
+      "sha256": "d4d1eb41c0caae04e95736af55587df52f4d060b99623ed72194cffc9b5dcb1c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCounterexampleRoot",
+      "sha256": "55c87f58bd05ab2f5601516af95f233f150fa565398bd70dc386bec613be025a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCounterexampleExcess",
+      "sha256": "7bcbb6d25729410a61c3fd07f4425d3370eda6040b62d1a26741119d705a8b09",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectedCountingProducts",
+      "sha256": "179e495d4bd85256de90370304c8dee4b734cbca203d9b24382cf8b4895bd359",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectedCountingTransport",
+      "sha256": "06f23a853192d4b5391bf71f8fe09be05139182cf756851ff06caf7959237fe6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarRadixEmbedding",
+      "sha256": "44c3323b9b488030f96194d2c45df1ef62094a1c6c9d8931fc0748034e50eb52",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarReflectionPowers",
+      "sha256": "d64e8a43dece3019ae8e0dc50218a30d6c2f41f7e99cce00cdf3448976a6353b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarReflectionAmplification",
+      "sha256": "0cd690bd98eb95a3ea9bd8f9f658bb787ef393cd6bb345faebf5591e59e2d202",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformEnergyWeight",
+      "sha256": "2edfd8ceb68d291803e9e72f5bc27ce5c13f0866bc9c603aaa22bde68bb1b5be",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntervalCountingEnergy",
+      "sha256": "f3b8bf215770ccfc40360704ddfb79f6da2ba3ce1ba78323ae6ccd4fbeae13f2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntervalEnergyBounds",
+      "sha256": "745a85dab0afed6c0d9c0f9888107382f4181bc3a7f823cf5474fda13c559f22",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SidonUniformOptimizer",
+      "sha256": "1227fc750e910980f47d0feb8c91a0cde0dd97b09d8b501f4b59e30b46bf9d94",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformProductFibers",
+      "sha256": "721c8195965392af47347352f50dfcf06d057e4e8f865845ee64f922e68ba8a8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformProductConditional",
+      "sha256": "d55aa1f8c6cd4ef5770a574999793194fc09b64f89c1f4e181fc87a63dda2f7c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SidonFiberSharpness",
+      "sha256": "bb936863c9ba76d5e652d4aa1622037b7cff49d5ebb26347f95dde4df55cff74",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntervalFiberSharpness",
+      "sha256": "28bf523ba6f24756cc7efe6c2cdce832eb68e51cc6730e00a851306ec82675e0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RetentionCoefficientOptimal",
+      "sha256": "95f6fe5610012691d215c364a51c3eba49bfafe76f2c1d047f3767c3145a8e37",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarSidonFamily",
+      "sha256": "695c383bc0a38de8e77d9774abec8d618139bb289144fdf5a7f40ba4f03aaaec",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SidonRetentionFamily",
+      "sha256": "68284bf83aca022a0cf579f8537ade49c9de403e6ed242dc5d7ff8ea6e33266c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RowPointEnergy",
+      "sha256": "107d754104c45a2f9fc4dbfb143a31913e4e1049d1dfb9305129959adb32118c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RowPointEnergyFormula",
+      "sha256": "687925dc31815986aad054499a62e2ddeaf1ccaa90fd1828ea66032d993463f2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RowPointReference",
+      "sha256": "ed6a6d9129706d34cf5c7c39764c0dce8885bc61a52226d321ecc19a0af53d60",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RowPointUniformEnergy",
+      "sha256": "723757ac8c536468c81396ff73d4ee8edea1d61db66c2e09d5bf48c772ba6327",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.RowPointRetentionFailure",
+      "sha256": "e14318965a7f8d69e7a99fcb5456b45cd2df08063df2e654c43739a4e16f69a0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ArbitraryParentCounterexample",
+      "sha256": "93fe93e49887d7a87954dcde3f4225a741a6a04c1d3356692e541381d6506490",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryCutExponents",
+      "sha256": "ecbe720cc5de353bcba008eac37bf3f49e297b308b030c2259829f8fc01f788d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryCutExponentValues",
+      "sha256": "3be155b9fe8cb44488b875ca996acd9a58e3f956bfddecc70d14414ed7292115",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Incidence",
+      "sha256": "4e85e04fd4a0e1effe5e7e7a07cee485485f058f1bb785d4ad1f0c8d6bd95493",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Masks",
+      "sha256": "97e9adac0bed745a14f46d6529a70892d72eb21b5ba990ea4c2a961367d5dee6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask00",
+      "sha256": "b6fba17bae318b4c38bcec441bbf31c48b7acec71f1288e7a5cb4cd3a14a3910",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask01",
+      "sha256": "e89941c0a66c04c7449e4447c5016388fa89692443e2f97cf9d453689e427dcc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask02",
+      "sha256": "ff8a37d84fc3cd2ddcf2434279a135428ee8f9b126ce67ff7fd6286b624a0085",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask03",
+      "sha256": "d1f222a59dd67a07a9dcd32c10b8a6e84db7fd2cab777c17bf01219e0ee955a8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask04",
+      "sha256": "721ecdf2f2ad8fe768fcbfde282c4cf4d693f2aac83613b8806f1dd9d4059134",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask05",
+      "sha256": "4616d5f6c420cc2cefa22146dd57e2edbe9c1abbce09b74243ebaf8ab679b879",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask06",
+      "sha256": "7c9afb80b62f1a5682680689d25c92985f688a58cd2db562170e8c037890beef",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask07",
+      "sha256": "a41eeee89e0f45afeca0f29bd1b3c4c481d93a6afa83d58cfe226ecbc680ada4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask08",
+      "sha256": "3bf3ab6ad437de7177cd583d4e9305122b3512991ba74521a01269230e05bc52",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask09",
+      "sha256": "3dfeb96a2100c695e21e166162247fa729afb2755502970998a42ef1d624865b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask10",
+      "sha256": "8db8ed40941045cb5df6e82ca63026d20178eaa30b4bbd172fdc1544e4143970",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask11",
+      "sha256": "6e8f27f4cc34746bfe8dc7c20e987cb12a76fa7fb3a99bcdc37f71c88c683f8f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask12",
+      "sha256": "440d8d8d8963ccd6893a7e1d3267613dcc717ca6911e9df8fe325fd6a731be48",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask13",
+      "sha256": "9a8ef6189d5884c26beda498663f4433313a1bc200a9169b3155232328d109eb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask14",
+      "sha256": "69b09d24c609087690ceae4ea327b0a687c81712f2be59a996cf90a25516ce74",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask15",
+      "sha256": "c3c0437278743ccdfb08ac590243b535e89af6e021f619a0b733a9291c85737b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask16",
+      "sha256": "4b8ed397c51a2748816080efe7fb12f00f8c57bf6a95bb36956d566b547cc0f4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask17",
+      "sha256": "0ed8eb54c0a665791152bba2bf932ee1d53a4007bdccf116843ce3202687998f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask18",
+      "sha256": "b417eef4556d431959d2f6d8b6c7934395c56a120be9916804f94fce24be497d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask19",
+      "sha256": "fd13e68c5b5976f1355cfae60b43821829f2111dfa47b8e1041eb0da38fbb685",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask20",
+      "sha256": "eeba6dc6d3bea00733309104607f90b285f140473cb7b739d8e04ed72c3fb706",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask21",
+      "sha256": "33e051ae2b4ec1670f70d848db837ce9b0377e49bdd235048cb5a1886ea06ce1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask22",
+      "sha256": "a21325894b0675efc87d4c239528687ad8158430e5e49aab154a3092d89fdea4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask23",
+      "sha256": "0ca1282914456f4d7a48ca3c04b1b1a95323d46a2251ffdbdbd0023cec1b42d9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask24",
+      "sha256": "773b968093e433b4b0387f7525b8fc551f51dc804f605677b16ec5309014c98d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask25",
+      "sha256": "cc3bd318aed3fce79d0743e3d9b127d7da8d5a30730ec40815a0eceeef3ec3bb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask26",
+      "sha256": "2da9974f2c5279f09b3ede1f063d316634b74c1f6887e90b2d5bb510db4cb106",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask27",
+      "sha256": "14e3618da823605e0f28cc38358ab53ce2f9225b38d265ed64b5cc023e53c70c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask28",
+      "sha256": "b0160576980b0a2ab5723cdefb1df649595cf64281f3c0216b530583dbe93d74",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask29",
+      "sha256": "d8194a12fa5ce58b94c7f5027207035ed16e0e05a668cd517bb08b17d8ffd4c7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask30",
+      "sha256": "4073aba76b85fe1f83c81fe8ce01869ee185e44c0841d3b4b653059b5c59c8cc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask31",
+      "sha256": "1d07f11df40a515ff2b2e5aaae7b586e9ed0d89ddd600115103033bd190a0ceb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask32",
+      "sha256": "6c4e8782a399e21147047d37a241a49ac7ab99d2ba029ec2f1148374ce34233c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask33",
+      "sha256": "d372b6193c59db846c8e02a338c3b987a8b2fc7f29484ef4cb2ba1c9cbb08af4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask34",
+      "sha256": "66a50929102188b6bc000ffbe335787b021ed55826c3e3911e44fd97583c58f5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask35",
+      "sha256": "35d787f6bd9278ee0ad0ae87c8edaff960617e997f809b30267e35313a2b56a7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask36",
+      "sha256": "e6556e369076b15ba5797d5839f9cc5d0826052230635a68ce386be0fcfec564",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask37",
+      "sha256": "ade4087acae4bb46503d6138d2cedc9f8defd7a4673a364aab6beeb61aea678a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask38",
+      "sha256": "1b712f1a8046604e94a68d0a5d33882403af589087e5c8b5362b185761fad32e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask39",
+      "sha256": "679ae255b334e935d455e63f0125ae1cee61d9ca0785f78224bc93074c45d9f9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask40",
+      "sha256": "d9e1164dfd2899c108af8ee8358d1592ee586729274438059c27bd76aa0c0bf8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask41",
+      "sha256": "cfeba62ea2eed951167d8e6a1acea480d8bd41ae2621019409af25efe043c52a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask42",
+      "sha256": "9f22acd47f349ab8ba8df032943749e0f63322c1552c4c6520e5e550390eae88",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask43",
+      "sha256": "912fd66a697eb55a63b56ec2bdb73d6ae77c591b6f01700017dbfb0b70ae8faf",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask44",
+      "sha256": "6e69bff50c68fb2bd8f59d76af9225fca64deb1066e68a959d367b3d669b02d1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask45",
+      "sha256": "b25e9647479a27285c19fee0a5338329f9ae3e9202fb4635e416ce3bae5360ed",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask46",
+      "sha256": "b1fe37ab42b8af7d8fcae6f88791f50cbc882d9fed1ba5b10b213431d70ee7be",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask47",
+      "sha256": "75273d017a19ef8eb8e4588af6845243d6712740c79403cc337d476a54ccc3f1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask48",
+      "sha256": "2f31c9286b4aa27fddce4aa2626578a460d70a2c0075bed648c98c85a4dcd822",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask49",
+      "sha256": "b7c9bde8f77c4d91e06084ae522bb786bc8349adf27ff06e96f4a5c8a5dacc5b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask50",
+      "sha256": "003a379d3ddd648489d5822107d71fc302dfc8b0deb39fa0652c6627ecc0694a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask51",
+      "sha256": "b6784f0a8c1abc80bcae6bed5b5e0d80c0f65916fcd08a7a2c083e54f2ea87bc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask52",
+      "sha256": "e90d0f8ab29ef066c7f6ed7c27c388bbd73eab5165028d0c4cb205d0978ad411",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask53",
+      "sha256": "e28761cb9c65aa87c2bd0ef57eeefcae7f706d82395879d59fc1891b727f80bf",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask54",
+      "sha256": "a482ba14f4574104922dc855cc506d38c952ec1c09e56701f02c3524f7501532",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask55",
+      "sha256": "938e10c7661d4dcade477a222b06fcadd468461918f3f215803328b08b42b632",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask56",
+      "sha256": "96fddf45cad78d6d615b10a18ce416f267cbef8ab117df268d2dccfa077c3e5b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask57",
+      "sha256": "d8253e0c7965ab3b74f4b91d90fc1f927605dcd40ad23d4de7219f9a03adbf7e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask58",
+      "sha256": "b60f22aee9f1caffcfd23ae5a12c00e5668572988428df65b6e4b2f3aadec4ef",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask59",
+      "sha256": "a7589fa6e55629a3723f01136746aad7dbdec36f5f00cde92552d88c6e0a85c0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask60",
+      "sha256": "604b7550abe1bcd2ea4e0050f99ae04f7a95576d56fcc51426de86a8695b5591",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask61",
+      "sha256": "3177d4a8b20e7f9b69bb21778f413f8f9a19ae29bbdf3758e22a37422af4ef4e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask62",
+      "sha256": "7c75035143e4cb95e295a5896e2a56878a3c0c859767d58dafa3a55688e517b2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Mask63",
+      "sha256": "6d4a94e00f80b17de0fc294f05ae7f534b08dc74a785cc29016ef4bc3c11ed07",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13AllCuts",
+      "sha256": "01f21e80a8db36a1c462f0ce5cac579a50bcb9553436c39d77e2992069562a33",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13MaskSets",
+      "sha256": "b3261fda59be1f17fb7df7543c17fb0b634b8cea8c647a75f688ad4babb88e4a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13MaskCard",
+      "sha256": "167203e6ef65310777e0d971985d8a66ce218fe69fb16d45385df78709eb4675",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ThreeDigitDecoding",
+      "sha256": "ac50db75553758f6729e5b7eab9b43b7589d3cb7e80e82aac6b6f445ef8f26e2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourLeafEncoding",
+      "sha256": "23aadb8b7c1306e41aeea035c2e3b0c4aa14d38cb2062b99d701e729612e6251",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourLeafBranch",
+      "sha256": "b0dca6d340396564564eebd3405d105e7827f4b7243723b31186e2292bd772fa",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteUniformFunctions",
+      "sha256": "a6cde717ea4951008f453955e377d9ec45cf1aa5c0cc585769c73ddc459cc6be",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteUniformImage",
+      "sha256": "03babf14d73de9bc752a765258dd3c8421e106a3898bd1bd03599c94a9d0ff42",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteEntropyKernel",
+      "sha256": "66c97c13005f5e7d47238474b76e9037f058ef59abdc7b311e9c15df0a97d561",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourLeafProjectionEntropy",
+      "sha256": "031c8fd7b422e166d5a13418414f25da34d4fd0afd8989b7ac81f99d0e94f866",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourLeafDefect",
+      "sha256": "511b95d38ae127b5904f077fbaba21fd5153b93f1adb3ceaf9fd5b34ce3e8297",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourLeafTreeModel",
+      "sha256": "e6e13afe5e87c0caedbef4bcb5f66b95e867b07cf5582eb5094809f4b72e8fce",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GluingDiameter",
+      "sha256": "2ca3afe1c0043b8272910ebc1e0950d401fea46d7fb24a901008274ac87975ee",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourLeafCounts",
+      "sha256": "d901961401315a531865298494467e2fbb9cfec867eb9514731f7045af484ff0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanTranslations",
+      "sha256": "40fecdc6f634caa85c1450331d39ec6bab354126538320a0f74f6198047034d3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GluingMaxFan",
+      "sha256": "8fec838c0b282444ae23b2b74227573c705cc15439195143a0fc43cbb7de182a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourLeafFans",
+      "sha256": "45aa34d505ec1a4e0c888809028638c2d1d87085aeaaa8e8e0e66893fcd38753",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteFiberCard",
+      "sha256": "8492f47a4d593fdf83abd2065ca7403dfbc0627acdf50386b5a6538a0e08c047",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourLeafProjectionCard",
+      "sha256": "aeee5a4b95ded97149bf66a9a98b72828ca297ecc37506455fab9f8249cf8539",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13LineCoordinates",
+      "sha256": "39ff61889e8703df222a27418f8c533763e0204758ced368c9f6f0135240bd96",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinatePadding",
+      "sha256": "cf1caab58958e173d0d96d26c71a03a25f38fa0f550e9fe599fd572f31617848",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourLeafBox",
+      "sha256": "f44566900be5a1bc53580b673b9ea83e0409a49331750abbaa0c7581ea5e2160",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Branches",
+      "sha256": "8c4ebb7f3c2c8a9ada53a8aa4124e68e0ea4860111385a2ed4b599f117c746ef",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13UnionLaw",
+      "sha256": "ebaf11906865b013344046ddafa74371e356780c4ca5722508b6e2ae6959265c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteMixtureEntropy",
+      "sha256": "eb49df536d317094b2b39269a1d584a2a55cb1352d733be0dc6b703415cea539",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13ProjectionEntropy",
+      "sha256": "26e38a0bb1cc30afbbfd8cca2f98d3adac6590097e7b8ccbb2c710ca8eb69eca",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13DigitSupport",
+      "sha256": "65bb791dd0542c98d4b84923e1875e63eeed813ce74b76dfe133f0a618367f30",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13MaskIntersection",
+      "sha256": "0f45e69bea7a354d8ac220ee099c9b7ad8dc96c00cb686ffa981c8e6ae1b21c9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13VisibleWeight",
+      "sha256": "907bea10fad8b8c2eca85d25e885a6d749b1aab59272ace3ddb8f8dd62a45130",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.IntegerFans",
+      "sha256": "3b31b0e3d808f4e4928c4816b125761d8c07aa4936a4c09ca4817ead4fbcd51a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13BranchFans",
+      "sha256": "f6c1b1999f04c7f40c8eb9b2d4d3563f6ee5accb8438d4b2d61862e36fa9bc62",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ImageFiberCardBound",
+      "sha256": "c24514b7c8a3e14fe9ddf3b38eb0b0fe5207062fd16b3c8293f7589c06e170fa",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13CrossFans",
+      "sha256": "71730bb5d441be25596e9ddd128e53b866e83cc3f3760683a9decd27d2806802",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13UnionFans",
+      "sha256": "0918e6906ce5e26b14337d939bfd2ad049a741b3dd675ae69bbbf8aeb41fb41b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13CutEntropy",
+      "sha256": "9b54f1a785f9b9eaef6959223366adac411034d49fa29303bbefa93a12360412",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformInjectiveImage",
+      "sha256": "dc02bc2f252fec499e3b96d6718880696ca92600af8cc5cd24fd72b59f4e1ab9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13RetainedEntropy",
+      "sha256": "c53a0baaa91c717193bada367c4946f23a6a58ac8d9b32df48c4034d2bdfdee9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13PaletteLower",
+      "sha256": "88ae34ce61aaa053fc023fbcddd27249a0a1c47fd6638a03a1efaa2413172ca2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PaletteEmbeddings",
+      "sha256": "50202ac874a2cf8c6d2a45069119e91dd840685d507f00a477894ed389df3043",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13RealBranches",
+      "sha256": "7990d8f8fc718d425ba9b09e7f3793568bf8869a48333abd5b03387b8e653341",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13HeavyBranch",
+      "sha256": "b9c01a1c7a350b2f0a80c8490564dad3946affce50db7009f55fabc638ad7435",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13CriticalExclusion",
+      "sha256": "9bef8580ea9f47ce98aecd485da42de27aa0d0ce2c9eba13643d29d8e846d0b3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteMixturePush",
+      "sha256": "dfcf01750c57fffae0721ae5e91c9aacad0eebbe7017a2e3958bdb965fd99c6d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryMixtureLaw",
+      "sha256": "ec96df8c975dffbc4403fb8ecaad8cef403e30c8b4e426b572b15f6d29259c09",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryMixtureEntropy",
+      "sha256": "c66cfb37d83e4152313fc17e71ae0bc7c0d56622659dba520ac2464f9cadc991",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13Defect",
+      "sha256": "0792367192e0bd3584eac16f6eb4f57534fac8acf2627435a34e0d5182fdc64e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryDefectMonotone",
+      "sha256": "0f875ffc8d3b5090b1c08289a3d2837d45bd331aa6281d1eea4459cb022af7cb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13ProjectionDefect",
+      "sha256": "4606e69bec31a8c71d1f5c322c536d588658141e7b1a823f529eb70cd197af8d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13WeightedCoefficient",
+      "sha256": "58dc51697de37825a6c3c7a7a14a771908740578ad30d375eb80c0659c1852fc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13WeightedGap",
+      "sha256": "610d93a95c3f0250f9037d7f7c94eddcdb11529fa9d70830ddff9dcda55db1a1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13WeightedObstruction",
+      "sha256": "ca683f4f24e7074b71135023b6047245c579fe1f7135c7cd38334e7dd3fbb1e2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.PG13LoglogError",
+      "sha256": "15a24c6f0850c79697a977876c18e464e1de3c8d0533a647c2c8d2ca55fc5d29",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.AnchoredJoin",
+      "sha256": "4221bc658b7bca78114dd45d2fdf0712f92e3ae9cebf00662bb09329794c0797",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteOrderRank",
+      "sha256": "777359539e58b2b77f99dc301ebef62f0c7764b87924bccd6e911d3164a0130b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.AnchoredJoinBounds",
+      "sha256": "a4da4747bcce4bd4cb8801737924ffe3d263b785952f24238e35f74151817206",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StripEncoding",
+      "sha256": "e6d05ea0b9af34dc1db79b01d092d6c56784e479aad26796348b6e46d8500aa1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StripProjection",
+      "sha256": "b2bda663c6d3851145b40dc5c9a79528f1e690b831b792218d4a2643380ffd8b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.UniformImageFibers",
+      "sha256": "5078c5c483ff3700b752204510c634e51434ead32d42acb0a79b9f3912ca697e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StripPartitions",
+      "sha256": "82ba675c000834796c9e113f4e5e658397ef70045e9fb8f8db9bd721319bf12e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StripZeroCosts",
+      "sha256": "5d4d66775099775143b4d22e650e299cd7c5cfb81dc1dcb29eedbbc8b0f74cb4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsZeroAlignment",
+      "sha256": "7a8ac470d6859beb0aa738479ad582c2d7eed1815b894f94b9edc5bbee3d3bba",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StripExactAlignment",
+      "sha256": "3fba3d50c206e241757dcda5907369cae7f354f588bb1e95e973fe2bda39d830",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StripFans",
+      "sha256": "3582e8e9ed633c4b4aa211b21c253d3e69d461733b4b3fe252026ba73d9ba13f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StripFanObstruction",
+      "sha256": "03434d8c57d5fc457bd697abdbbcf2182bab293a73f3f14dff723d9b77374885",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignedBinaryCode",
+      "sha256": "957866a6ffc73831529f8a2dd9519d0ff47825acced74ec800939cf1c7f5a914",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignedBinaryOrder",
+      "sha256": "f50e99180bc757ec6a41c2002deca92456b203081b6ed0dd3a2a8dfdbede4d05",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SignedBinarySet",
+      "sha256": "b8693c2ef85a83689dfc8ed51aad2704a589110426efdf70f6ba752e8232da0a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CornerSelectorFamily",
+      "sha256": "b0d44616052a80257b41695468de5978a462684727ba402287ee4b26a07558ae",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CornerSelectorDensity",
+      "sha256": "ad5b3e73fc9af68a93e113fc2a6574016c6a7d3d7e937b2065ffb563a1023f98",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SidonEntropySharpness",
+      "sha256": "ae85a188ec7edfbdba3219bd7ae412421b544bcc0057f77a0e8abd0288f083e7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteBlockEntropy",
+      "sha256": "11bd4a8dacf5e8b25f5b571e7f931ee7d9d54a8c4c1b8c50ae8ab951035e8285",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ThreeBlockEntropy",
+      "sha256": "2ecf4b5b08bbcfbf1f630c15c6748a1e83cc5eb68d54fde830e579b061ba64f4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.K4BlockEntropy",
+      "sha256": "a46db82e1cc7fdfaea6139151266c7766b9da97c9485afa9f18ddc860cd78ac2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.K4CycleSharpness",
+      "sha256": "ddce9488d16248ebc503e2e9c3748b71255c50a8ace98971ca180be02a23711f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.K4CycleMasks",
+      "sha256": "4e2a394646e2a935dc983613772a426671fef98d4783bfa711197002e1901a6f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteBlockCover",
+      "sha256": "0933baf36e7a85cf7340f3839edfc9f635d72257779299e73656e5ed4ec5bae7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GeneralBlockEntropy",
+      "sha256": "1d2479ab3929958d277bbc981d643cb2bf6baf974c06edcd853122ff7c75d01d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ExposedCoverGap",
+      "sha256": "ad447d8686831a6b051ea72f58745789091253b19b4348f9138a03932d0d0048",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FullExposedMask",
+      "sha256": "99cfc2cb3d1d2f3876cb7e1a22c328d10ff9094ea4a8eb18ac09902fb069f4cb",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsPureComponents",
+      "sha256": "9854e2dd4b4a95a4bd1edf5ea3948c407f8c57cd59e162772d5a905aa2b6abcc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GibbsPureRetention",
+      "sha256": "2d38416f806f9aaf4a291e29b1c1e93586e6c82ea1e72bd8415d6e3805a187f4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.StationaryPairSymmetry",
+      "sha256": "b1f4d8cd62a5a7a6877fc3bff7743db60524695ac7175ed33d2b7804d400bc34",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanEntropyDefect",
+      "sha256": "7fdcc61a9be414c04fc8da34fd698464c408195a2f72184bc47892eee7604c0e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteObservationEntropy",
+      "sha256": "d34820a82318dbcec27daf477fe6d81d739b43ed8b2f3ce0b46326b5ee42168b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourBlockInformation",
+      "sha256": "3fcb2401101f3bf9f3fa06888687be7cab6120b2a650d6cb4a04da2eeb36d311",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanFourInformation",
+      "sha256": "1338e17010fa9b38721623501229792ef596fb234d4b8c6aa7f308b83445a567",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ChannelMaxWeights",
+      "sha256": "a579e224cb4a53329103f47074a27cb303ad592e4fc8cb6449291ebf9fa28d3a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanPowerSum",
+      "sha256": "91b70c960fbf1c3193d0792ba199505a3d424b6046e51f904e0e0507975605d5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FinitePositiveReference",
+      "sha256": "8f0844807425bfdd57b7db600325f181da4a4f095a9c7be50c6ac5164a58c283",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanNormEntropyEquivalence",
+      "sha256": "68d01ae4520f94a280f5a0ff66ba0b60b0a7d2d22767416c62eb6696d0b35288",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarFanEntropyCalibration",
+      "sha256": "574300175fe265bedf18a2660e88f8a274169d4049e8bbb376d2d980b1dbcc2c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanNormCalibrations",
+      "sha256": "5f0e16a5929554cc920fc653ec2e2f2e5e64a510330bbc32f805cf24901568d5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanNormDefectEquivalence",
+      "sha256": "d7a079c84106166dde45a4c090f099dbcabd6bc119fae098c8a98f753ceef246",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedTransferGap",
+      "sha256": "4813d0912dceb597b4c2febd277e578fa74fc32d9b2d05a3f3d47de5ef3da23d",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanColorWeights",
+      "sha256": "346d3484a621c0da3d07769c152dc3c3f8795cd617c848d1268d8eb09772cd33",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedFanColorBound",
+      "sha256": "42b15c0811d968e6ebc0d8df0773badaf845e2d67a703fe3543f5039e69014c9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteLabelCollision",
+      "sha256": "f98b319dee45accd9977817b49e321d6ae5fcd1857a9d142af4b4b41f40e6c94",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanColorCollision",
+      "sha256": "4a5c8b243c330dc4d1451499d544b7dc94e71cfad057d6a73d1eafedbf92d761",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FanColorStrictness",
+      "sha256": "2ef8255e8a7111b2b1cb87d58b9c9dcefaa85ec998c2cb2abd66603a41142b36",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CountingFanBound",
+      "sha256": "38fcd728f66dc74b64cd12de861e04e3f526b8e1b030fcf30d70f36647694503",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarMaxClass",
+      "sha256": "e96ef4f0cdc2ba28a609c72f48356e232ae133f008c8273e7b11f2da72d3cb82",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarRealInterval",
+      "sha256": "8956387b2e5901700355590171bce538f27dd033e849ec9620bdcf194f349a62",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarEndpointEstimates",
+      "sha256": "f8d052aa258b783f16dbcd8ec2d5c201caf494d8a6ec0efe790cd539cf4f7055",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarGeometricTail",
+      "sha256": "e961efac9b00b1faac2adc01f40944e3b1c4abad3e14afc44555485a87967b21",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarEndpointRatio",
+      "sha256": "4d46a4d9ebf288293507555c94c318be0968bb992c7548134681566c5e3053c1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.WeightedEnergyPrefix",
+      "sha256": "d7e6d50b37ced1440a35736506e1c2dee7e7fa3b3d35a6d8ce910c891d1bec3e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarEndpointWeights",
+      "sha256": "33a21c1347ff7b9804b0ff206f8331a75886099bf2ffbc890af2f89571d9c335",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ScalarEndpointObstruction",
+      "sha256": "bf58b9fbee328287609e6d47c09678f3754102bb18d214cdac025b2ffa3ad2e2",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ThreeDimensionalCalibrationGeometry",
+      "sha256": "a09ffbf23f5b6a9a1709d6a311d8f8f8842523af279766f702aaf6dfcac75c17",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.GluingEqualCardFan",
+      "sha256": "0c107d8b3b45a3a3199e9be2b6ac0800028dd35e13a8703e406d7bf98cf83ea1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ThreeDimensionalCalibrationFans",
+      "sha256": "e32f88b50c25a24bcd853b95ccfbdbcb2635d49e8587ffb468f420a7cf03b690",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ThreeDimensionalCalibrationEnergy",
+      "sha256": "048c674cd9876cb61d52cb512e40c3b50dd61d5df6b9a28b75c0f0a45738586e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CountingFanPower",
+      "sha256": "977ce1cada5653d5d36b59d330b25f7be4970484a716ddc0178abbcb79f408c6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ThreeDimensionalNormObstruction",
+      "sha256": "d0bb5e664c14af897acdf1907e505e1508c2c2a53ced4e6fdca498895691782c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionAffineTests",
+      "sha256": "310e6a9d8c2f498a87d15003ccee7378d9b9812380b45cf2c4f370348e8831c9",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteOverlapColoring",
+      "sha256": "e10b3f5792ae02936f05460251ae49c8c55cf1c22a13bce02a9208c3a8829043",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteExponentialHolder",
+      "sha256": "47aad81a5ee89341b1d215f4d074c330d24b18f09b2ce91b6ed2a9ac61b129d0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteBernoulliLaw",
+      "sha256": "9976457acc4090e0ce80a2b14ab448bd083e15478fb74a9b4fdd91f0b79ff7a3",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.BernoulliBlockMoments",
+      "sha256": "89734ab533afb89a7d25646305937820163c7cdd58dc93bb4ffcca94e1320db8",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteChernoff",
+      "sha256": "c7efa0fe25d5fa5c0c1282a10d0dfe6b0865f768210f0836ab1c70ad93115dc1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ColoredBernoulliTail",
+      "sha256": "d7f3f18014eca83a9ad8450f314a0f711f6a20fd4435b31d4b31e7213c8bffbc",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionBernoulliTests",
+      "sha256": "7a63bb7cefb2688513ccb615c371f4cf70b79a21643cc9ac351ac8a32c7a51b6",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.BernoulliSizeTail",
+      "sha256": "8b2fe8d39302c30ee59ce781c790b9018bd95dda60aca5467c16618645fc952c",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionSampling",
+      "sha256": "c86cf8ced53392837849f57fe29b6cd7a0e61c8c0ebf7a17aa9587b13707ca1f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteAvoidance",
+      "sha256": "e0e4615f2178bcbdcbf499a8032605f2d3e3221f8723939523deb44b773dd70f",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SimultaneousReflectionSampling",
+      "sha256": "1d2ead8dba50903abc8cc0b3172dc1428d146062759ff5c2774d6292a668df40",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionFailureEstimate",
+      "sha256": "03176d053bbe93fa66492f75cdafd3aca9c448f14b3331e90c65f367e72b42a0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionExistence",
+      "sha256": "9dd255b3972e3f947e13fc9d0725c5b5a0ba426bfb876767b68b4c48a6676c04",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionNorms",
+      "sha256": "c431553ca4f7f59a88adaf6db0cbad6c18917d43e3595255bfc79441e13e1558",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionEntropyLoss",
+      "sha256": "886df77d4d633b9ea1a0a718b2fbabadb2ffe50e93e6f0639cc9db848c6b935a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCoefficientObstruction",
+      "sha256": "91480270dd7e2c86f2fb1b712bd33121aa02078503d1285148baa920a3f8a9de",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FiniteSupportCost",
+      "sha256": "3c0cf05d50844217e8b149463481c2a7df6299658973ba58c3e473ddd4dd49cd",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectedMassEntropy",
+      "sha256": "3a0d869af886044517d676ec93b250b0ae7beb82d54b6f6e63fa409c076a7889",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectedNormRetention",
+      "sha256": "6bb0befb6689fdf25b225730920fe3c9cb1d2f7d7348d418c80b9133a9040a6e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionSharpScale",
+      "sha256": "ba9a4cfc56c359e6729b2a217a3ca205de76ea52b421eec5f71d40ba6e51fdda",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyImageEquality",
+      "sha256": "b50a722bacf630a89bb82a30b214d2eb866965240ece42a49cdef8d387340b76",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.EnergyFiniteCover",
+      "sha256": "c324bcfa3d736302eb706c53ccf77a096969b34806396640ddaf635cb6eaf357",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionRatioTransport",
+      "sha256": "341e5965a825ce5165bad5853209dc3198cf3760fcdad31c1afbfa8930a4955b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionProductGeometry",
+      "sha256": "5dce9fc9e8627b76f33e112fc2e963f0ee733100dc8a67ded4dd7606d874bac4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionProductCut",
+      "sha256": "0d3269748b8763b24ab81012b2e60c0872809432aef5d7e3ebadeeeb56cf85a0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionProductProjection",
+      "sha256": "e998356d7da610fb8c7b76612fdf6be751f8520dd6dcfc1e68c470d9215da742",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.CoordinateProductEnergyPalette",
+      "sha256": "27851a88dbfdcc01f0793b4a095987533a971fdbd951af6b2bd894388744d7d7",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProductCriticalExclusion",
+      "sha256": "658671adacc891af705b3323cf315de3f08b66b56938100f9480ad5fde6cbe1b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionRatioDefect",
+      "sha256": "f5cdef6acae24742a76074b1d5a7ca7915688e79d17ae3dd3209f4487d2b675e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionProductBounds",
+      "sha256": "1e95208c62be8f4ecb6985f2f2f6f7abf5a790a9ed421c1caa8e6f126a58c651",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionProductExistence",
+      "sha256": "b483fda161c9b1a166d39a02ad2df0cdb7d660a21156c32da8ae1937321b8b8a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SparseReflectionProductCritical",
+      "sha256": "d5b97c63aff1f83645f05ed275826d4ec907e1c3e13c43ec2824a7fb16d0d9cd",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCoverCard",
+      "sha256": "a4dae2a3ba46730b67e3746792db2b88265ab3a538dc89e40574df95fcf72105",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionProductCoefficient",
+      "sha256": "41d645c80ce7e14a3ad8deaa2bb00e8926905f365515f86a9092a989fad0498b",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProductFactorRatios",
+      "sha256": "a4c55c5ede386ac80a491450a4e0f17a793f5bb653c25b3ce24c96269dd4ec12",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ReflectionCoverEntropy",
+      "sha256": "7cdc4e9a089669cca6cb1019cac010f60af4a363101505a60c90eab6911e4cb5",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FractionalCoverPairBounds",
+      "sha256": "031cb9aaa5d1277a79207fbb789a0ed320ce6dcd83e24f19a858ad7e50ee6f7e",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourMaskMembership",
+      "sha256": "ef10b55ec5f77bfbbf01297f50d31935e8ad4e160e1e0878e47c5bbd690badf1",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourMaskTrimming",
+      "sha256": "991000b6f9ba83bbb5e426a65655975f61163ea63c1d401fb386cf3a1a87511a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ImageFiberEntropyBound",
+      "sha256": "63b462d6beb6cd2c1414c161f3beb5df4b03af7bb6b309991049c539ad552427",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.ProjectionEntropySupportBound",
+      "sha256": "c070b98dab9703a7573154b783445926ae8f2e9be6bbf03d16a7bdd1363b1214",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourMaskEntropyCut",
+      "sha256": "d95ad10099423fe694f170bcbcaad91f55e86f492197275cdeaf4485a34b2e22",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourMaskCriticalCut",
+      "sha256": "361e5b056b9a8c7f355dce59c30c4b1a25165021b4c6ddf6ab67b3374e802877",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.FourMaskWeightedCut",
+      "sha256": "af8c7a28d79417bede8b19bde9d1b90564e2876a2a5dd5c89f1187b7e4054df0",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SmallCoverCutAllowance",
+      "sha256": "64291d7cbeaabd65496408b67106a16677405ac30839a2c931b60096881ff795",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.SmallFourCoverCut",
+      "sha256": "0163d51cff24a3da5772f6856d8143dafcafe1e016d18a4f8fc02814d89937f4",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539",
+      "sha256": "0a058a3a75475766496bc99f84fccc973d2e9662420065955eb9b9dc8300bc0a",
+      "exit_code": 0,
+      "reused_verified_artifact": true
+    },
+    {
+      "module": "Erdos539.Audit",
+      "sha256": "0fa23e76b98e8aaf0f32fe2242f1ca9d8456f8187e29c8928f2396a018973ffa",
+      "exit_code": 0
+    }
+  ],
+  "axiom_audit_output": "Axiom audit passed for 12917 declarations. Allowed: propext, Classical.choice, Quot.sound.\n"
+}

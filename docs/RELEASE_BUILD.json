@@ -1,0 +1,194 @@
+{
+  "status": "passed canonical release-source audit; local unpublished candidate",
+  "baseline_commit": "53b83d4e81b4f3a80b3c55b44f945c714f1c7cff",
+  "initial_local_compiled_artifacts": 0,
+  "initial_run": "interrupted after 88 fresh modules, before an explicit memory ceiling; those 88 were subsequently rechecked under the agreed ceiling",
+  "source_build": "resumed only matching artifacts built in the initially empty extraction; no original project artifacts copied",
+  "external_dependencies": [
+    {
+      "name": "mathlib",
+      "expected": "698d2b68b870f1712040ab0c233d34372d4b56df",
+      "actual": "698d2b68b870f1712040ab0c233d34372d4b56df",
+      "tracked_status": ""
+    },
+    {
+      "name": "plausible",
+      "expected": "22a0afa903bcf65285152eea298a3d319badc78d",
+      "actual": "22a0afa903bcf65285152eea298a3d319badc78d",
+      "tracked_status": ""
+    },
+    {
+      "name": "LeanSearchClient",
+      "expected": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "actual": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "tracked_status": ""
+    },
+    {
+      "name": "importGraph",
+      "expected": "db22912cdd820b2a2bd84bd25273cb322ff09ead",
+      "actual": "db22912cdd820b2a2bd84bd25273cb322ff09ead",
+      "tracked_status": ""
+    },
+    {
+      "name": "proofwidgets",
+      "expected": "136730b5a40dc633967f5433cb7668df5c3bf9a3",
+      "actual": "136730b5a40dc633967f5433cb7668df5c3bf9a3",
+      "tracked_status": ""
+    },
+    {
+      "name": "aesop",
+      "expected": "3426969888a264d3f69b6f30ab50aa11f28eb38d",
+      "actual": "3426969888a264d3f69b6f30ab50aa11f28eb38d",
+      "tracked_status": ""
+    },
+    {
+      "name": "Qq",
+      "expected": "3a9fde028258300f1cbb003d457d47c8d8e16b1c",
+      "actual": "3a9fde028258300f1cbb003d457d47c8d8e16b1c",
+      "tracked_status": ""
+    },
+    {
+      "name": "batteries",
+      "expected": "bce25af79ec73f5e63240d4399a4cd8a6a227fcb",
+      "actual": "bce25af79ec73f5e63240d4399a4cd8a6a227fcb",
+      "tracked_status": ""
+    },
+    {
+      "name": "Cli",
+      "expected": "61cd682f2a25175996bc1b9e8d8231e76cded866",
+      "actual": "61cd682f2a25175996bc1b9e8d8231e76cded866",
+      "tracked_status": ""
+    }
+  ],
+  "external_dependency_cache_reused": true,
+  "external_dependencies_rebuilt": false,
+  "canonical_module_count": 844,
+  "project_declaration_count": 12917,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "axiom_audit_output": "Axiom audit passed for 12917 declarations. Allowed: propext, Classical.choice, Quot.sound.",
+  "verification_receipt": "docs/verification.json",
+  "verification_receipt_sha256": "1409a6b0603f504c6024d27273704ff2f4d031f5e3610e9b4601bbc7830c29e7",
+  "memory_ceiling_mb": 4096,
+  "lean_processes_at_once": 1,
+  "synchronous_elaboration": true,
+  "all_current_canonical_modules_checked_at_or_below_ceiling": true,
+  "refactor": {
+    "changed_wrappers": 25,
+    "new_small_parts": 97,
+    "public_statements_unchanged": 874,
+    "digit_lists_unchanged": 387,
+    "native_evaluation_axioms_added": false
+  },
+  "reference_lean_files_outside_import_closure": 5,
+  "phases": [
+    {
+      "phase": "2048 MB resume",
+      "started_at_utc": "2026-10-14T22:49:45.307549+00:00",
+      "finished_at_utc": "2026-10-14T22:49:55.666021+00:00",
+      "exit_code": 134,
+      "elapsed_seconds": 10.358472
+    },
+    {
+      "phase": "4096 MB before synchronous elaboration",
+      "started_at_utc": "2026-10-14T22:57:16.609497+00:00",
+      "finished_at_utc": "2026-10-14T23:18:56.820294+00:00",
+      "exit_code": 134,
+      "elapsed_seconds": 1300.210797,
+      "lean_memory_limit_mb": 4096,
+      "threads": 1,
+      "child_max_rss_bytes": 4295606272
+    },
+    {
+      "phase": "4096 MB before certificate refactor",
+      "started_at_utc": "2026-10-14T23:23:48.522274+00:00",
+      "finished_at_utc": "2026-10-14T23:25:58.531835+00:00",
+      "exit_code": 134,
+      "elapsed_seconds": 130.01039691697224,
+      "lean_memory_limit_mb": 4096,
+      "threads": 1,
+      "child_max_rss_bytes": 4295278592
+    },
+    {
+      "phase": "refactored canonical source build",
+      "started_at_utc": "2026-10-14T23:31:40.965863+00:00",
+      "finished_at_utc": "2026-10-15T00:24:59.552819+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 3198.6285505419946,
+      "lean_memory_limit_mb": 4096,
+      "threads": 1,
+      "child_max_rss_bytes": 3484680192
+    },
+    {
+      "phase": "early-artifact resource recheck and final axiom audit",
+      "started_at_utc": "2026-10-15T00:25:38.410754+00:00",
+      "finished_at_utc": "2026-10-15T00:32:52.146247+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 433.7394701660087,
+      "lean_memory_limit_mb": 4096,
+      "threads": 1,
+      "child_max_rss_bytes": 3382132736
+    }
+  ],
+  "exact_upstream_statement_bridge": {
+    "status": "passed on freshly rebuilt release artifacts",
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "toolchain": "leanprover/lean4:v4.29.0-rc8"
+  },
+  "paper": {
+    "path": "paper/main.tex",
+    "sha256": "7284b5ba5581b416a2a04464704bc7eea05bbba1c258ec3fca6e2b6f870c8665",
+    "built_in_compilation": "passed",
+    "pdf_export_and_visual_review": "passed: PDF generated from the same built-in-compiled source; all 16 pages reviewed",
+    "pdf_sha256": "f932ff0bf904d2eccf432556381ee8d7e86aff5f3f6b5ed586c9ffc013610d5d",
+    "authors": [
+      "Sarim Sarfraz",
+      "Wali Ahmed"
+    ]
+  },
+  "current_upstream_build_and_lint": {
+    "status": "passed changed-module build and configured custom linters with warnings treated as errors",
+    "baseline": "197f7f8dcc457f556754f826389d2ec7a0d85b92",
+    "toolchain": "leanprover/lean4:v4.33.1",
+    "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "command": "lake --wfail build FormalConjectures/ErdosProblems/539.lean",
+    "exit_code": 0,
+    "lean_memory_limit_mb": 4096,
+    "lean_compiler_processes_at_once": 1,
+    "max_lean_rss_bytes": 3030007808,
+    "proposed_file_sha256": "dd83ba9cd6bb70b69f2e2c40f6f1fdf7b9d6958ee820ef1c3ded5fcd740da528",
+    "scope": "one changed problem file and dependencies; full repository build is not requested by upstream AGENTS.md for this scope",
+    "final_public_urls": "insert and recheck after author-approved release"
+  },
+  "publication": "none",
+  "initial_full_pass_project_declarations": 12934,
+  "declaration_count_note": "The final capped re-elaboration reports 12917. Counts include generated helper declarations and are receipt-specific; the source theorem statements did not change.",
+  "initial_clean_verification_receipt_sha256": "a45f31c1927a8e06d9fe179006086ecfd3073c9b594a17f7319d52bec033bc15",
+  "latest_revalidation": {
+    "exit_code": 0,
+    "elapsed_seconds": 26.14656904200092,
+    "finished_at_utc": "2026-10-19T05:55:37.122180+00:00",
+    "lean_memory_limit_mb": 4096,
+    "processes_at_once": 1,
+    "mode": "source/artifact hash validation with existing check script; unchanged checked artifacts may be reused",
+    "child_max_rss_bytes": 3371483136
+  },
+  "previous_verification_receipt_sha256": "0ce904744c1338addd6cbdcccac16e434bd75a554ecfffb0190aad58be009ad7",
+  "private_repository_revalidation": {
+    "exit_code": 0,
+    "elapsed_seconds": 21.359915209002793,
+    "max_lean_rss_bytes": 3358228480,
+    "max_concurrent_lean_processes": 1,
+    "lean_memory_limit_mb": 4096,
+    "mode": "revalidation using hash-matched compiled artifacts from the audited release; fresh axiom audit; not a new clean rebuild",
+    "finished_at_utc": "2026-10-19T17:29:54.870912+00:00",
+    "resource_violation": null
+  }
+}

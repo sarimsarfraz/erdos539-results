@@ -1,0 +1,749 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Gcd quotients and positive differences: sharp bounds in fixed dimension},
+  pdfauthor={Sarim Sarfraz and Wali Ahmed},
+  pdfsubject={Erdos problem 539: quantitative and fixed-dimensional bounds},
+  pdfkeywords={gcd quotients, positive differences, additive combinatorics, Lean}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Dp}{\mathcal{D}}
+\newcommand{\Mf}{M}
+\newcommand{\Tf}{T}
+\newcommand{\Lg}{L}
+\DeclareMathOperator{\dimaff}{dim_{aff}}
+
+\title[Gcd quotients and positive differences]{Gcd quotients and positive differences:\\ sharp bounds in fixed dimension}
+\author{Sarim Sarfraz}
+\address{University of Toronto, Toronto, Ontario, Canada}
+\email{sarim.sarfraz@mail.utoronto.ca}
+\author{Wali Ahmed}
+\address{Columbia University}
+\subjclass[2020]{11B30, 11B75, 05D99}
+\keywords{Erd\H{o}s problems, gcd quotients, positive orthant, additive combinatorics, difference sets, formal verification}
+\date{19 October 2026}
+
+\begin{document}
+
+\begin{abstract}
+For a finite set $A$ of positive integers, let $Q(A)=\{a/\gcd(a,b):a,b\in A\}$, and let $h(n)$ be the minimum of $|Q(A)|$ over $n$-element sets. We prove
+\[
+h(n)\ge\sqrt n\exp\!\left(c\sqrt{\frac{\log n}{\log\log n}}\right)
+\]
+for all sufficiently large $n$ and an absolute $c>0$. The proof uses an elementary extraction onto logarithmically many original coordinates and an estimate for positive differences with controlled fiber irregularity. For integers supported on any $d$ fixed primes, we determine the exact order $h_d(n)=\Theta_d(n^{u_d})$, where $u_1=1$ and $u_d=\min_{p+s=d}(u_p+u_s)/(1+u_p+u_s)$. Matching constructions and a two-corner pruning argument establish this for every fixed $d$. Both headline results, including an explicit unrestricted constant $c=1/16000$, have been formalized in Lean. We also give dimension-sensitive bounds for structured sets and a completion-and-exchange criterion for further progress. The sharper unrestricted scale $\sqrt n\exp(\Theta(\sqrt{\log n}))$ remains conjectural.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+For a finite set $A\subset\N_{>0}$ write
+\[
+Q(A)=\left\{\frac{a}{\gcd(a,b)}:a,b\in A\right\},
+\qquad h(n)=\min_{|A|=n}|Q(A)|.
+\]
+Erd\H{o}s asked for the order of magnitude of $h(n)$ \cite{Er73,EP539}. Prime valuations turn this arithmetic question into a problem about coordinatewise positive differences. For $x\in\R^d$ put $x^+=(\max(x_1,0),\ldots,\max(x_d,0))$, and define
+\[
+\Dp(F)=(F-F)^+,\qquad
+M(F)=\max_{a\in F}|(F-a)^+|.
+\]
+We call $(F-a)^+$ a forward fan. The equality
+$v_p(a/\gcd(a,b))=(v_p(a)-v_p(b))^+$ identifies $h(n)$ with the minimum of $|\Dp(F)|$ over all $n$-point integer sets in arbitrary dimension. Restricting to $d$ fixed distinct primes gives
+\[
+h_d(n)=\min_{\substack{F\subset\Z^d\\|F|=n}}|\Dp(F)|,
+\qquad h(n)=\min_{d\ge1}h_d(n).
+\]
+The geometric lower bounds below hold for real point sets as well.
+
+\subsection*{Context}
+The classical bounds are $\sqrt n\ll h(n)\ll n^{2/3}$; Granville and Roesler give proofs and the geometric formulation \cite{GR99}. In fixed dimension, they obtained the sharp planar exponent $2/3$. Holzman, Lev and Pinchasi \cite{HLP08} proved
+\[
+h_3(n)\ge\tfrac16n^{3/5},\qquad
+h_4(n)\gg n^{6/11}(\log n)^{-2/11}.
+\]
+The 2026 preprint of Schmitt et al.\ \cite[Appendix A]{PC26} establishes
+\begin{equation}\label{eq:known-upper}
+h(n)\le\sqrt n\exp(C\sqrt{\log n}),
+\end{equation}
+and hence $h(n)=n^{1/2+o(1)}$. Pham's unrefereed manuscript \cite{Ph26} gives the lower bound $\sqrt n\exp(c(\log n)^{1/3})$, using a dimension-dependent estimate and weak polynomial Freiman--Ruzsa theory \cite{GGMT}. Kitamura's separate Lean developments \cite{Ki26,KiExp26} verify the logarithmic exponent $1/2$ and the divergence $h(n)/\sqrt n\to\infty$, with the appropriate comparison to the zero-inclusive Formal Conjectures definition. These conclusions do not determine the order of $h(n)$.
+
+\subsection*{Main results}
+Our first result improves the quantitative lower bound.
+
+\begin{theorem}[Unrestricted lower bound]\label{thm:main}
+There is an absolute $c>0$ such that, for all sufficiently large $n$,
+\[
+h(n)\ge\sqrt n\exp\!\left(c\sqrt{\frac{\log n}{\log\log n}}\right).
+\]
+\end{theorem}
+
+The formal proof supplies $c=1/16000$; we do not optimize constants. Combined with \eqref{eq:known-upper}, this gives
+\[
+\log\big(h(n)/\sqrt n\big)=(\log n)^{1/2+o(1)}.
+\]
+It leaves a factor $\sqrt{\log\log n}$ between the lower and upper bounds on this logarithm.
+
+For the fixed-dimensional problem, define
+\begin{equation}\label{eq:ud}
+u_1=1,\qquad
+u_d=\min_{\substack{p+s=d\\p,s\ge1}}
+\frac{u_p+u_s}{1+u_p+u_s}\quad(d\ge2).
+\end{equation}
+
+\begin{theorem}[Sharp order in every fixed dimension]\label{thm:fixed}
+For every $d\ge1$, there is a constant $C_d$ such that $h_d(n)\le C_dn^{u_d}$ for all $n\ge1$. Every finite nonempty $F\subset\R^d$ satisfies
+\[
+|\Dp(F)|\ge M(F)\ge 2^{-2^{d+1}}|F|^{u_d}.
+\]
+Consequently $h_d(n)=\Theta_d(n^{u_d})$ for every fixed $d$.
+\end{theorem}
+
+Here $u_d\ge d/(2d-1)$, with equality for powers of two. The first values illustrate the nonuniform recursion:
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}c|ccccccccc@{}}
+\toprule
+$d$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 16\\
+\midrule
+$u_d$ & $1$ & $\frac23$ & $\frac58$ & $\frac47$ & $\frac{31}{55}$ & $\frac{26}{47}$ & $\frac{67}{123}$ & $\frac8{15}$ & $\frac{16}{31}$\\
+\bottomrule
+\end{tabular}
+\caption{Sharp fixed-dimensional exponents.}\label{tab:ud}
+\end{table}
+In particular, $h_3(n)\asymp n^{5/8}$ and $h_4(n)\asymp n^{4/7}$. Thus the theorem determines a family of extremal functions, one for each fixed prime support. The constants depend on $d$; taking a minimum over growing $d$ does not settle the unrestricted problem. Appendix~\ref{app:small-d} gives the better lower constant $8^{-d}$ through dimension fifteen.
+
+The estimate used for Theorem~\ref{thm:main} has more favorable dimension dependence. For $I\subseteq[d]$, let $P_I(S)=|\pi_I S|$ and let $\Delta_I(S)$ be the largest fiber of $\pi_I$ on $S$. Put
+\[
+R(S)=\max_{I\subseteq[d]}\frac{P_I(S)\Delta_I(S)}{|S|}.
+\]
+Disjoint translates of a largest fiber show that $1\le R(S)\le|S-S|/|S|$.
+
+\begin{theorem}[Fiber-regularity estimate]\label{thm:regular}
+Let $d\ge1$, with $\alpha_1=0$ and $\alpha_d=(1+\log_2d)/2$ for $d\ge2$. Every finite nonempty $S\subset\R^d$ satisfies
+\[
+M(S)\ge256^{-d}R(S)^{-\alpha_d}|S|^{u_d}.
+\]
+\end{theorem}
+
+\begin{corollary}\label{cor:uniform}
+Let $d\ge1$ and $B_d=1+2\alpha_d$. Every finite nonempty $F\subset\R^d$ satisfies
+\[
+|\Dp(F)|\ge256^{-d/B_d}|F|^{\frac12+\frac{u_d-1/2}{B_d}}
+\ge256^{-d/B_d}|F|^{\frac12+\frac1{(4d-2)B_d}}.
+\]
+\end{corollary}
+The exponent gain is of order $1/(d\log d)$. An elementary extraction theorem supplies an actual large subset on $O(\log K)$ original coordinates when $|S-S|\le K|S|$. Combining the two estimates proves Theorem~\ref{thm:main}, without a PFR input. This insistence on original coordinates matters: general additive embeddings need not preserve positive parts.
+
+\subsection*{Scope and organization}
+Sections~\ref{sec:constructions}--\ref{sec:two-corners} prove the sharp fixed-dimensional theorem. Sections~\ref{sec:regular} and~\ref{sec:unrestricted} prove the unrestricted bound. Section~\ref{sec:structured} treats midpoint-closed sets and ordered layers. Section~\ref{sec:energy} develops critical cores and a concrete exchange criterion, isolating the missing statement needed for the conjectural scale
+\begin{conjecture}\label{conj:main}
+$h(n)=\sqrt n\exp(\Theta(\sqrt{\log n}))$.
+\end{conjecture}
+Section~\ref{sec:formal} records the precise formalization boundary. The new completion-and-exchange arguments have written proofs here; they are distinguished from the results in the completed Lean audit.
+
+\section{Preliminaries}\label{sec:prelim}
+
+All sets are finite and nonempty. For $F\subset\R^d$ and $a\in F$ write $(F-a)^+=\{(x-a)^+:x\in F\}$ and $(a-F)^+=\{(a-x)^+:x\in F\}$. Besides $\Mf(F)$ we use the two-sided fan
+\[
+\Tf(F)=\max_{a\in F}\max\big\{|(F-a)^+|,\ |(a-F)^+|\big\}.
+\]
+For $I\subseteq[d]$ let $\pi_I$ be the coordinate projection onto $\R^I$, $P_I(F)=|\pi_IF|$, and let $\Delta_I(F)$ be the largest size of a fiber $\{x\in F:\pi_Ix=z\}$. For $I=\varnothing$ we put $P_\varnothing=1$ and $\Delta_\varnothing=|F|$.
+
+\begin{lemma}\label{lem:dictionary}
+For finite $A\subset\N_{>0}$ let $F_A$ be the set of prime-exponent vectors of its elements. Then $|F_A|=|A|$ and $|Q(A)|=|\Dp(F_A)|$. Conversely, every finite $F\subset\Z^d$ is a translate of $F_A$ for some $A$ supported on $d$ given primes. Since $\Dp$ is translation invariant, $h_d(n)=\min\{|\Dp(F)|:F\subset\Z^d,\ |F|=n\}$ and $h(n)=\min_d h_d(n)$.
+\end{lemma}
+
+\begin{proof}
+Unique factorization and $v_p(a/\gcd(a,b))=(v_p(a)-v_p(b))^+$.
+\end{proof}
+
+\begin{lemma}\label{lem:basic}
+Let $F\subset\R^d$ with $|F|=n$.
+\begin{enumerate}
+\item $\Mf(F)\le\Tf(F)\le|\Dp(F)|$, and $\Dp(-F)=\Dp(F)$.
+\item $|F-F|\le|\Dp(F)|^2$.
+\item For every $a\in F$, $|(F-a)^+|\cdot|(a-F)^+|\ge n$; in particular $\Tf(F)\ge n^{1/2}$.
+\item For every coordinate $i$, $\Mf(F)\ge P_{\{i\}}(F)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) is clear. For (2) and (3) use $z=z^+-(-z)^+$: the maps $z\mapsto(z^+,(-z)^+)$ on $F-F$ and $x\mapsto((x-a)^+,(a-x)^+)$ on $F$ are injective. For (4), anchor at a point $a$ with minimal $i$-th coordinate; then $x\mapsto (x-a)^+_i=x_i-a_i$ takes $P_{\{i\}}(F)$ values.
+\end{proof}
+
+We use the standard Pl\"unnecke--Ruzsa consequence \cite{Ru89,Pe12}
+\begin{equation}\label{eq:plunnecke}
+|A-A|\le K|A|\quad\Longrightarrow\quad |A+A|\le K^2|A|
+\end{equation}
+for finite subsets of an abelian group. All logarithms are natural unless a base is specified.
+
+\section{Constructions}\label{sec:constructions}
+
+\begin{proposition}[Gluing]\label{prop:glue}
+Let $p,s\ge1$, and let $F\subset\Z^p$ and $G\subset\Z^s$ be finite and nonempty, let $L$ bound every coordinate diameter of $F$ and of $G$, let $M>2L$ and $K\ge1$ be integers, and put
+\[
+T=\big\{(x+jM\mathbf 1_p,\ y-jM\mathbf 1_s):x\in F,\ y\in G,\ 0\le j<K\big\}\subset\Z^{p+s}.
+\]
+Then $|T|=K|F||G|$, $|T-T|=(2K-1)|F-F||G-G|$, and
+\[
+|\Dp(T)|=|\Dp(F)|\,|\Dp(G)|+(K-1)\big(|F-F|+|G-G|\big).
+\]
+\end{proposition}
+
+\begin{proof}
+A difference of two points of $T$ at levels $j,j'$ equals $(u+gM\mathbf 1_p,\ v-gM\mathbf1_s)$ with $u\in F-F$, $v\in G-G$, $g=j-j'$. Every coordinate of $u$ and $v$ lies in $[-L,L]$ and $M>2L$, so the first coordinate determines $g$, and then $u$ and $v$; this gives the formulas for $|T|$ and $|T-T|$. If $g=0$ the positive part is $(u^+,v^+)$, and all of $\Dp(F)\times\Dp(G)$ occurs. If $g>0$ the first block is positive and the second negative, so the positive part is $(u+gM\mathbf 1_p,0)$; for each $g\in\{1,\dots,K-1\}$ all $u\in F-F$ occur. Symmetrically $g<0$ gives $(0,v+|g|M\mathbf 1_s)$. These classes are pairwise disjoint because $M>2L$: in the class $g=0$ every coordinate lies in $[0,L]$; for $g>0$ the first block has all coordinates in $[gM-L,gM+L]$, which also determines $g$; and for $g<0$ the first block vanishes while the second block has all coordinates in $[|g|M-L,|g|M+L]$.
+\end{proof}
+
+\begin{lemma}\label{lem:ud}
+$u_d$ is nonincreasing, and $d/(2d-1)\le u_d\le1$, with equality in the lower bound if $d$ is a power of two. In particular $u_d\ge \tfrac12+\tfrac1{4d-2}$.
+\end{lemma}
+
+\begin{proof}
+The upper bound is immediate from the recursion. For monotonicity, $u_2\le u_1$; given a minimizing split $p+s=d$, induction gives $u_{p+1}\le u_p$, and the split $(p+1)+s=d+1$ gives $u_{d+1}\le u_d$. The map $t\mapsto t/(1+t)$ is increasing, so by induction it suffices to show $\frac{A}{1+A}\ge\frac{d}{2d-1}$ for $A=\frac{p}{2p-1}+\frac{s}{2s-1}$ and $d=p+s$, i.e.\ $A\ge 1+\frac1{d-1}$. Now $A-1=\frac1{2(2p-1)}+\frac1{2(2s-1)}\ge\frac{4}{2(2p-1)+2(2s-1)}=\frac1{d-1}$ by the harmonic--arithmetic mean inequality. For $d=2m$ the balanced split gives $\frac{2u_m}{1+2u_m}=\frac{2m}{4m-1}$ when $u_m=\frac{m}{2m-1}$.
+\end{proof}
+
+\begin{theorem}\label{thm:upper}
+For every $d\ge1$ there is $C_d$ with $h_d(n)\le C_dn^{u_d}$ for all $n\ge1$.
+\end{theorem}
+
+\begin{proof}
+We construct, for every binary tree $\tau$ with $d$ leaves, positive integers $a_\tau,b_\tau$ with $b_\tau/a_\tau=\alpha_\tau$, and sets $F_W\subset\Z^d$ ($W\ge1$) with
+\[
+|F_W|=W^{a_\tau},\qquad |\Dp(F_W)|\le C_\tau W^{b_\tau},\qquad |F_W-F_W|\le C_\tau W^{a_\tau},
+\]
+where $\alpha_{\text{leaf}}=1$ and $\alpha_\tau=(\alpha_1+\alpha_2)/(1+\alpha_1+\alpha_2)$ for a tree with subtrees $\tau_1,\tau_2$. Minimizing over trees gives exponent $u_d$, by \eqref{eq:ud} and induction.
+
+For a leaf take $F_W=\{0,\dots,W-1\}$, with $(a,b)=(1,1)$. Given families for $\tau_1,\tau_2$ with parameters $(a_i,b_i)$, use the first family at parameter $W^{a_2}$ and the second at parameter $W^{a_1}$; both then have $W^{A}$ points, $A=a_1a_2$, and difference-set exponents $b_1a_2$ and $b_2a_1$. Put $B=b_1a_2+b_2a_1$. Since $\alpha_i\ge1/2$ (inductively, as $\alpha_1+\alpha_2\ge1$), $B\ge A$. Glue with $K=W^{B-A}$ levels (Proposition~\ref{prop:glue}). The result has $W^{A+B}$ points, $|\Dp|\le C W^{B}+2K\cdot CW^{A}=O(W^B)$ and $|T-T|\le 2K C^2W^{2A}=O(W^{A+B})$. Its exponent is $B/(A+B)=(\alpha_1+\alpha_2)/(1+\alpha_1+\alpha_2)$.
+
+Finally, given $n$, take the least $W$ with $W^{a}\ge n$, where $a=a_\tau$ for a minimizing tree, and any $n$-element subset of $F_W$. Since $W\le 2n^{1/a}$ and passing to a subset does not enlarge $\Dp$, we get $h_d(n)\le C_\tau 2^{a} n^{u_d}$. Translating into $\Z_{\ge0}^d$ gives integer sets by Lemma~\ref{lem:dictionary}.
+\end{proof}
+
+\begin{example}
+Gluing two intervals of length $W$ with $K=W$ levels gives $W^3$ points with $|\Dp|=W^2+2(W-1)(2W-1)\sim5W^2$, recovering the Freiman--Lev exponent $2/3$. Gluing an interval of length $W^3$ with this planar set, using $K=W^2$, gives $h_3(n)\ll n^{5/8}$.
+\end{example}
+
+\section{Pruning lemmas}\label{sec:pruning}
+
+Throughout this section $E\subset\R^p\times\R^s$ is finite with $|E|=m$, $X=\pi_1E\subset\R^p$ and $Y=\pi_2E\subset\R^s$ are its two block projections, and for $y\in Y$ we write $E^y=\{x\in\R^p:(x,y)\in E\}$ for the horizontal fiber.
+
+\begin{lemma}[One-sided pruning]\label{lem:P1}
+Let $a,b,c_p,c_s>0$. Suppose $\Mf(H)\ge c_p|H|^a$ for every nonempty $H\subseteq E^y$ $(y\in Y)$ and $\Mf(J)\ge c_s|J|^b$ for every nonempty $J\subseteq Y$. Then
+\[
+\Mf(E)\ \ge\ c_pc_s\Big(\frac{m}{2|Y|}\Big)^{a}\Big(\frac{m}{2|X|}\Big)^{b}.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $\lambda=c_p(m/(2|Y|))^a$ and $B^y=\{x\in E^y:|(E^y-x)^+|<\lambda\}$. For $x\in B^y$ we have $(B^y-x)^+\subseteq(E^y-x)^+$, so $\Mf(B^y)<\lambda$, and the hypothesis forces $|B^y|<m/(2|Y|)$. Hence fewer than $m/2$ points of $E$ are \emph{bad}, and some $x_0\in X$ has a set $V=\{y:(x_0,y)\in E,\ x_0\notin B^y\}$ with $|V|>m/(2|X|)$. Choose $y_0\in V$ with $|(V-y_0)^+|=\Mf(V)\ge c_s|V|^b$, and for each $w\in(V-y_0)^+$ choose $y_w\in V$ with $(y_w-y_0)^+=w$. For $x\in E^{y_w}$,
+\[
+\big((x,y_w)-(x_0,y_0)\big)^+=\big((x-x_0)^+,\,w\big),
+\]
+and $(x-x_0)^+$ takes at least $\lambda$ values because $x_0\notin B^{y_w}$. The sets obtained for different $w$ are disjoint, and $(x_0,y_0)\in E$. Hence $|(E-(x_0,y_0))^+|\ge\lambda\,\Mf(V)$.
+\end{proof}
+
+\section{Two corners and constant factors in every dimension}\label{sec:two-corners}
+
+For $a,b\in\R^d$ put $\operatorname{box}(a,b)=\prod_i[\min(a_i,b_i),\max(a_i,b_i)]$.
+
+\begin{lemma}[Two-corner selection]\label{lem:two-corner-box}
+For $d\ge1$, every nonempty finite $S\subset\R^d$ has $a,b\in S$, possibly equal, such that
+\[
+|S\cap\operatorname{box}(a,b)|\ge2^{-(2^d+2)}|S|.
+\]
+\end{lemma}
+\begin{proof}
+The selection principle is classical; see \cite[Section 7]{ABKKW}. For an explicit constant put $r=2^{2^{d-1}}$. Iterated Erd\H{o}s--Szekeres, sorting the first coordinate and taking successive monotone subsequences in the others, puts one of every $r+1$ points between two others. Coordinate ties may be ranked consistently; monotone ranks imply weak monotonicity of the original values.
+
+The hypergraph of such triples has independence number at most $r$. If $N=|S|\ge2r$, retain vertices independently with probability $p=2r/N$ and delete at most one vertex for each surviving edge. If there are $e$ edges, this gives $r\ge Np-ep^3$, hence $e\ge N^3/(8r^2)$. Assign each triple to a witnessing pair of corners. Some pair has at least $e/\binom N2\ge N/(4r^2)$ distinct middle points in its box. If $N<2r$, a singleton suffices. Finally $4r^2=2^{2^d+2}$.
+\end{proof}
+
+\begin{theorem}\label{thm:two-corner-fan}
+Every nonempty finite $S\subset\R^d$, $d\ge1$, satisfies
+\[
+\Mf(S)\ge2^{-2^{d+1}}|S|^{u_d}.
+\]
+\end{theorem}
+\begin{proof}
+Put $A_d=2^{d+1}$, $L_d=2^d+2$, and induct on $d$. The scalar case follows by anchoring at the minimum. Choose $E=S\cap\operatorname{box}(a,b)$ as above, so $m=|E|\ge2^{-L_d}N$. With $I=\{i:a_i\le b_i\}$ and $J=I^c$, the two actual anchors give
+\[
+(x-a)^+=(x_I-a_I,0_J),\qquad
+(x-b)^+=(0_I,x_J-b_J)\quad(x\in E).
+\]
+Consequently $P_I(E),P_J(E)\le\Mf(S)=M$, including ties. If a block is empty, $M\ge m\ge2^{-A_d}N^{u_d}$. Otherwise let $p=|I|$, $s=|J|$, and $t=u_p+u_s$. Lemma~\ref{lem:P1} and the induction give
+\[
+M^{1+t}\ge2^{-A_p-A_s}(m/2)^t
+\ge2^{-[A_p+A_s+t(L_d+1)]}N^t.
+\]
+For every nonempty split, $A_p+A_s\le A_d$ and $L_d+1\le A_d$. Taking the $(1+t)$-th root and using $t/(1+t)\ge u_d$ proves the claim. Together with Theorem~\ref{thm:upper}, this completes the constant-factor assertion in Theorem~\ref{thm:fixed}.
+\end{proof}
+
+\begin{remark}
+The loss in Lemma~\ref{lem:two-corner-box} cannot be replaced universally by $e^{-O(d)}$. List the $m=2^{d-1}$ sign vectors $\sigma_j\in\{-1,1\}^d$ having first entry $1$, and form $v(\eta)=\sum_{j=0}^{m-1}3^j\eta_j\sigma_j$ for $\eta\in\{0,1\}^m$. The leading differing digit determines every coordinate comparison. In three points ordered by their first coordinates, the two successive leading digits differ, so their sign vectors disagree in some coordinate. No point is between the other two. Thus each two-corner box contains only its two corners, out of $2^{2^{d-1}}$ points. Each coordinate is nevertheless injective, so $M(S)=|S|$. This obstructs stronger box selection, not a theorem allowing a large-fan alternative.
+\end{remark}
+
+\section{Fiber-regular sets: aggregate pruning}\label{sec:regular}
+
+\begin{lemma}\label{lem:PDelta}
+For every finite $S\subset\R^d$ and $J\subseteq[d]$, $P_J(S)\Delta_J(S)\le|S-S|$. Hence $R(S)\le|S-S|/|S|$.
+\end{lemma}
+
+\begin{proof}
+Let $H$ be a largest $J$-fiber, and choose $s_z\in S$ with $\pi_Js_z=z$ for every $z\in\pi_JS$. The sets $s_z-H\subseteq S-S$ have $|H|$ elements each and are pairwise disjoint, since their $J$-projections are distinct.
+\end{proof}
+
+Throughout this section $S\subset\R^d$ is fixed, $N=|S|$, $P_J=P_J(S)$, $\Delta_J=\Delta_J(S)$ and $R=R(S)$; all projection and fiber sizes refer to $S$. For a nonempty $A\subseteq S$ and $I\subseteq[d]$ we put
+\[
+\Mf_I(A)=\max_{a\in A}\big|\{(x-a)^+:\ x\in A,\ \pi_Ix=\pi_Ia\}\big|,
+\]
+the largest fan of $A$ taken inside a single $I$-fiber. Thus $\Mf_\varnothing(A)=\Mf(A)$. Note that $A$ may meet many $I$-fibers.
+
+\begin{lemma}[Relative projection balance]\label{lem:relbalance}
+Let $A\subseteq S$ be nonempty, $I\subseteq[d]$, $m=d-|I|\ge1$, $\rho=|A|/N$ and $\Mf_I(A)\le M$. Then the coordinates $[d]\setminus I$ can be partitioned as $U\sqcup V$ (one part possibly empty) so that
+\[
+\frac{P_{I\cup U}}{P_I}\le Q\quad\text{and}\quad\frac{P_{I\cup V}}{P_I}\le Q,
+\qquad Q=2^{m+2}\frac{R}{\rho}M.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $n=|A|$. The number $E$ of ordered pairs $(x,y)\in A^2$ with $\pi_Ix=\pi_Iy$ satisfies $E\ge n^2/P_I$, as $A$ meets at most $P_I$ fibers of $\pi_I$. For such a pair let $J(x,y)=\{j\notin I:x_j\ge y_j\}$. Fix $y\in A$ and $J\subseteq[d]\setminus I$. For the points $x$ in the $I$-fiber of $y$ with $J(x,y)=J$, the vector $(x-y)^+$ determines $\pi_{I\cup J}x$; it takes at most $M$ values, and each value of $\pi_{I\cup J}x$ is shared by at most $\Delta_{I\cup J}\le RN/P_{I\cup J}$ points. If $P_{I\cup J}/P_I>Q$, there are therefore fewer than $MRN\rho/(2^{m+2}RMP_I)=n/(2^{m+2}P_I)$ such $x$. Summing over the $2^m$ masks and the $n$ anchors, fewer than $E/4$ pairs have $P_{I\cup J(x,y)}/P_I>Q$, and likewise fewer than $E/4$ have $P_{I\cup J(y,x)}/P_I>Q$. Take a pair avoiding both, let $U=J(x,y)$ and $V=([d]\setminus I)\setminus U$. Then $V\subseteq J(y,x)$, and $P_{I\cup V}\le P_{I\cup J(y,x)}$ by monotonicity of projection sizes.
+\end{proof}
+
+\begin{lemma}\label{lem:alpha}
+Let $m\ge2$, $p+s=m$ with $p,s\ge1$, and $t=u_p+u_s$. Then $\dfrac{\alpha_p+\alpha_s+t}{1+t}\le\alpha_m$.
+\end{lemma}
+
+\begin{proof}
+Recall $1\le t\le2$ and $\alpha_m\ge1$ for $m\ge2$. If $p,s\ge2$, then with $L=\log_2m$ we have $\alpha_p+\alpha_s=1+\tfrac12\log_2(ps)\le L$, and $(L+t)/(1+t)\le(L+1)/2$ is equivalent to $(L-1)(t-1)\ge0$. If $p=1$, then $\alpha_p+\alpha_s=\alpha_{m-1}\le\alpha_m$, and $(\alpha_m+t)/(1+t)\le\alpha_m$ because $\alpha_m\ge1$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:regular}]
+We prove by induction on $m$ the following statement: \emph{if $I\subseteq[d]$, $m=d-|I|\ge1$, and $A\subseteq S$ is nonempty, then with $\rho=|A|/N$ and $z=|A|/P_I$,}
+\begin{equation}\label{eq:aggr}
+\Mf_I(A)\ \ge\ 256^{-m}R^{-\alpha_m}\rho^{\alpha_m}z^{u_m}.
+\end{equation}
+Taking $I=\varnothing$ and $A=S$ (so $\rho=1$, $z=N$) gives the theorem.
+
+If $z\le1$, the right-hand side of \eqref{eq:aggr} is at most $1\le\Mf_I(A)$. If $m=1$, some $I$-fiber of $A$ contains at least $z$ points, and anchoring at the one with smallest free coordinate gives at least $z$ outputs. So let $m\ge2$ and $z>1$, write $n=|A|$, $\Mf=\Mf_I(A)$, and take $U,V$ from Lemma~\ref{lem:relbalance}.
+
+If one part is empty, the other is $[d]\setminus I$, so $N/P_I\le Q$, i.e.\ $\Mf\ge z/(2^{m+2}R)$; this implies \eqref{eq:aggr} because $\alpha_m\ge1$, $R\ge1$, $\rho\le1$, $z>1$ and $u_m\le1$.
+
+Otherwise let $p=|U|$, $s=|V|$ and $t=u_p+u_s$, and put
+\[
+\lambda=256^{-p}R^{-\alpha_p}\Big(\frac\rho2\Big)^{\alpha_p}\Big(\frac{n}{2P_{I\cup V}}\Big)^{u_p},
+\qquad
+\lambda'=256^{-s}R^{-\alpha_s}\Big(\frac\rho2\Big)^{\alpha_s}\Big(\frac{n}{2P_{I\cup U}}\Big)^{u_s}.
+\]
+Call $a\in A$ \emph{bad} if its fan inside its $(I\cup V)$-fiber of $A$ has fewer than $\lambda$ elements, and let $B$ be the set of \emph{all} bad points, across all such fibers. If $|B|\ge n/2$, then \eqref{eq:aggr} for $B$ with conditioning set $I\cup V$ (density at least $\rho/2$ and $|B|/P_{I\cup V}\ge n/(2P_{I\cup V})$) gives a point of $B$ whose fan inside its $(I\cup V)$-fiber of $B$, hence of $A$, has at least $\lambda$ elements, a contradiction. So $A'=A\setminus B$ has more than $n/2$ points.
+
+By \eqref{eq:aggr} for $A'$ with conditioning set $I\cup U$, there is $a_0\in A'$ such that $W=\{(y-a_0)^+:y\in A',\ \pi_{I\cup U}y=\pi_{I\cup U}a_0\}$ has at least $\lambda'$ elements. For each $w\in W$ choose such a $y_w$ with $(y_w-a_0)^+=w$. As $y_w$ is not bad, the vectors $(x-y_w)^+$ with $x\in A$ and $\pi_{I\cup V}x=\pi_{I\cup V}y_w$ take at least $\lambda$ values. For such $x$, since $y_w$ agrees with $a_0$ on $I\cup U$ and $x$ agrees with $y_w$ on $I\cup V$,
+\[
+(x-a_0)^+=\big(0\ \text{on }I,\ \ (x-y_w)^+\ \text{on }U,\ \ w\ \text{on }V\big),
+\]
+and $x$ lies in the $I$-fiber of $a_0$. Distinct $w$ have distinct $V$-parts. Hence $\Mf\ge\lambda\lambda'$.
+
+By Lemma~\ref{lem:relbalance}, $n/(2P_{I\cup V})\ge z/(2Q)=z\rho/(2^{m+3}R\Mf)$, and similarly for $U$. Substituting,
+\[
+\Mf^{1+t}\ \ge\ 2^{-8m-(\alpha_p+\alpha_s)-(m+3)t}\,R^{-(\alpha_p+\alpha_s+t)}\,\rho^{\alpha_p+\alpha_s+t}\,z^{t}.
+\]
+By Lemma~\ref{lem:alpha}, $t/(1+t)\ge u_m$, and $8m+(\alpha_p+\alpha_s)+(m+3)t\le8m(1+t)$ (as $\alpha_p+\alpha_s\le2m\le2mt$ and $t\ge1$), taking $(1+t)$-th roots and using $R\ge1$, $\rho\le1$, $z>1$ proves \eqref{eq:aggr}.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:uniform}]
+Let $q=|\Dp(F)|$ and $n=|F|$. By Lemmas~\ref{lem:basic} and~\ref{lem:PDelta}, $R(F)\le|F-F|/n\le q^2/n$, and $q\ge\Mf(F)$. Theorem~\ref{thm:regular} gives $q^{1+2\alpha_d}\ge256^{-d}n^{u_d+\alpha_d}$, and $(u_d+\alpha_d)/(1+2\alpha_d)=\tfrac12+(u_d-\tfrac12)/B_d$. Finally use Lemma~\ref{lem:ud}.
+\end{proof}
+
+\section{The unrestricted problem}\label{sec:unrestricted}
+
+\begin{theorem}[Elementary original-coordinate extraction]\label{thm:elementary-extraction}
+Let $S\subset\R^D$ be finite, $N=|S|$, and $|S-S|\le KN$. There is a subset $T\subseteq S$, of size at least $N/(1024K^{10})$, whose coordinate-prefix tree in any prescribed order has exactly $b_i$ children at each retained vertex of level $i-1$. At most $\lceil\log_2(2K^2)\rceil$ of the $b_i$ exceed one. Projection onto those original coordinates is injective on $T$.
+\end{theorem}
+\begin{proof}
+Compress coordinate $i$ by replacing every nonempty line parallel to that coordinate by $\{0,\ldots,m-1\}$, where $m$ is its cardinality, keeping other coordinates fixed. This does not increase the sumset: over each fixed sum of the other coordinates, the compressed sum fiber is an initial interval of size
+\[
+\max_{y+y'=z}(|S_y|+|S_{y'}|-1),
+\]
+whereas the original fiber contains $S_y+S_{y'}$ for every such pair, each of at least that size.
+
+Compress in reverse order $D,D-1,\ldots,1$, obtaining a downset $A\subset\Z_{\ge0}^D$ with $|A|=N$ and $|A+A|=\sigma N\le K^2N$ by \eqref{eq:plunnecke}. More precisely, $A$ consists of $(b_1-1,\ldots,b_D-1)$ for all feasible exact branching profiles of the original prefix tree. Induct on depth to see this: the last $D-1$ compressions give the feasible suffix-profile downset separately inside each first-coordinate fiber. For a given suffix profile, the last compression records exactly the number of original fibers supporting it. Every point of $A$ therefore lifts to an actual subtree with that branching profile and unchanged labels.
+
+For every $a\in A$, the $2^{|\operatorname{supp}a|}$ vectors with coordinates $2a_i$ or $2a_i-1$ when $a_i>0$, and zero otherwise, belong to $A+A$. These cells are disjoint, since their coordinatewise rounded-up halves recover $a$. Thus
+\[
+\sum_{a\in A}2^{|\operatorname{supp}a|}\le\sigma N.
+\]
+Let $r=\lceil\log_2(2\sigma)\rceil$ and $E=\{a\in A:|\operatorname{supp}a|\le r\}$, so $|E|\ge N/2$. Put $B=\max_{a\in E}\prod_i(a_i+1)$. Every representation $z=a+b$ with $a,b\in E$ gives
+\[
+1\le B\prod_i[(a_i+1)(b_i+1)]^{-1/2}.
+\]
+The scalar sum $\sum_{x=0}^z[(x+1)(z-x+1)]^{-1/2}$ is one at $z=0$ and at most four otherwise: split $j=x+1$ at $(z+2)/2$ and use $\sum_{j\le t}j^{-1/2}\le2\sqrt t$. Since $z\in E+E$ has at most $2r$ nonzero coordinates, its representation count is at most $16^rB$. Hence
+\[
+N^2/4\le|E|^2\le16^rB|E+E|\le16^rB\sigma N.
+\]
+As $16^r\le256\sigma^4$, we have $B\ge N/(1024\sigma^5)\ge N/(1024K^{10})$. Lift a maximizing corner of $E$ to its feasible original subtree. Its branching levels are the nonzero coordinates of that corner, at most $r\le\lceil\log_2(2K^2)\rceil$. Two different retained leaves first differ at a branching level, proving injectivity of the stated projection. No assertion that compression preserves positive differences is used.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let $A$ be a set of $n$ positive integers, $F=F_A\subset\Z^D$, and $q=|\Dp(F)|=|Q(A)|$. Put $K_0=q^2/n\ge1$ and $T=\log(2K_0)$. By Lemma~\ref{lem:basic}(2), $|F-F|\le K_0n$. Theorem~\ref{thm:elementary-extraction} supplies an actual subset and an injective original-coordinate projection with image $S\subset\R^d$ such that $m=|S|\ge n/(1024K_0^{10})$ and $d\le\lceil\log_2(2K_0^2)\rceil\le CT$. If $m=1$, then $n\le1024K_0^{10}$, giving a stronger conclusion. Otherwise $d\ge1$. Projection commutes with positive parts, so $q\ge|\Dp(S)|$, while $|S-S|\le|F-F|$ and $R(S)\le1024K_0^{11}$. Theorem~\ref{thm:regular} and Lemma~\ref{lem:ud} give
+\[
+\sqrt{K_0n}=q\ge\Mf(S)\ge256^{-d}(1024K_0^{11})^{-\alpha_d}
+\left(\frac{n}{1024K_0^{10}}\right)^{\frac12+\frac1{4d}}.
+\]
+Taking logarithms, with $X=\log n$,
+\[
+\frac{X}{4d}\ \le\ C\big(d+T(1+\log d)\big)
+\]
+for an absolute constant $C$. Since $d\le CT$, this gives $X\le C'T^2(1+\log(T+1))$, hence $T\ge c\sqrt{X/\log X}$ for large $X$ (if $T\ge X$ there is nothing to prove). Finally $q=\sqrt n\,\exp((T-\log2)/2)$.
+\end{proof}
+
+\section{Structured sets}\label{sec:structured}
+
+\begin{theorem}[Structured sets]\label{thm:structured}
+Let $d\ge1$.
+\begin{enumerate}
+\item Let $\Gamma\subset\R^d$ be a free abelian group of rank $r$, and let $S\subset\Gamma$ be finite, nonempty and midpoint-closed: $(x+y)/2\in S$ whenever $x,y\in S$ and $x+y\in2\Gamma$. Then $\Mf(S)\ge 2^{-d-3r}|S|^{u_d}$. In particular every finite nonempty set $S=C\cap\Lambda$, with $C\subset\R^d$ convex and $\Lambda\subset\R^d$ a lattice of rank $d$, satisfies $\Mf(S)\ge16^{-d}|S|^{u_d}$.
+\item Every set obtained from finite subsets of $\R$ by repeatedly forming ordered layer products (Definition~\ref{def:layers}) satisfies $\Mf(S)\ge 4^{-(d-1)}|S|^{u_d}$.
+\end{enumerate}
+\end{theorem}
+
+\subsection*{Midpoint-closed sets}
+For $S\subset\R^d$ write $S^+=(S-0)^+=\{x^+:x\in S\}$.
+
+\begin{proposition}\label{prop:centered}
+Let $\Gamma\subset\R^d$ be a free abelian group of rank $r$, and let $S\subset\Gamma$ be finite, midpoint-closed, symmetric ($S=-S$) and contain $0$. Then $|S^+|\ge2^{-d-2r}|S|^{u_d}$.
+\end{proposition}
+
+\begin{proof}
+Induction on $d$; for $d=1$, $|S^+|\ge(|S|+1)/2$. Let $n=|S|$ and $q=|S^+|$. Assign each $x\in S$ the set $\sigma(x)=\{i:x_i\ge0\}$; some class $E$ has at least $n/2^d$ points. If $\sigma=[d]$ or $\sigma=\varnothing$, then $q\ge|E|$ (using $S=-S$ in the second case). Otherwise let $U=\sigma$ and $V=[d]\setminus U$. For $x\in E$ we have $x^+=(\pi_Ux,0)$ and $(-x)^+=(0,-\pi_Vx)$, and both lie in $S^+$; hence $|\pi_UE|,|\pi_VE|\le q$.
+
+Let $\Gamma_U=\Gamma\cap\ker\pi_V$ and $\Gamma_V=\Gamma\cap\ker\pi_U$, of ranks $r_U,r_V$. These subgroups have disjoint coordinate supports, so $r_U+r_V\le r$. A largest $V$-fiber of $E$ has at least $n/(2^dq)$ points, all in one coset of $\Gamma_U$; choose a class modulo $4\Gamma_U$ containing at least $n/(2^dq4^{r_U})$ of them, and fix $z$ in it. For every $x$ in this class, $x+(-z)\in4\Gamma_U\subseteq2\Gamma$ and $-z\in S$, so $(x-z)/2\in S\cap2\Gamma_U=:S_U$. Thus $|S_U|\ge n/(2^dq4^{r_U})$, and similarly $|S_V|\ge n/(2^dq4^{r_V})$ for $S_V=S\cap2\Gamma_V$. The set $S_U$ is symmetric, contains $0$, is midpoint-closed with respect to the rank-$r_U$ group $2\Gamma_U$, and lives in the coordinates $U$; similarly for $S_V$. If $x\in S_U$ and $y\in S_V$, then $x+y\in2\Gamma$, so $(x+y)/2\in S$, and $((x+y)/2)^+$ equals $x^+/2$ on $U$ and $y^+/2$ on $V$. Hence $q\ge|S_U^+|\,|S_V^+|$.
+
+With $\alpha=u_{|U|}$, $\beta=u_{|V|}$ and $t=\alpha+\beta$, the induction hypothesis gives
+\[
+q^{1+t}\ \ge\ 2^{-d(1+t)}\,4^{-r_U(1+\alpha)-r_V(1+\beta)}\,n^t\ \ge\ 2^{-d(1+t)}4^{-r(1+t)}n^t,
+\]
+and $t/(1+t)\ge u_d$ completes the induction.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:structured}(1)]
+Count pairs $(x,y)\in S^2$ with $x\equiv y\pmod{2\Gamma}$; there are at least $|S|^2/2^r$ of them, and each has its midpoint in $S$. Hence some $a\in S$ is the midpoint of at least $|S|/2^r$ such pairs, so $S'=S\cap(2a-S)$ has at least $|S|/2^r$ points. The set $S'-a$ is symmetric, contains $0$, lies in $\Gamma$ and is midpoint-closed. By Proposition~\ref{prop:centered}, $\Mf(S)\ge|(S'-a)^+|\ge2^{-d-2r}(|S|/2^r)^{u_d}\ge2^{-d-3r}|S|^{u_d}$. A convex lattice set $C\cap\Lambda$ is midpoint-closed with respect to $\Lambda$, of rank $d$.
+\end{proof}
+
+\subsection*{Ordered layer products}
+
+\begin{definition}\label{def:layers}
+Let $A_1,\dots,A_k\subset\R^p$ and $B_1,\dots,B_k\subset\R^s$ be finite and nonempty, with every coordinate of every point of $A_{i+1}$ larger than the corresponding coordinate of every point of $A_i$, and every coordinate of every point of $B_{i+1}$ smaller than the corresponding coordinate of every point of $B_i$. Then $\bigcup_i(A_i\times B_i)\subset\R^{p+s}$ is an \emph{ordered layer product} of the $A_i$ and $B_i$. The sets of Proposition~\ref{prop:glue} are of this form.
+\end{definition}
+
+\begin{lemma}\label{lem:layerfan}
+For an ordered layer product $S$ as above, with $a_i=|A_i|$ and $b_i=|B_i|$,
+\[
+\Mf(S)\ \ge\ \max_i\Big(\Mf(A_i)\Mf(B_i)+\sum_{j>i}a_j+\sum_{j<i}b_j\Big).
+\]
+\end{lemma}
+
+\begin{proof}
+Let $(x,y)\in A_i\times B_i$, with $x$ and $y$ realizing $\Mf(A_i)$ and $\Mf(B_i)$. Points of the same layer give the vectors $((x'-x)^+,(y'-y)^+)$, which take $\Mf(A_i)\Mf(B_i)$ values. A point $(x',y')$ of a layer $j>i$ gives $(x'-x,0)$, with $x'-x$ coordinatewise positive and larger than every vector $(x''-x)^+$, $x''\in A_i$; these give $a_j$ new values for each $j>i$. Symmetrically, layers $j<i$ give $(0,y'-y)$, with $b_j$ new values each. All these values are distinct.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:structured}(2)]
+Induction on the construction, the case of subsets of $\R$ being trivial. Let $S$ be an ordered layer product whose factors satisfy $\Mf(A_i)\ge c_pa_i^{\alpha}$ and $\Mf(B_i)\ge c_sb_i^{\beta}$ with $c_p=4^{-(p-1)}$, $c_s=4^{-(s-1)}$, $\alpha=u_p$, $\beta=u_s$. Put $q=\Mf(S)$, $c=c_pc_s$, $t=\alpha+\beta$ and $\mu=\min(\alpha,\beta)$. By Lemma~\ref{lem:layerfan}, $\sum_{i>1}a_i\le q$, $\sum_{i<k}b_i\le q$ and $a_i^\alpha b_i^\beta\le q/c$ for every $i$. For $1<i<k$ this gives $\min(a_i,b_i)\le(q/c)^{1/t}$, hence $\sum_{1<i<k}a_ib_i\le(q/c)^{1/t}\sum_{1<i<k}(a_i+b_i)\le2q(q/c)^{1/t}$; and the two end layers satisfy $a_ib_i\le(q/c)^{1/\mu}$. Thus
+\[
+|S|\le2q(q/c)^{1/t}+2(q/c)^{1/\mu}.
+\]
+If the second term is at least $|S|/2$, then $q\ge c(|S|/4)^{\mu}\ge 4^{-(p+s-1)}|S|^{u_{p+s}}$, as $\mu\ge u_{p+s}$. Otherwise $q^{1+1/t}\ge c^{1/t}|S|/4$, so $q\ge c^{1/(1+t)}(|S|/4)^{t/(1+t)}\ge4^{-(p+s-1)}|S|^{u_{p+s}}$, as $c\le1$ and $t/(1+t)\ge u_{p+s}$.
+\end{proof}
+
+\section{Weighted energy and projection-critical cores}\label{sec:energy}
+
+Write $q(S)=|\Dp(S)|$. For a finitely supported nonnegative weight define
+\[
+\mathcal E(f)=\sum_{a+b=c+d}f(a)f(b)f(c)f(d),\qquad
+\Lambda(S)=\max_{\substack{f\ge0,\ \operatorname{supp}f\subseteq S\\\sum f^2=1}}\mathcal E(f).
+\]
+Set $\Lambda(\varnothing)=0$; a zero-coordinate singleton has norm one. All logarithms in this section are natural. The following arguments are independent of any unproved projection-balance assertion.
+
+\begin{lemma}[Norm and optimizer facts]\label{lem:energy-facts}
+If $N=|S|$ and $K=|S-S|/N$, then $N/K\le\Lambda(S)\le N$. An exact maximizer $f$ exists. Writing $\lambda=\Lambda(S)$ and $\mu=f^2$, one has $\mu_x\le1/\lambda$. The law
+\[
+Q(a,b,c,d)=\lambda^{-1}f(a)f(b)f(c)f(d)\,\mathbf1_{a+b=c+d}
+\]
+has all four marginals $\mu$, with $H(Q)=\log\lambda+2H(\mu)$. Moreover
+\[
+\Lambda(A)\ge\lambda\mu(A)^2\quad(\varnothing\ne A\subseteq S).
+\]
+\end{lemma}
+\begin{proof}
+Constant weights and Cauchy--Schwarz on difference representations give the lower bound. Cauchy--Schwarz in each sum fiber gives $\mathcal E(f)\le N(\sum f^2)^2$. Compactness gives a maximizer. Put $R_x=\sum_{x+b=c+d}f(b)f(c)f(d)$. The first-order equations give $R_x=\lambda f(x)$ on positive coordinates; at a zero coordinate the same equality follows because a positive derivative would improve the normalized weight. Since $R_x\le\|f\|_2\|f*f\|_2=\sqrt\lambda$, the atom bound follows. The equations also give the four marginals, and direct evaluation of $-\mathbb E_Q\log Q$ gives the entropy identity.
+
+Mixed-energy H\"older bounds the additive sum of four weights by the product of their energy fourth roots. Indeed, embed their supports in the finitely generated torsion-free group they span, identify it with $\Z^r$, and apply Fourier H\"older on its compact dual. The same representation gives the triangle inequality for $\mathcal E^{1/4}$. Applying mixed H\"older to $f,f,f,g$ gives $\mathcal E(g)\ge\lambda\langle f,g\rangle^4$. Use $g=f\mathbf1_A/\sqrt{\mu(A)}$ when $\mu(A)>0$; otherwise the claimed bound is trivial.
+\end{proof}
+
+\begin{theorem}[Full projection-critical normalization]\label{thm:critical-core}
+Let $S\subset\R^D$, $N=|S|$, $q_0=q(S)$, and $K_0=q_0^2/N$. Fix $b>0$ and minimize $J_b(T)=q(T)^{2b}/\Lambda(T)^{b+1}$ over all nonempty projected subsets $T=\pi_I A$ of $S$, including the empty-coordinate singleton. Break ties by minimum cardinality, then minimum number of coordinates. Put $\lambda=\Lambda(T)$, $q=q(T)$, and $\alpha=(b+1)/(2b)$. Then
+\begin{gather}
+\lambda\ge NK_0^{-(2b+1)},\qquad q^2/\lambda\le K_0^{2+1/b},\label{eq:critical-retention}\\
+q(\pi_I A)\ge q\left(\frac{\Lambda(\pi_I A)}\lambda\right)^\alpha
+\quad(\varnothing\ne A\subseteq T),\label{eq:critical-heredity}\\
+\Lambda(\pi_I A)\le\lambda,\qquad q^2\le\lambda^{1+1/b}.\label{eq:critical-singleton}
+\end{gather}
+Every exact maximizing law on $T$ has full support, and no proper coordinate projection is injective. If $T$ has $d>0$ coordinates, it has an axis-parallel pair in every coordinate and full affine dimension $d$. Its maximizing law satisfies
+\[
+q(A)\ge q\mu(A)^{1+1/b},\qquad
+0\le H(\mu)-\log\lambda\le(2+1/b)\log K_0.
+\]
+\end{theorem}
+\begin{proof}
+The candidate family is closed under taking subsets and coordinate projections, by lifting one representative per projected point. Put $\lambda_0=\Lambda(S)$ and $K_\lambda=q_0^2/\lambda_0\le K_0^2$, using $\lambda_0\ge N/K_0$. Since $|B|\le q(B)^2$ and $\Lambda(B)\le|B|$, one has $J_b(B)\ge1/\Lambda(B)$. Comparison with $S$ gives $\lambda\ge\lambda_0K_\lambda^{-b}$, proving the first bound. Minimality also gives
+\[
+q^2/\lambda\le K_\lambda(\lambda/\lambda_0)^{1/b}\le K_0^{2+1/b},
+\]
+because every candidate has at most $N$ points. Comparison with every projected subset gives \eqref{eq:critical-heredity}. Its palette is at most $q$, implying no norm inflation, and the singleton competitor gives the second part of \eqref{eq:critical-singleton}.
+
+A proper positive support of a maximizer has the same norm and no larger palette, contradicting the cardinality tie rule. An injective proper projection preserves all original additive quadruples, so its norm is at least $\lambda$, hence equal by the preceding bound. Its palette must then equal $q$, contradicting the coordinate tie rule. Deleting each coordinate must therefore identify a pair differing only there; their differences span all coordinate axes. The mass inequality follows from Lemma~\ref{lem:energy-facts}. Finally $\log\lambda\le H(\mu)\le\log|T|\le2\log q$, proving the entropy-defect bounds.
+\end{proof}
+
+\begin{proposition}[A sufficient quadratic core bound]\label{prop:core-suffices}
+Suppose there is an absolute $C$ such that
+\[
+\log\Lambda(T)\le CD^2
+\]
+for every core selected by Theorem~\ref{thm:critical-core} from a $D$-coordinate parent with $b=4D$. Then Conjecture~\ref{conj:main} holds.
+\end{proposition}
+\begin{proof}
+First use Theorem~\ref{thm:elementary-extraction}. If the retained set is a singleton the conclusion is already stronger. Otherwise its dimension $D$ is $O(1+\log K_0)$, its logarithmic size loss is $O(1+\log K_0)$, and its palette surplus is at most a fixed constant times $K_0^{11}$. Apply \eqref{eq:critical-retention} to this set with $b=4D$. The assumed bound then yields $\log N=O((1+\log K_0)^2)$ for the original cardinality. The known upper bound supplies the other half of Conjecture~\ref{conj:main}.
+\end{proof}
+
+
+\subsection*{Completion and exchanges}
+The preceding normalization only compares projected subsets of the input. Allowing every set with a compatible positive-difference palette gives a stronger extremality condition. This enlargement preserves the quantitative reduction.
+
+\begin{proposition}[Completion normalization]\label{prop:completion}
+Let $Q_0=\Dp(S)$ and retain the notation of Theorem~\ref{thm:critical-core}. Minimize $J_b$ over all coordinate masks $I$ and all finite sets $A\subset\R^I$ satisfying $0\in A$ and $\Dp(A)\subseteq\pi_IQ_0$, with the same tie rules. A minimizer $T$ exists. It has all the projected-subset criticality properties above and satisfies the sharper estimates
+\[
+\Lambda(T)\ge NK_0^{-(2b+1)},\qquad
+\frac{q(T)^2}{\Lambda(T)}\le K_0^2.
+\]
+In particular, with $\lambda=\Lambda(T)$, $q=q(T)$, $W=|T-T|$, and
+\[
+L=\log\lambda,\qquad \Delta=2\log q-L,\qquad
+\kappa=\log(W/\lambda),
+\]
+one has $0\le\kappa\le\Delta\le\min(L/b,2\log K_0)$.
+\end{proposition}
+\begin{proof}
+Every admissible $A$ lies in $\pi_IQ_0-\pi_IQ_0$, because $a=a^+-(-a)^+$ and $0\in A$. There are therefore finitely many candidates. A translate of every projected subset of $S$ is admissible, and the family is closed under translated projected subsets. The proof of Theorem~\ref{thm:critical-core} gives criticality, full support, the tie-rule consequences, and the norm-retention estimate.
+
+Put $\lambda_0=\Lambda(S)$ and $K_\lambda=q_0^2/\lambda_0\le K_0^2$. Minimality gives
+\[
+\frac{q^2}{\lambda}\le K_\lambda(\lambda/\lambda_0)^{1/b}.
+\]
+If $\lambda\le\lambda_0$, this is at most $K_\lambda$; if $\lambda\ge\lambda_0$, use $q\le q_0$ instead. Finally $\lambda\le|T|\le W\le q^2$, and comparison with the singleton gives $q^2\le\lambda^{1+1/b}$. These prove the stated inequalities. The completed set need not be a subset of $S$.
+\end{proof}
+
+\begin{proposition}[Exchange inequality]\label{prop:exchange}
+Let $T$ be a completed core, let $f$ be any exact optimizer, and put $\mu=f^2$, $s=1+1/b$. Extend $f$ by zero and define
+\[
+R_f(x)=\sum_{a+b-c=x}f(a)f(b)f(c).
+\]
+For $C\subseteq T$ and a finite $X$ disjoint from $T$, set
+$A=(T\setminus C)\cup X$ and $Z_X=\lambda^{-2}\sum_{x\in X}R_f(x)^2$.
+If $A\ne\varnothing$ and $\Dp(A)\subseteq\Dp(T)$, then, with $r=q-q(A)$,
+\begin{equation}\label{eq:exchange}
+\mu(C)\ge Z_X+1-(1-r/q)^{1/s}\ge Z_X+\frac{r}{sq}.
+\end{equation}
+Conversely, $q(A)/q<(1-\mu(C)+Z_X)^s$ certifies $J_b(A)<J_b(T)$.
+\end{proposition}
+\begin{proof}
+Mixed-energy H\"older gives
+$\langle R_f,g\rangle\le\lambda^{3/4}\mathcal E(g)^{1/4}$.
+Choose $g$ to be the normalized restriction of $R_f$ to $A$. Since $R_f=\lambda f$ on $T$,
+\[
+\Lambda(A)\ge\lambda(1-\mu(C)+Z_X)^2.
+\]
+If the restriction vanishes, this inequality is trivial. Translate $A$ by one of its points to obtain an admissible competitor; this preserves its palette and energy. Completion minimality gives $q(A)/q\ge(\Lambda(A)/\lambda)^{s/2}$, proving the first inequality in \eqref{eq:exchange}; concavity of $t^{1/s}$ gives the second. The strict version follows by substituting the same norm bound into $J_b(A)/J_b(T)$.
+\end{proof}
+
+This yields a useful sufficient covering condition. Let $C_j$ be the lift of $c_j>0$ points of $\pi_{I_j}T$, and choose $X_j$ as in Proposition~\ref{prop:exchange}. Write $r_j=q-q((T\setminus C_j)\cup X_j)$ and $\mathcal R_j=r_j+sqZ_{X_j}>0$. The largest $I_j$-fiber has size at most $W/P_{I_j}(T)$, and each optimizer atom has mass at most $1/\lambda$. Thus
+\begin{equation}\label{eq:lifted-cover}
+P_{I_j}(T)\le \frac{sq e^\kappa c_j}{\mathcal R_j}.
+\end{equation}
+Suppose nonnegative weights $a_j$ fractionally cover the coordinates, meaning $\sum_{j:i\in I_j}a_j\ge1$ for every $i$. If
+$\mathcal R_j/c_j\ge q^{\theta_j}/C_j'$ with $0\le\theta_j\le1$ and $C_j'\ge1$, put
+\[
+\rho=\sum_j a_j,\qquad \beta=\sum_j a_j(1-\theta_j),
+\qquad B=\sum_j a_j\log C_j'.
+\]
+Fractional Shearer, applied to the same optimizer law throughout, and \eqref{eq:lifted-cover} imply
+\begin{equation}\label{eq:completion-criterion}
+(1-\beta/2)L\le\rho(\kappa+\log s)+\beta\Delta/2+B.
+\end{equation}
+Indeed, $L\le H(\mu)\le\sum_j a_jH(\mu_{I_j})\le\sum_j a_j\log P_{I_j}(T)$; substitute \eqref{eq:lifted-cover} and $\log q=(L+\Delta)/2$. Fractional Shearer follows by writing each projection entropy as a sum of conditional coordinate entropies and observing that conditioning on fewer preceding coordinates increases each term.
+
+After elementary extraction, let $d$ be the retained dimension and $K_0$ the extracted parent's palette surplus. Choose $D=\max\{d,\lceil1+\log K_0\rceil\}$, pad with constant coordinates, and take $b=4D$. The extraction bounds imply that $D$ is $O(1+\log K)$ in terms of the original palette surplus $K$. A uniform supply of these certificates with $\beta\le2-1/D$, $\rho=O(1)$ and $B=O(D)$ would give $L=O(D^2)$: use $\Delta\le L/(4D)$ in \eqref{eq:completion-criterion}, leaving at least $L/(4D)$ on the left, and $\kappa\le2\log K_0=O(D)$ on the right. Proposition~\ref{prop:core-suffices} has the same proof for completed cores, so this would establish Conjecture~\ref{conj:main}.
+
+\emph{The existence of such certificates for every sufficiently large completed core is unproved.} The exchange inequality evaluates an actual replacement; it does not produce enough replacements to cover the coordinates. In particular, child criticality cannot be inferred from root criticality without a loss. For a projected descendant $B$, that loss is
+\[
+\delta(B)=\log q(B)-\frac{s}{2}\log\Lambda(B)
+              -\left(\log q-\frac{s}{2}L\right)\ge0.
+\]
+Root comparison gives a factor $e^{-\delta(B)}$ in the corresponding child palette bound. Signed telescoping does not bound positive excursions or the sum over branches.
+
+\subsection*{Other verified progress and limits}
+The accompanying Lean development proves weighted pruning with one actual anchor, stationary fan and reference-law budgets, and compatible cuts whenever a proper exposed fractional cover of weight at most two uses at most four masks. The exposure and cover hypotheses are essential: no theorem supplies such a cover for every critical core. It also formalizes counterexamples to several stronger intermediate assertions, including a dimension-only budget for the average cost of passing to reflected parents. These are obstructions to particular proof methods, not counterexamples to Conjecture~\ref{conj:main}.
+
+The completed-core approach incorporates the additional freedom of replacing points without enlarging the palette. Later exact finite checks and constructions test this approach, but do not close its universal covering step. Neither those computations nor further formalization of the proved lemmas supplies the missing geometric theorem.
+
+\section{Formal verification and reproducibility}\label{sec:formal}
+The main results have an accompanying Lean 4 development \cite{Lean539}, using Lean \texttt{v4.29.0-rc8} and Mathlib revision \texttt{698d2b68b870}. The completed release audit covers 844 local and vendored modules and 12,917 project declarations. These counts include definitions and generated declarations; they are not counts of mathematical theorems. The transitive axiom audit permits only \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+
+The canonical import closure was rebuilt from source in an isolated extraction, reusing the pinned external dependency cache but no old project artifacts. Generated finite certificates were partitioned into smaller kernel-checked computations to bound memory, without changing their public theorem statements. Later five-mask drafts and preserved upstream reference copies are outside this verification claim.
+
+The principal endpoints are as follows; namespaces are \texttt{Erdos539Geometry}, except for the explicitly named threshold theorem.
+\begin{itemize}
+\item Theorem~\ref{thm:main}, with $c=1/16000$, is proved by
+\begin{quote}\small\ttfamily
+positiveCofactorMinimum\_super\_sqrt\_explicit\\
+Erdos539.cofactorThreshold\_super\_sqrt\_explicit.
+\end{quote}
+\item Theorem~\ref{thm:fixed} is proved by
+\begin{quote}\small\ttfamily
+fixedDimensionalMinimum\_all\_dimension\_isTheta\\
+primeSupportedMinimum\_all\_dimension\_isTheta.
+\end{quote}
+The lower-bound endpoint is \texttt{all\_dimension\_fan\_lower\_bound}.
+\item Theorems~\ref{thm:regular}, \ref{thm:elementary-extraction} and \ref{thm:structured}, the gluing identities, and Appendix~\ref{app:small-d} are covered by the same receipt. The unrestricted lower-bound dependency closure uses elementary extraction and has no PFR imports.
+\item Theorem~\ref{thm:critical-core} and the conditional implication in Proposition~\ref{prop:core-suffices} are formalized. Propositions~\ref{prop:completion}--\ref{prop:exchange} and the lifted exchange criterion \eqref{eq:completion-criterion} have written proofs in this paper but are not included in that completed Lean receipt.
+\end{itemize}
+
+The arithmetic interface requires care. This paper minimizes over positive integers. Formal Conjectures allows zero in its definition of \texttt{cofactorThreshold}. The development proves the comparison between these definitions; it does not identify them. Both displayed headline endpoints have the stated quantifiers, with no universal cut or critical-core hypothesis assumed. Conversely, the conditional stronger-bound theorems retain those hypotheses explicitly.
+
+The companion proof archive includes the theorem map, source hashes, audit output, and reproduction instructions. As of 19 October 2026, the DeepMind catalogue still marks the main problem open \cite{FC539}. Formal verification checks the encoded statements and proofs; it does not establish novelty or substitute for independent review of the exposition and its mathematical interfaces.
+
+\appendix
+\section{Improved constants through dimension fifteen}\label{app:small-d}
+We retain the notation $E\subset\R^p\times\R^s$, $m=|E|$, $X=\pi_1E$, $Y=\pi_2E$ and $E^y=\{x:(x,y)\in E\}$ from Section~\ref{sec:pruning}. Recall $T(F)=\max\{M(F),M(-F)\}$.
+
+\begin{lemma}[Two-sided anchored pruning]\label{lem:P2}
+Let $a,b,c_p,c_s>0$. Suppose $\Mf(H)\ge c_p|H|^a$ and $\Mf(-H)\ge c_p|H|^a$ for every nonempty $H\subseteq E^y$, and $\Tf(J)\ge c_s|J|^b$ for every nonempty $J\subseteq Y$. Then
+\[
+\Tf(E)\ \ge\ c_pc_s\Big(\frac{m}{4|Y|}\Big)^{a}\Big(\frac{m}{2|X|}\Big)^{b}.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $\lambda=c_p(m/(4|Y|))^a$, and delete from each $E^y$ the anchors whose fan in $E^y$ in \emph{either} direction has fewer than $\lambda$ elements. As in Lemma~\ref{lem:P1} (applied to $H$ and to $-H$) each of the two bad sets in $E^y$ has fewer than $m/(4|Y|)$ elements, so fewer than $m/2$ points are deleted. Choose $x_0$ and $V$ as before, with $|V|>m/(2|X|)$, and choose $y_0\in V$ and a sign realizing $\Tf(V)$. If the sign is $+$, argue as in Lemma~\ref{lem:P1}. If it is $-$, for each $w\in(y_0-V)^+$ choose $y_w\in V$ with $(y_0-y_w)^+=w$; then $((x_0,y_0)-(x,y_w))^+=((x_0-x)^+,w)$ for $x\in E^{y_w}$, and $(x_0-x)^+$ takes at least $\lambda$ values. Thus one of the two fans of $E$ at $(x_0,y_0)$ has at least $\lambda\Tf(V)$ elements.
+\end{proof}
+
+\begin{lemma}[Two-sided pruning for $\Dp$]\label{lem:P3}
+Let $a,b,c_p,c_s>0$. Suppose $\Tf(H)\ge c_p|H|^a$ for every nonempty $H\subseteq E^y$, and $|\Dp(J)|\ge c_s|J|^b$ for every nonempty $J\subseteq Y$. Then
+\[
+|\Dp(E)|\ \ge\ c_pc_s\Big(\frac{m}{2|Y|}\Big)^{a}\Big(\frac{m}{4|X|}\Big)^{b}.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $\lambda=c_p(m/(2|Y|))^a$, and call $x\in E^y$ bad if both of its fans in $E^y$ have fewer than $\lambda$ elements. The bad set $B^y$ satisfies $\Tf(B^y)<\lambda$, so $|B^y|<m/(2|Y|)$, and more than $m/2$ points are good. Label each good point $(x,y)$ by a sign $\epsilon$ such that its $\epsilon$-fan in $E^y$ has at least $\lambda$ elements, and keep the more frequent label, say $\epsilon$; at least $m/4$ points remain. Some $x_0$ has a set $V$ of size at least $m/(4|X|)$ of kept points $(x_0,y)$. For $w\in\Dp(V)$ choose $y,y'\in V$ with $w=(y-y')^+$ if $\epsilon=+$, and with $w=(y'-y)^+$ if $\epsilon=-$. If $\epsilon=+$, the vectors $((x,y)-(x_0,y'))^+=((x-x_0)^+,w)$, $x\in E^y$, take at least $\lambda$ values; if $\epsilon=-$, so do $((x_0,y')-(x,y))^+=((x_0-x)^+,w)$. Different $w$ give disjoint sets, so $|\Dp(E)|\ge\lambda|\Dp(V)|$.
+\end{proof}
+
+\begin{lemma}[Planar fans]\label{lem:planar}
+Every $H\subset\R^2$ with $|H|=N$ satisfies $\Mf(H)\ge(N/2)^{2/3}$.
+\end{lemma}
+
+\begin{proof}
+Let $r,s$ be the numbers of distinct first and second coordinates. By Lemma~\ref{lem:basic}(4), $\Mf(H)\ge\max(r,s)$. Put $k=\lceil N/(2s)\rceil-1$ and $l=\lceil N/(2r)\rceil-1$. On each horizontal line remove the $k$ points with largest first coordinate (all of them if there are fewer), obtaining $H_1$; then on each vertical line remove from $H_1$ the $l$ points with largest second coordinate. Fewer than $N/2+N/2$ points are removed, so some $a$ survives. Then $a$'s vertical line contains at least $l+1$ points $b\in H_1$ with $b_2\ge a_2$, and each such $b$ has at least $k+1$ points $x\in H$ on its horizontal line with $x_1\ge b_1=a_1$. These $(k+1)(l+1)\ge N^2/(4rs)$ points are distinct and satisfy $x\ge a$ coordinatewise, so $|(H-a)^+|\ge N^2/(4rs)$. Multiplying the three lower bounds gives $\Mf(H)^3\ge N^2/4$.
+\end{proof}
+
+This is the anchored form of the argument of \cite[Lemma~2.2]{HLP08}.
+
+\begin{lemma}[Three-dimensional fans]\label{lem:3d}
+Every $F\subset\R^3$ with $|F|=n$ satisfies $\Mf(F)\ge 8^{-3}n^{5/8}$.
+\end{lemma}
+
+\begin{proof}
+For distinct $x,y\in F$, each coordinate is nonnegative in $x-y$ or in $y-x$, so one of them has at least two nonnegative coordinates. Counting ordered pairs (diagonal pairs included), some anchor $a\in F$ has at least $(n+1)/2$ points $x$ such that $x-a$ has at least two nonnegative coordinates. Classify these by their set of nonnegative coordinates; one of the four possible classes, $E$, has $m\ge n/8$ points. If it is $\{1,2,3\}$, then $\Mf(F)\ge|(F-a)^+|\ge m$. Otherwise it is a two-element set $P$, and $Q=[3]\setminus P$. For $x\in E$ the vector $(x-a)^+$ determines $\pi_Px$, so $|\pi_PE|\le\Mf(F)$; and $|\pi_QE|\le P_Q(F)\le\Mf(F)$ by Lemma~\ref{lem:basic}(4). Apply Lemma~\ref{lem:P1} to $E\subset\R^P\times\R^Q$, using Lemma~\ref{lem:planar} ($c=2^{-2/3}$, exponent $2/3$) and $\Mf(H)=|H|$ in dimension one. With $\Mf=\Mf(F)\ge\Mf(E)$ this gives $\Mf^{8/3}\ge2^{-2/3}(m/2)^{5/3}\ge 2^{-22/3}n^{5/3}$, which implies the claim.
+\end{proof}
+
+\begin{theorem}\label{thm:small-d}
+Every finite $F\subset\R^d$ with $|F|=n$ satisfies
+\[
+\Tf(F)\ge 8^{-d}n^{u_d}\quad(1\le d\le7),\qquad |\Dp(F)|\ge8^{-d}n^{u_d}\quad(1\le d\le15).
+\]
+\end{theorem}
+
+\begin{proof}
+The one-sided bounds $\Mf(F)\ge 8^{-p}n^{u_p}$ hold for $p\le3$: trivially for $p=1$, by Lemma~\ref{lem:planar} for $p=2$ and by Lemma~\ref{lem:3d} for $p=3$. They give the claim for $\Tf$ when $d\le3$.
+
+Let $4\le d\le7$ and assume the bound for $\Tf$ in smaller dimensions. Translate so that $0\in F$, and classify $x\in F$ by $\sigma(x)=\{i:x_i\ge0\}$; some class $E$ has $m\ge n/2^d$ points. If $\sigma\in\{\varnothing,[d]\}$, the fan of $F$ at $0$ in the appropriate direction is injective on $E$, so $\Tf(F)\ge m\ge 8^{-d}n^{u_d}$. Otherwise write $[d]=P\sqcup N$ with $P=\sigma$. Since $(x-0)^+=(\pi_Px,0)$ and $(0-x)^+=(0,-\pi_Nx)$ for $x\in E$, both block projections of $E$ have at most $\Tf(F)$ elements. Let the smaller block, of dimension $p\le3$, be the first block in Lemma~\ref{lem:P2}, with the one-sided bounds (which also apply to $-H$), and use the inductive bound for $\Tf$ on the other block. With $t=u_p+u_{d-p}$ we get
+\[
+\Tf(F)^{1+t}\ \ge\ 8^{-d}\,(m/4)^{t}\ \ge\ 8^{-d}\,2^{-(d+2)t}\,n^{t}.
+\]
+Since $t/(1+t)\ge u_d$ and $3d+(d+2)t\le3d(1+t)$, this gives $\Tf(F)\ge8^{-d}n^{u_d}$.
+
+For $\Dp$ argue identically with $q=|\Dp(F)|$: the block projections of $E$ have at most $q$ elements since $(F-0)^+,(0-F)^+\subseteq\Dp(F)$. For $d\le15$ the smaller block has dimension $p\le7$, so Lemma~\ref{lem:P3} applies with the bound for $\Tf$ on that block and the inductive bound for $\Dp$ on the other, and the same arithmetic concludes.
+\end{proof}
+
+\newpage
+\section*{AI assistance}
+OpenAI Codex (GPT-6) and Anthropic Claude were used extensively for proof development, Lean formalization, computational checks, and drafting and revising the paper. The authors take responsibility for the mathematical claims and exposition.
+
+\begin{thebibliography}{GGMT25}
+
+\bibitem[ABKKW]{ABKKW}
+N.~Alon, G.~Brightwell, H.~A.~Kierstead, A.~V.~Kostochka and P.~Winkler, \emph{Dominating sets in $k$-majority tournaments}, J. Combin. Theory Ser. B \textbf{96} (2006), no.~3, 374--387; see Section~7.
+
+\bibitem[Er73]{Er73}
+P.~Erd\H{o}s, \emph{Problems and results on combinatorial number theory}, in: A Survey of Combinatorial Theory (Proc. Internat. Sympos., Colorado State Univ., Fort Collins, 1971), North-Holland, 1973, 117--138.
+
+\bibitem[EP]{EP539}
+T.~F.~Bloom, \emph{Erd\H{o}s Problem \#539}, \url{https://www.erdosproblems.com/539}.
+
+\bibitem[GGMT25]{GGMT}
+W.~T.~Gowers, B.~Green, F.~Manners and T.~Tao, \emph{On a conjecture of Marton}, Ann. of Math. (2) \textbf{201} (2025), no.~2, 515--549.
+
+\bibitem[GR99]{GR99}
+A.~Granville and F.~Roesler, \emph{The set of differences of a given set}, Amer. Math. Monthly \textbf{106} (1999), 338--344.
+
+\bibitem[HLP08]{HLP08}
+R.~Holzman, V.~F.~Lev and R.~Pinchasi, \emph{Projecting difference sets on the positive orthant}, Combin. Probab. Comput. \textbf{17} (2008), 681--688.
+
+\bibitem[Ki26]{Ki26}
+K.~Kitamura, \emph{A Lean disproof of the square-root variants in Erd\H{o}s Problem 539}, 2026, \url{https://github.com/KitaKen1/erdos-539-sqrt-disproof}.
+
+\bibitem[Ph26]{Ph26}
+S.~Pham, \emph{A stretched-exponential lower bound for Erd\H{o}s Problem 539}, unrefereed manuscript, 9 August 2026, \url{https://github.com/sonpham-org/erdos-539-lower-bound}.
+
+\bibitem[Pe12]{Pe12}
+G.~Petridis, \emph{New proofs of Pl\"unnecke-type estimates for product sets in groups}, Combinatorica \textbf{32} (2012), 721--733.
+
+\bibitem[PC26]{PC26}
+J.~Schmitt, T.~Gehrunger, J.~Dekoninck, G.~B\'erczi, U.~Kreitner, L.~Price and D.~Holmes, \emph{ProofCouncil: an LLM agent for solving open mathematical problems}, arXiv:2607.09474, 2026, Appendix~A.
+
+\bibitem[Ru89]{Ru89}
+I.~Z.~Ruzsa, \emph{An application of graph theory to additive number theory}, Scientia Ser. A Math. Sci. \textbf{3} (1989), 97--109.
+
+\bibitem[FC26]{FC539}
+Google DeepMind and contributors, \emph{Formal Conjectures: Erd\H{o}s Problem 539}, repository snapshot checked on 19 October 2026, \url{https://github.com/google-deepmind/formal-conjectures/blob/197f7f8dcc457f556754f826389d2ec7a0d85b92/FormalConjectures/ErdosProblems/539.lean}.
+
+\bibitem[KiExp26]{KiExp26}
+K.~Kitamura, \emph{Lean proofs of the exponent variants of Erd\H{o}s Problem 539}, 2026, \url{https://github.com/KitaKen1/erdos-539-formal-conjectures}.
+
+\bibitem[Sa26]{Lean539}
+S.~Sarfraz, \emph{Gcd quotients and positive differences: Lean formalization}, Lean 4 development, release candidate 0.1.0, 2026. The companion proof archive supplies source hashes, verification receipts, and a theorem map.
+
+\end{thebibliography}
+
+\end{document}

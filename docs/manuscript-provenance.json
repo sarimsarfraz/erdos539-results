@@ -1,0 +1,28 @@
+{
+  "current": {
+    "revision": "2026-10-19",
+    "source": "paper/main.tex",
+    "sha256": "7284b5ba5581b416a2a04464704bc7eea05bbba1c258ec3fca6e2b6f870c8665",
+    "status": "local preprint review candidate; 32-word AI disclosure; paper/PDF and upstream changed-module checks passed; no publication",
+    "theorem_map": "docs/PAPER_THEOREMS.md",
+    "verification": "docs/verification.json",
+    "build_provenance": "docs/RELEASE_BUILD.json",
+    "authors": [
+      "Sarim Sarfraz",
+      "Wali Ahmed"
+    ],
+    "pdf_sha256": "f932ff0bf904d2eccf432556381ee8d7e86aff5f3f6b5ed586c9ffc013610d5d",
+    "author_affiliations": {
+      "Sarim Sarfraz": "University of Toronto",
+      "Wali Ahmed": "Columbia University"
+    }
+  },
+  "proof_source_baseline": "53b83d4e81b4f3a80b3c55b44f945c714f1c7cff",
+  "source_derivation": {
+    "baseline_modules": 747,
+    "refactored_reflection_wrappers": 25,
+    "added_certificate_parts": 97,
+    "unchanged_public_certificate_statements": 874
+  },
+  "status": "local review candidate; no publication identifiers assigned"
+}

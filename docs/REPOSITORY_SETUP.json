@@ -1,0 +1,21 @@
+{
+  "status": "private repository created; local integrity and Lean revalidation checks passed",
+  "source_archive_sha256": "ae5fd21a4fcd4e3fe21b3353bf6ea9fc21eb711c59ddc0b9f55aedc072073d0a",
+  "canonical_lean_sources_unchanged": 844,
+  "preserved_reference_sources_unchanged": 5,
+  "fresh_history": true,
+  "lean_revalidation": {
+    "exit_code": 0,
+    "elapsed_seconds": 21.359915209002793,
+    "max_lean_rss_bytes": 3358228480,
+    "max_concurrent_lean_processes": 1,
+    "lean_memory_limit_mb": 4096,
+    "mode": "revalidation using hash-matched compiled artifacts from the audited release; fresh axiom audit; not a new clean rebuild",
+    "finished_at_utc": "2026-10-19T17:29:54.870912+00:00",
+    "resource_violation": null
+  },
+  "privacy": "private",
+  "public_release": "not authorized",
+  "cla": "author reports completed; upstream bot confirmation will occur on submission",
+  "repository": "https://github.com/sarimsarfraz/erdos539-results"
+}
