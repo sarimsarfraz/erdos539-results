@@ -10,23 +10,29 @@ Version 0.1.0 contains the checked proof sources and accompanying paper describe
 
 For an n-element set A of positive integers, let
 
-$$
-Q(A)=\{a/\gcd(a,b):a,b\in A\},\qquad h(n)=\min_{|A|=n}|Q(A)|.
-$$
+```math
+Q(A)=\left\{\frac{a}{\gcd(a,b)}:a,b\in A\right\},\qquad h(n)=\min_{|A|=n}|Q(A)|.
+```
 
 The principal results are:
 
 1. **Unrestricted lower bound.** For all sufficiently large n,
-   $$
+
+   ```math
    h(n)\ge\sqrt n\exp\!\left(\frac1{16000}\sqrt{\frac{\log n}{\log\log n}}\right).
-   $$
+   ```
+
    The same eventual bound is proved for the exact, zero-inclusive `Erdos539.cofactorThreshold` definition used by Formal Conjectures. These two arithmetic functions are compared by proved lemmas; they are not identified.
+
 2. **Sharp order for every fixed prime support.** For every d > 0 and any d fixed distinct primes,
-   $$
+
+   ```math
    h_d(n)=\Theta_d(n^{u_d}),\qquad
-   u_1=1,\quad u_d=\min_{p+s=d\atop p,s\ge1}\frac{u_p+u_s}{1+u_p+u_s}.
-   $$
+   u_1=1,\quad u_d=\min_{\substack{p+s=d \\ p,s\ge1}}\frac{u_p+u_s}{1+u_p+u_s}.
+   ```
+
    Both bounds are proved, including a Mathlib `IsTheta` statement. In particular, the exponents in dimensions three and four are 5/8 and 4/7.
+
 3. **Geometric and structural estimates.** The development includes positive-difference and anchored-fan bounds for real point sets, elementary extraction onto original coordinates, fiber-regularity estimates, sharp constructions, and estimates for midpoint-closed sets and ordered layers.
 
 The unrestricted proof uses elementary extraction. Its 38-module local import closure contains no PFR imports. The larger library retains a historical PFR route and supporting energy and entropy results.
@@ -86,9 +92,9 @@ The GitHub Actions workflow checks file hashes, proof-source correspondence to t
 
 The conjectural unrestricted scale
 
-$$
+```math
 h(n)=\sqrt n\exp(\Theta(\sqrt{\log n}))
-$$
+```
 
 is not proved here. Universal compatible-cut and quadratic-core bounds remain explicit hypotheses in the conditional theorems. Verified small-cover cases and counterexamples to intermediate proof strategies do not resolve this gap.
 
