@@ -22,11 +22,11 @@ Both headline bounds and their supporting estimates were checked against actual 
 
 The exact proposed DeepMind proposition passed against the freshly rebuilt release artifacts, using only the permitted standard axioms. The patch applies to the pinned upstream source. The actual upstream v4.33.1 changed-module build and configured custom linters now pass with warnings treated as errors, one Lean process at a time and a 4096 MB ceiling. The external proof stays on its own pinned v4.29.0-rc8 toolchain.
 
-## Original pre-publication review and subsequent private repository setup
+## Pre-publication review, repository setup and release
 
 The manuscript, theorem correspondence, proof sources, citation information and both upstream PR candidates have been checked. The source and matching 17-page PDF include Sarim Sarfraz (University of Toronto) and Wali Ahmed (Columbia University). The paper and software licenses have been approved. The authors authorized the coordinated public release and both upstream submissions on 19 October 2026. Their publication and review status is tracked separately from these proof-checking receipts.
 
-The reviewed source tree is prepared in the dedicated release repository `sarimsarfraz/erdos539-results`. Its isolated history does not include the original research repository's history, private working notes or unfinished proofs. [Repository verification](REPOSITORY_VERIFICATION.md) records its separate setup checks. The author reports completing the Google CLA; the upstream CLA bot will validate account coverage when a PR is submitted.
+The reviewed source tree is published in the dedicated release repository `sarimsarfraz/erdos539-results`. Its isolated history does not include the original research repository's history, private working notes or unfinished proofs. [Repository verification](REPOSITORY_VERIFICATION.md) records its separate setup checks and links to the published records and submitted PRs. The Google CLA check passed on both [PR #7457](https://github.com/google-deepmind/formal-conjectures/runs/118315269075) and [PR #7458](https://github.com/google-deepmind/formal-conjectures/runs/118315359499), as verified on 19 October 2026; this is separate from mathematical review or acceptance.
 
 The final upstream patches, including their paper references and immutable proof links, passed focused checks on 19 October 2026, individually and together. The ten supporting API lemmas and both exact-statement bridges also passed. These checks ran serially under the 4096 MiB limit. The current AI disclosure credits OpenAI GPT-6 Astra through Codex as the primary AI tool, with additional assistance from Anthropic Claude. The submitting author remains responsible for understanding the formalization and writing reviewer responses. Hosted CI and maintainer review are separate from these local checks.
 
@@ -36,4 +36,4 @@ The approved title is *Gcd quotients: a quantitative lower bound and sharp fixed
 
 ## Author attribution revision, 19 October 2026
 
-The author identifies GPT-6 Astra through Codex as the primary AI tool, with additional assistance from Anthropic Claude. The current disclosure reflects that attribution; earlier word-count descriptions above refer to the superseded disclosure. This editorial change alters no mathematical statement or Lean source.
+The author identifies GPT-6 Astra through Codex as the primary AI tool, with additional assistance from Anthropic Claude. The current disclosure reflects that attribution. This editorial change alters no mathematical statement or Lean source.

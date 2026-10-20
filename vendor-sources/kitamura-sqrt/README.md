@@ -1,5 +1,7 @@
 # A Lean disproof of the square-root variants in Erdős Problem 539
 
+> **Local reference copy.** The text below is Kenta Kitamura's [upstream README](https://github.com/KitaKen1/erdos-539-sqrt-disproof/blob/78e0a02a462321e110c182b58e48dbbb8280ad4b/README.md) at revision `78e0a02a462321e110c182b58e48dbbb8280ad4b`. It describes the upstream project; this directory contains only selected reference files. Local changes add this note and point source links to that pinned upstream revision. The mathematical text, author attribution and [license](LICENSE) are unchanged. Original hashes and the local adaptation are recorded in [SOURCE.json](SOURCE.json).
+
 This repository gives negative answers to the exact declarations
 `Erdos539.erdos_539.variants.isBigO_sq` and
 `Erdos539.erdos_539.variants.sq` in
@@ -12,7 +14,7 @@ h(n) / √n → ∞.
 ```
 
 **Try it in Lean4Web:** [open the Latest editor](https://live.lean-lang.org/#project=MathlibDemo)
-and paste the [standalone proof](lean4web/Erdos539SqrtLean4Web.lean).
+and paste the [standalone proof](https://github.com/KitaKen1/erdos-539-sqrt-disproof/blob/78e0a02a462321e110c182b58e48dbbb8280ad4b/lean4web/Erdos539SqrtLean4Web.lean).
 Select **Latest Mathlib with Lean v4.34.0-rc2** and allow checking to reach the
 end of the file.
 
@@ -102,12 +104,12 @@ cannot increase the cofactor count. The preceding bound forces
 
 | Directory | Lean version | Purpose |
 |---|---:|---|
-| [`lean/`](lean/) | `v4.33.1` | Modular proof importing the original Formal Conjectures target |
-| [`lean4web/`](lean4web/) | `v4.34.0-rc2` | Standalone Mathlib-only proof for the public Latest editor |
-| [`vendor/pfr/`](vendor/pfr/) | `v4.33.1` | Proved PFR source dependency used by `lean/` |
+| [`lean/`](https://github.com/KitaKen1/erdos-539-sqrt-disproof/tree/78e0a02a462321e110c182b58e48dbbb8280ad4b/lean) | `v4.33.1` | Modular proof importing the original Formal Conjectures target |
+| [`lean4web/`](https://github.com/KitaKen1/erdos-539-sqrt-disproof/tree/78e0a02a462321e110c182b58e48dbbb8280ad4b/lean4web) | `v4.34.0-rc2` | Standalone Mathlib-only proof for the public Latest editor |
+| [`vendor/pfr/`](https://github.com/KitaKen1/erdos-539-sqrt-disproof/tree/78e0a02a462321e110c182b58e48dbbb8280ad4b/vendor/pfr) | `v4.33.1` | Proved PFR source dependency used by `lean/` |
 
-The entry points are [`Erdos539SqrtFC.lean`](lean/Erdos539SqrtFC.lean) and
-[`Erdos539SqrtLean4Web.lean`](lean4web/Erdos539SqrtLean4Web.lean).
+The entry points are [`Erdos539SqrtFC.lean`](https://github.com/KitaKen1/erdos-539-sqrt-disproof/blob/78e0a02a462321e110c182b58e48dbbb8280ad4b/lean/Erdos539SqrtFC.lean) and
+[`Erdos539SqrtLean4Web.lean`](https://github.com/KitaKen1/erdos-539-sqrt-disproof/blob/78e0a02a462321e110c182b58e48dbbb8280ad4b/lean4web/Erdos539SqrtLean4Web.lean).
 Both projects include `lakefile.toml`, `lean-toolchain`, and `lake-manifest.json`.
 The `lean4web/compat/` sources record the adaptations for Mathlib 4.34; the
 standalone file already includes the required PFR proofs.
@@ -182,13 +184,13 @@ formal verification reported above.
 - [PFR source at 7d6404b79b11b1a89dd1b6f997a10b14c208c4ed](https://github.com/teorth/pfr/tree/7d6404b79b11b1a89dd1b6f997a10b14c208c4ed).
 
 The 49 vendored PFR files retain their original notices and license. The
-[source manifest](vendor/pfr/SOURCE-MANIFEST.json) and
-[patch](vendor/pfr/upstream.patch) record compatibility changes, including
+[source manifest](https://github.com/KitaKen1/erdos-539-sqrt-disproof/blob/78e0a02a462321e110c182b58e48dbbb8280ad4b/vendor/pfr/SOURCE-MANIFEST.json) and
+[patch](https://github.com/KitaKen1/erdos-539-sqrt-disproof/blob/78e0a02a462321e110c182b58e48dbbb8280ad4b/vendor/pfr/upstream.patch) record compatibility changes, including
 removal of default-argument annotations that generated syntax holes and
 resolution of names already supplied by Mathlib. The statement of
 `weak_PFR_int` is unchanged.
 
-The [4.34 compatibility patch](lean4web/compat/changes.patch) adapts the measure
+The [4.34 compatibility patch](https://github.com/KitaKen1/erdos-539-sqrt-disproof/blob/78e0a02a462321e110c182b58e48dbbb8280ad4b/lean4web/compat/changes.patch) adapts the measure
 APIs and deprecated names. Two internal finite-range helpers now require
 measurability because Mathlib changed the fallback for nonmeasurable maps;
 every caller supplies that proof. The final Erdős 539 statements have no added
@@ -196,7 +198,7 @@ hypotheses. This port was also compared with
 [PFR at 07839bdd](https://github.com/teorth/pfr/tree/07839bddb1395c8808fa47db821ce2e4fff9362e).
 
 The source is Apache-2.0; see [LICENSE](LICENSE) and
-[vendor/pfr/LICENSE](vendor/pfr/LICENSE).
+[vendor/pfr/LICENSE](https://github.com/KitaKen1/erdos-539-sqrt-disproof/blob/78e0a02a462321e110c182b58e48dbbb8280ad4b/vendor/pfr/LICENSE).
 
 ## AI usage disclosure
 

@@ -30,5 +30,12 @@
       "upstream_path": "lean/Erdos539Asymptotic.lean",
       "sha256": "6994fdb52f85e9971c4149fdf5319e54db21a5c1d0954a0943d2bdbc30cbcc82"
     }
+  ],
+  "local_adaptations": [
+    {
+      "path": "README.md",
+      "description": "Added a local provenance note and changed ten relative source-link occurrences to the pinned upstream revision. Mathematical text, author attribution and license are unchanged. The files array retains original upstream hashes.",
+      "sha256": "c283995b84e168f176cded0e59521e7f27b13ab6b0563e99111ed9f9b3bbd2b8"
+    }
   ]
 }

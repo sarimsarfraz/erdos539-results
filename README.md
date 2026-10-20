@@ -68,7 +68,7 @@ The environment is pinned:
 - Mathlib: `698d2b68b870f1712040ab0c233d34372d4b56df`
 - Other dependencies: [lake-manifest.json](lake-manifest.json)
 
-The clean source audit of 14–15 October, revalidated on 19 October 2026, covers **844 canonical local and vendored modules and 12,917 project declarations**. Declarations include definitions and generated declarations; this is not a theorem count. The audit allows only `propext`, `Classical.choice`, and `Quot.sound` in the transitive axiom closure. See [the current release audit](docs/RELEASE_AUDIT.md) for the clean-build evidence, source refactor and remaining publication checks. The five Lean files in [the upstream reference snapshots](vendor-sources/README.md) are retained for attribution and are outside the compiled import closure.
+The clean source audit of 14–15 October, revalidated on 19 October 2026, covers **844 canonical local and vendored modules and 12,917 project declarations**. Declarations include definitions and generated declarations; this is not a theorem count. The audit allows only `propext`, `Classical.choice`, and `Quot.sound` in the transitive axiom closure. See [the current release audit](docs/RELEASE_AUDIT.md) for the clean-build evidence, source refactor and publication record. The five Lean files in [the upstream reference snapshots](vendor-sources/README.md) are retained for attribution and are outside the compiled import closure.
 
 With the pinned toolchain installed and dependency caches available, run:
 

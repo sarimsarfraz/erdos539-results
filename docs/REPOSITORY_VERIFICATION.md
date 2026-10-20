@@ -1,4 +1,4 @@
-# Private repository verification
+# Repository verification
 
 This repository starts from the 882-file audited release tree. It has a fresh Git history. The reviewed PDF, paper license, citation details, repository-integrity verifier, and GitHub workflow are added for distribution. No Lean source, mathematical statement, dependency revision or proof-checker behavior is changed.
 
@@ -20,4 +20,4 @@ python3 scripts/verify-release.py
 
 The manifest is an inventory, not a signature or independent attestation. It excludes only itself and ignored runtime directories. Changing a Lean proof requires a fresh successful Lean check and corresponding receipt before the integrity check can pass. Never treat regeneration of hashes as verification of a changed proof.
 
-Private build caches and logs are ignored by Git. The GitHub workflow does not install Lean, download dependencies, publish releases, or change repository visibility. Public release and the two upstream submissions remain subject to the author's approval.
+Local build caches and logs are ignored by Git. The GitHub workflow does not install Lean, download dependencies, publish releases, or change repository visibility. The author approved the public release and both upstream submissions on 19 October 2026. Version [0.1.0](https://github.com/sarimsarfraz/erdos539-results/releases/tag/v0.1.0) and the [paper](https://zenodo.org/records/23481037) and [software](https://zenodo.org/records/23481106) records are published; DeepMind PRs [#7457](https://github.com/google-deepmind/formal-conjectures/pull/7457) and [#7458](https://github.com/google-deepmind/formal-conjectures/pull/7458) are submitted. Publication and submission do not imply upstream review or acceptance.

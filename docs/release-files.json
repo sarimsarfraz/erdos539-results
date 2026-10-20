@@ -14,8 +14,8 @@
       "bytes": 1289
     },
     "CONTRIBUTING.md": {
-      "sha256": "4a396f6c7e41162fa66ac3c34c0897fbefe24bcff3869d87e9fe8df4946e0d7c",
-      "bytes": 1080
+      "sha256": "7fac1f8a1db19786409698e00b80f8cf7fb95d74c89073d7852487082790df1d",
+      "bytes": 1134
     },
     "Erdos539.lean": {
       "sha256": "0a058a3a75475766496bc99f84fccc973d2e9662420065955eb9b9dc8300bc0a",
@@ -26,8 +26,8 @@
       "bytes": 11357
     },
     "README.md": {
-      "sha256": "7cb41f42865f8bb6c87003aa95f9d511b35bd73fadaea3add0efaa47ed51a89c",
-      "bytes": 7652
+      "sha256": "576eff374a9db126d676c26d1d2941cd6e5e52065f225dbd243c59ba132ea2c4",
+      "bytes": 7642
     },
     "THIRD_PARTY_NOTICES.md": {
       "sha256": "94c9173e973765651459712d5733c7edef7544821be0bc3724e7aa56ca209b4c",
@@ -3446,8 +3446,8 @@
       "bytes": 3408
     },
     "docs/RELEASE_AUDIT.md": {
-      "sha256": "cca0162d2674754ec6f9fecbf4c9b7b1a08cc85d836baf443e3edd825fa8038c",
-      "bytes": 6334
+      "sha256": "304dbaaf49bb48ee2859697b7ea65908e190e4ea3efe8a0b420c84bdb42e2bab",
+      "bytes": 6471
     },
     "docs/RELEASE_BUILD.json": {
       "sha256": "b81a4818a09420c16d5f31e43805969a2f536a6f400725af9f1cb29ab2ebabf2",
@@ -3458,8 +3458,8 @@
       "bytes": 956
     },
     "docs/REPOSITORY_VERIFICATION.md": {
-      "sha256": "5d662e4e82930366853b3a64007550037f3932da3f6a6ff9f2cfdcaaa67e32ec",
-      "bytes": 2226
+      "sha256": "60e8e4743af95a5d291b43f7a681e36dd2993e09de75572b436f87afd996607e",
+      "bytes": 2679
     },
     "docs/REPRODUCING.md": {
       "sha256": "0d3b269d341500359fa5eabcbcd747343b03903f097a763b5ffd44251f07a990",
@@ -3518,20 +3518,20 @@
       "bytes": 6435
     },
     "vendor-sources/README.md": {
-      "sha256": "cbc38e487effabcca8ff90b282d742546f7a3edb4fcf85afdfd16028776429e5",
-      "bytes": 751
+      "sha256": "6b9ec8cab40da55e67e856bb780aa92ac1f2acdd2497a3bf94c71dc56754aa76",
+      "bytes": 1193
     },
     "vendor-sources/kitamura-sqrt/LICENSE": {
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
       "bytes": 11357
     },
     "vendor-sources/kitamura-sqrt/README.md": {
-      "sha256": "bf7211bb95dcec1f4cb0168f92d770f6ae04bbc765880285461c2f7d251a672e",
-      "bytes": 7868
+      "sha256": "c283995b84e168f176cded0e59521e7f27b13ab6b0563e99111ed9f9b3bbd2b8",
+      "bytes": 9432
     },
     "vendor-sources/kitamura-sqrt/SOURCE.json": {
-      "sha256": "b447c76d5e918b8f1c626bb0a40482ab158eb3ea437610d28499d00b6bc2bdcc",
-      "bytes": 1152
+      "sha256": "92bc0f0a739e3778cff5ae3187dc908213c196bf606645db734b7428837ad123",
+      "bytes": 1555
     },
     "vendor-sources/kitamura-sqrt/lean/Erdos539Asymptotic.lean": {
       "sha256": "6994fdb52f85e9971c4149fdf5319e54db21a5c1d0954a0943d2bdbc30cbcc82",
